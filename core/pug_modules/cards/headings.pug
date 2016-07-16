@@ -1,0 +1,7 @@
+//- Declaration
+mixin heading(content, settings)
+	//- setting default values
+	- settings = (settings || {classes:''})
+	div.heading(class=settings.classes)
+		h1= content.title
+		h6= content.subtitle

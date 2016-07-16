@@ -1,0 +1,7 @@
+mixin feature(content, settings)
+	//- setting default values
+	- settings = (settings || {classes:''})
+	div.feature(class=settings.classes)
+		i(class=content.icon)
+		h4= content.title
+		p= content.description

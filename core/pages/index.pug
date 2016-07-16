@@ -1,0 +1,68 @@
+extends ../pug_modules/skeleton
+include ../pug_modules/section
+include ../pug_modules/cards/headings
+include ../pug_modules/layouts/twocol
+include ../pug_modules/layouts/onecol
+include ../pug_modules/cards/features
+
+block title
+	title test fucking page title hi
+
+block content
+	
+	//- Hero header
+	+section( 
+		{
+			layout: 'onecol',
+			settings: {},
+			cards: [{
+				name: 'heading',
+				content: {
+					title : 'Welcome to ZiON',
+					subtitle: 'Web template crafting machine'
+				}
+			}]
+		}, {
+			classes: 'full_height',
+			container: '',
+			alignContent : 'vertical_center text-center'
+		})
+
+	//- Generic section
+	+section( 
+		{
+			heading: {
+				content : {
+					title: 'Heading from section',
+					subtitle: 'Calling the heading card inside section'
+				},
+				settings : {
+					classes : 'text-center'
+				}
+			},
+			layout: 'twocol',
+			settings: {},
+			cards: [{
+				name: 'feature',
+				content: {
+					title : 'Test title hola',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et '
+				},
+				settings: {
+					classes : 'text-center'
+				}
+			}, {
+				name: 'feature',
+				content: {
+					title : 'Test title two',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et '
+				},
+				settings: {
+					classes : 'text-center'
+				}
+			}]
+		}, {
+			classes: 'full_height',
+			container: '',
+			alignContent : 'vertical_center'
+		})

@@ -1,0 +1,16 @@
+//- A parent wireframe for every section
+
+//- @since version 0.4.0
+//- 
+//- params:
+//- 	content 	: {}
+//- 	settings	: {}
+	
+mixin section(content, settings)
+	section(class=settings.classes)
+		div(class=(settings.container||'container')+' '+(settings.alignContent||''))
+			
+			if content.heading
+				+heading(content.heading.content, content.heading.settings)
+
+			+#{content.layout}(content.cards, content.settings)
