@@ -1,7 +1,11 @@
 //- Declaration
 mixin heading(content, settings)
 	//- setting default values
-	- settings = (settings || {classes:''})
-	div.heading(class=settings.classes)
+	- settings = (settings || '')
+	div.heading(class=settings.class)
 		h1= content.title
 		h6= content.subtitle
+		
+		
+		if content.buttons
+			+buttons(content.buttons)

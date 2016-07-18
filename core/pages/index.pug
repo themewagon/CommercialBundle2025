@@ -1,9 +1,12 @@
 extends ../pug_modules/skeleton
 include ../pug_modules/section
+include ../pug_modules/elements/buttons
 include ../pug_modules/cards/headings
 include ../pug_modules/layouts/twocol
 include ../pug_modules/layouts/onecol
 include ../pug_modules/cards/features
+include ../pug_modules/cards/media
+
 
 block title
 	title test fucking page title hi
@@ -11,7 +14,7 @@ block title
 block content
 	
 	//- Hero header
-	+section( 
+	+section(
 		{
 			layout: 'onecol',
 			settings: {},
@@ -19,16 +22,44 @@ block content
 				name: 'heading',
 				content: {
 					title : 'Welcome to ZiON',
-					subtitle: 'Web template crafting machine'
+					subtitle: 'Web template crafting machine',
+					buttons: [{
+						content: {
+							title: 'button name',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-primary'
+						}
+					},
+					{
+						content: {
+							title: 'another button',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-danger'
+						}
+					}]
 				}
 			}]
 		}, {
-			classes: 'full_height',
+			attrs: {
+				id : 'intro',
+				class: 'full_height'
+			},
 			container: '',
-			alignContent : 'vertical_center text-center'
+			alignContent : 'vertical_center text-center',
+			background: {
+				parallax: true,
+				image: '',
+				video: '',
+				class: 'background__primary'
+			}
 		})
 
-	//- Generic section
+
+	//- //- Generic section
 	+section( 
 		{
 			heading: {
@@ -37,32 +68,82 @@ block content
 					subtitle: 'Calling the heading card inside section'
 				},
 				settings : {
-					classes : 'text-center'
+					class : 'text-center'
 				}
 			},
 			layout: 'twocol',
 			settings: {},
 			cards: [{
-				name: 'feature',
+				name: 'image',
 				content: {
-					title : 'Test title hola',
-					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et '
+					src: 'http://pillar.mediumra.re/img/hero27.jpg',
+					caption : 'Test title hola',
 				},
 				settings: {
-					classes : 'text-center'
+					class : 'img-responsive',
+					showCaption: true
 				}
 			}, {
 				name: 'feature',
 				content: {
 					title : 'Test title two',
-					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et '
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ',
+					buttons: [{
+						content: {
+							title: 'button name',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-info'
+						}
+					}]
 				},
 				settings: {
-					classes : 'text-center'
+					class : ''
 				}
 			}]
 		}, {
-			classes: 'full_height',
+			attrs: {
+				id: 'features',
+				class: 'full_height',
+			},
 			container: '',
-			alignContent : 'vertical_center'
+			alignContent : 'vertical_center',
+			background: {
+				parallax: true,
+				image: '',
+				video: '',
+				class: ''
+			}
 		})
+
+	//- Hero section
+	+section(
+		{
+			layout: 'onecol',
+			settings: {},
+			cards: [{
+				name: 'heading',
+				content: {
+					title : 'Motherfucking title',
+					subtitle: 'Web template crafting machine'
+				}
+			}]
+		}, {
+			attrs: {
+				id : 'intro2',
+				class: 'full_height'
+			},
+			container: '',
+			alignContent : 'vertical_center text-center',
+			background: {
+				parallax: true,
+				image: 'http://pillar.mediumra.re/img/hero27.jpg',
+				video: '',
+				class: 'background__primary'
+			}
+		})
+
+
+block append scripts
+	script(src='assets/lib/skrollr/src/skrollr.js')

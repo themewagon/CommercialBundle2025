@@ -23,7 +23,8 @@
   ],
   "dependencies": {
     "jquery": "^3.1.0",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "skrollr": "^0.6.30"
   },
   "overrides": {
     "bootstrap": {

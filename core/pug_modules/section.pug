@@ -7,7 +7,24 @@
 //- 	settings	: {}
 	
 mixin section(content, settings)
-	section(class=settings.classes)
+	- settings = settings || ''
+	section(id=settings.attrs.id, class=settings.attrs.class)
+
+		//- background controller
+		if settings.background.parallax 
+			div.background_holder(
+				class=(settings.background.class)
+				data-top='transform: translate3d(0px, 0px, 0px)', 
+				data-top-bottom='transform: translate3d(0px, 300px, 0px)',
+				data-anchor-target='#'+settings.attrs.id
+			)
+				img(src=settings.background.image)
+		else
+			div.background_holder(class=(settings.background.class))
+				img(src=settings.background.image)
+
+
+
 		div(class=(settings.container||'container')+' '+(settings.alignContent||''))
 			
 			if content.heading

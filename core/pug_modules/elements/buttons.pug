@@ -1,0 +1,7 @@
+mixin button(content, settings)
+	a(href=content.link, title=content.title, class='btn '+settings.class) #{content.title}
+
+mixin buttons(buttons)
+	div.buttons
+		each button in buttons
+			+button(button.content, button.settings)

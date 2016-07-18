@@ -67,7 +67,7 @@ gulp.task('core:compile:scss', function () {
 
 // Pushing alll the assets
 gulp.task('core:assets', ['asset:bower', 'asset:php'], function () {
-  return gulp.src('./core/assets/')
+  return gulp.src('./core/assets/**/*.*')
     .pipe(gulp.dest('./bin/assets/'));
 });
 
@@ -75,6 +75,7 @@ gulp.task('core:assets', ['asset:bower', 'asset:php'], function () {
 gulp.task('core:watch', function () {
   
   gulp.watch('./core/assets/scss/**/*.scss', ['core:compile:scss']);
+  gulp.watch('./core/assets/**/*.*', ['core:assets']);
   gulp.watch(['./core/pages/*.pug', './core/pug_modules/**/*.pug'], ['core:compile:pug']);
 
 });
