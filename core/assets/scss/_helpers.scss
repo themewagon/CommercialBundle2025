@@ -1,13 +1,54 @@
+
+// 
+// Spacing and padding helpers
+// 
+
+$spacer: 100px !default;
+
+
+// Paddings
+.p-b-0{
+    padding-bottom: 0;
+}
+.p-t-0{
+    padding-top: 0;
+}
+.p-l-0{
+    padding-left: 0;
+}
+.p-r-0{
+    padding: 0;
+}
+
+// Margins
+.m-b-0{
+    margin-bottom: 0;
+}
+.m-t-0{
+    margin-top: 0;
+}
+.m-l-0{
+    margin-left: 0;
+}
+.m-r-0{
+    margin: 0;
+}
+
+
+
+
 // 
 // Layout Helpers
 // 
 section{
 	position: relative;
 	overflow: hidden;
+    padding: $spacer 0;
 }
 
 .full_height{
 	height: 100vh;
+    padding: 0;
 }
 
 .vertical_center {
@@ -15,15 +56,21 @@ section{
     top: 50%;
     transform: translateY(-50%);
 }
+
+
+
+//
+// Reseats
+//
+
+* {
+    outline: none;
+}
 img{
 	max-width: 100%;
 }
-.heading{
-    margin-bottom: 30px;
-    h1{
-        margin-top: 0;
-    }
-}
+
+
 
 
 //
