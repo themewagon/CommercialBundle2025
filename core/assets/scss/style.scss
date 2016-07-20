@@ -1,4 +1,7 @@
+@import "bourbon";
+@import "../../../src/assets/scss/_config.scss";
 @import "helpers";
+@import "typography";
 
 body{
 	min-height: 100%;

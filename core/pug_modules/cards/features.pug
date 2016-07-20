@@ -14,7 +14,7 @@ mixin feature__with_media(content, settings)
 	- settings = (settings || {class:''})
 	div.feature__with_media(class=settings.class)
 
-		+image(content.image)
+		+image(content.image.content, content.image.settings)
 
 		div.feature__content
 			h4= content.title

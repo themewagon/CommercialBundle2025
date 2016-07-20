@@ -51,7 +51,10 @@ gulp.task('core:compile:scss', function () {
   	return gulp.src('./core/assets/scss/**/*.scss')
       .pipe(plumber())
 	    .pipe(sourcemaps.init())
-	    .pipe(sass({outputStyle : 'expanded'}).on('error', sass.logError))
+	    .pipe(sass({
+        outputStyle : 'expanded',
+        includePaths: require('node-bourbon').includePaths
+      }).on('error', sass.logError))
 	    .pipe(autoprefixer({
 	        browsers: ['last 5 versions'],
 	        cascade: false

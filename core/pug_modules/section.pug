@@ -28,6 +28,6 @@ mixin section(content, settings)
 		div(class=(settings.container||'container')+' '+(settings.alignContent||''))
 			
 			if content.heading
-				+heading(content.heading.content, content.heading.settings)
+				+heading__section(content.heading.content, content.heading.settings)
 
 			+#{content.layout}(content.cards, content.settings)
