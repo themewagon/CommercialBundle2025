@@ -1,7 +1,10 @@
+@import "config";
+@import "../../../src/assets/scss/_config.scss"; //user defined configs 
+
 @import "bourbon";
-@import "../../../src/assets/scss/_config.scss";
-@import "helpers";
+@import "mq";
 @import "typography";
+@import "helpers";
 @import "cards/headings";
 
 body{
