@@ -1,6 +1,8 @@
 $modular-scale-ratio: 1.414 !default;
 $modular-scale-base: 1rem !default;
 
+$heading-font: 'Raleway', sans-serif !default;
+$content-font:  serif !default;
 
 
 
@@ -16,15 +18,28 @@ body {
 
 h1 {
   font-size: modular-scale(5);
+  font-family: $heading-font;
 }
 
-h2 {font-size: modular-scale(4);}
+h2 {
+	font-size: modular-scale(4);
+	font-family: $heading-font;
+}
 
-h3 {font-size: modular-scale(3);}
+h3 {
+	font-size: modular-scale(3);
+	font-family: $heading-font;
+}
 
-h4 {font-size: modular-scale(2);}
+h4 {
+	font-size: modular-scale(2);
+	font-family: $heading-font;
+}
 
-h5 {font-size: modular-scale(1);}
+h5 {
+	font-size: modular-scale(1);
+	font-family: $heading-font;
+}
 
 p {font-size: modular-scale(0);}
 

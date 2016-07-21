@@ -1,3 +1,16 @@
+//
+// Responsive breakpoints
+//
+$mq-responsive: true;
+$mq-breakpoints: (
+    mobile:  544px,
+    tablet:  768px,
+    desktop: 992px,
+    wide:    1200px
+);
+
+@import "mq";
+
 
 // 
 // Spacing and padding helpers
@@ -44,6 +57,9 @@ section{
 	position: relative;
 	overflow: hidden;
     padding: $spacer 0;
+    @include mq($until: tablet) {
+        padding: ($spacer / 2) 0;
+    }
 }
 
 .full_height{
