@@ -3,8 +3,15 @@ mixin heading(content, settings)
 	//- setting default values
 	- settings = (settings || '')
 	div.heading(class=settings.class)
+
+		if content.uptitle
+			p(class='col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2')!= content.uptitle
+			.clearfix
+
 		h1= content.title
-		p(class='col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2')= content.subtitle
+		
+		if content.subtitle
+			p(class='col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2')!= content.subtitle
 		
 		
 		if content.buttons

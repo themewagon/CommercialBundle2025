@@ -1,9 +1,18 @@
+//
+// Reseats
+//
+
+* {
+    outline: none;
+}
+img{
+    max-width: 100%;
+}
+
+
 // 
 // Spacing and padding helpers
 // 
-
-$spacer: 100px !default;
-
 
 // Paddings
 .p-b-0{
@@ -38,7 +47,10 @@ $spacer: 100px !default;
 
 // 
 // Layout Helpers
-// 
+//
+.container{
+    position: relative;
+}
 section{
 	position: relative;
 	overflow: hidden;
@@ -61,22 +73,10 @@ section{
 
 
 
-//
-// Reseats
-//
-
-* {
-    outline: none;
-}
-img{
-	max-width: 100%;
-}
-
-
 
 
 //
-// Style helpers
+// Utility helpers
 //
 
 /* Parallax background */
@@ -90,13 +90,6 @@ img{
     background-position: 50% 50%;
     z-index: 0;
 }
-
-
-
-// 
-// Typography Helpers
-// 
-
 
 
 
@@ -169,6 +162,7 @@ img{
 .btn{
     padding: modular-scale(0) modular-scale(2);
     font-family: $heading-font;
+    font-weight: 600;
     font-size: modular-scale(-1);
     text-transform: uppercase;
     letter-spacing: modular-scale(-6);

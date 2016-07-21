@@ -1,6 +1,6 @@
 mixin button(content, settings)
 	a(href=content.link, title=content.title, class='btn '+settings.class) 
-		if(content.icon)
+		if content.icon
 			span(class=content.icon, aria-hidden="true") 
 			| 
 		!=content.title
