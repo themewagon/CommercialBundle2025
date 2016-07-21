@@ -246,7 +246,31 @@ block content
 			}
 		})
 
-	+footer('copyright &copy; 2016 <a href="https://themewagon.com">Themwagon</a>', {class: 'text-center'})
+	//- footer
+	+section({
+		layout: 'onecol',
+		settings: {},
+		cards: [{
+			name: 'footer',
+			content: 'copyright &copy; 2016 <a href="https://themewagon.com">Themwagon</a>', 
+			settings: {
+				class: 'text-center'
+			}
+		}]
+	}, {
+		attrs: {
+				id : 'footer',
+				class: ''
+			},
+			container: '',
+			alignContent : 'text-center',
+			background: {
+				parallax: false,
+				image: '',
+				video: '',
+				class: ''
+			}
+	})
 
 block append styles
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,600,700,900' rel='stylesheet' type='text/css'>
