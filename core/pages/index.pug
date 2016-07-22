@@ -16,7 +16,9 @@ block title
 
 block content
 	
-	+nav__onepage({
+	+nav__menuzord({
+			brand: 'ZiON'
+		},{
 			attrs: {
 				class: ''
 			},
@@ -24,6 +26,40 @@ block content
 			container: '',
 			alignment: 'right'
 		})
+		li.active
+			a(href='#about') Simple item
+		li
+			a(href='javascript:void(0)') Dropdown
+			ul.dropdown
+				li
+					a(href='#') Programming
+				li
+					a(href='#') Hosting
+				li
+					a(href='#') Design
+				li
+					a(href='#') Vectors
+		li
+			a(href='#') Web development
+			ul.dropdown
+				li
+					a(href='#') .NET
+				li
+					a(href='#') Magento
+				li
+					a(href='#') Joomla
+				li
+					a(href='#') MODX
+				li
+					a(href='#') Wordpress
+				li
+					a(href='#') Ruby on Rails
+				li
+					a(href='#') Mobile
+				li
+					a(href='#') Folders
+				li
+					a(href='#') Business cards
 
 
 
