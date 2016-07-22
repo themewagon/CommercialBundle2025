@@ -189,6 +189,7 @@ block content
 
 	
 		//- //- Generic section
+	
 	+section( 
 		{
 			heading: {
@@ -293,6 +294,49 @@ block content
 				class: ''
 			}
 		})
+
+
+	+section( 
+		{
+			layout: 'onecol',
+			settings: {},
+			cards: [{
+				name: 'feature',
+				content: {
+					title : 'Test title two sdfsdf',
+					description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ',
+					buttons: [{
+						content: {
+							title: 'Learn more >',
+							link: '#'
+						},
+						settings: {
+							class: 'btn-outline-primary'
+						}
+					}]
+				},
+				settings: {
+					class : ''
+				}
+			}]
+		}, {
+			attrs: {
+				id: 'onecolfeature',
+				class: '',
+			},
+			container: '',
+			alignContent : 'text-center',
+			background: {
+				parallax: false,
+				image: '',
+				video: '',
+				class: 'background__primary'
+			}
+		})
+
+	
+		//- //- Generic section
+
 
 	//- footer
 	+section({
