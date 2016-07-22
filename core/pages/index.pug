@@ -8,6 +8,7 @@ include ../pug_modules/layouts/onecol
 include ../pug_modules/cards/features
 include ../pug_modules/cards/media
 include ../pug_modules/cards/footers
+include ../pug_modules/layouts/navigations
 
 
 block title
@@ -15,6 +16,17 @@ block title
 
 block content
 	
+	+nav__onepage({
+			attrs: {
+				class: ''
+			},
+			color: 'blue',
+			container: '',
+			alignment: 'right'
+		})
+
+
+
 	//- Hero header
 	+section(
 		{
@@ -126,7 +138,7 @@ block content
 			}]
 		}, {
 			attrs: {
-				id: 'features',
+				id: 'about',
 				class: '',
 			},
 			container: '',
@@ -273,7 +285,10 @@ block content
 	})
 
 block append styles
-	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,600,700,900' rel='stylesheet' type='text/css'>
+	link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,600,700,900')
+	link(rel='stylesheet', type='text/css', href='assets/lib/menuzord/css/menuzord.css')
 
 block append scripts
 	script(src='assets/lib/skrollr/src/skrollr.js')
+	script(src='assets/lib/menuzord/js/menuzord.js')
+	script(src='assets/lib/smoothscroll.js')
