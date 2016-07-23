@@ -2,7 +2,7 @@ $modular-scale-ratio: 1.414 !default;
 $modular-scale-base: 1rem !default;
 
 $heading-font: 'Raleway', sans-serif !default;
-$content-font:  serif !default;
+$content-font:  'Droid Serif', serif !default;
 
 
 
@@ -13,8 +13,12 @@ body {
   font-family: $content-font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #4c4c4c; //sould be dynamic
 }
 
+h1, h2, h3, h4, h5, h6{
+  color: #000000;
+}
 
 h1 {
   font-size: modular-scale(5);
@@ -41,7 +45,12 @@ h5 {
 	font-family: $heading-font;
 }
 
-p {font-size: modular-scale(0);}
+p {
+  font-size: modular-scale(0);
+  &.lead{
+    font-size: modular-scale(1);
+  }
+}
 
 h6 {
   font-size: modular-scale(-1);

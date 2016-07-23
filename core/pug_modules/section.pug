@@ -6,8 +6,28 @@
 //- 	content 	: {}
 //- 	settings	: {}
 	
-mixin section(content, settings)
-	- settings = settings || ''
+mixin section(content, s)
+	-
+		settings = s || {
+			attrs: '',
+			background: '',
+			container: 'container',
+			alignContent: ''
+		}
+		
+		if(s)
+			settings.attrs = s.attrs || ''
+			settings.background = s.background || ''
+			settings.container = s.container || 'container'
+			settings.alignContent = s.alignContent || ''
+
+
+
+		content = content || {
+			layout: false
+		}
+
+
 
 	section(id=settings.attrs.id, class=settings.attrs.class)
 
@@ -26,9 +46,13 @@ mixin section(content, settings)
 
 
 
-		div(class=(settings.container||'container')+' '+(settings.alignContent||''))
+		div(class=(settings.container +' '+ settings.alignContent))
 			
 			if content.heading
 				+heading__section(content.heading.content, content.heading.settings)
 
-			+#{content.layout}(content.cards, content.settings)
+			if content.layout
+				+#{content.layout}(content.cards, content.settings)
+
+			//- Allowing uses to use custom block content/ Layout in sections
+			block
