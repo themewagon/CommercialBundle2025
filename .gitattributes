@@ -18,5 +18,5 @@
 
 # Making Zion engine seperate from child templates
 
-src/**/*.*    merge=ours
-bower.json    merge=ours
+src/**/*.* merge=ours
+bower.json merge=ours
