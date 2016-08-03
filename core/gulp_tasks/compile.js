@@ -48,7 +48,7 @@ gulp.task('compile:sass', function () {
 
 gulp.task('compile:pug', function () {
   return gulp.src('./src/pages/*.pug')
-    .pipe(watch(['./src/pages/*.pug', './src/pug_modules/**/*.pug']))
+    .pipe(watch(['./src/pages/*.pug']))
     .pipe(plumber())
     .pipe(gulpJade({
       jade: pug,
