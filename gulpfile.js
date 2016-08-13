@@ -38,7 +38,7 @@ global.browserSync = require('browser-sync').create();
 var requireDir  = require('require-dir');
 
 
-requireDir('./core/gulp_tasks');
+requireDir('./zcore/gulp_tasks');
 
 gulp.task('default', ['asset', 'compile', 'serve'],  function() {
 	console.log("\n\n*** Engine is firing up ***\n\n");
