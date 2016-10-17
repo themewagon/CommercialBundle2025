@@ -1,5 +1,5 @@
 {
-  "name": "ZiONCore",
+  "name": "ZiON",
   "version": "0.4.0",
   "description": "Web template crafting machine",
   "main": "gulpfile.js",
@@ -7,6 +7,7 @@
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
+    "gulp-gm": "0.0.8",
     "gulp-jade": "^1.1.0",
     "gulp-plumber": "^1.1.0",
     "gulp-preprocess": "^2.0.0",
