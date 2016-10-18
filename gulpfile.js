@@ -1,45 +1,29 @@
-// *************************************
-//
-//  Gulp tasks
-//  @since v4.0
-//
-// *************************************
-//
-// Available tasks:
-//
-//   `gulp`
-//
-//   `gulp init`
-//
-//   `gulp build`
-//   `gulp build:bin`
-//   `gulp build:product`
-//   `gulp build:compressed`
-//
-//   `gulp compile`
-//   `gulp compile:js`
-//   `gulp compile:sass`
-//   `gulp compile:jade`
-//
-//   `gulp asset`
-//   `gulp asset:fonts`
-//   `gulp asset:images`
-//   `gulp asset:videos`
-//   `gulp asset:bower`
-//
-//   `gulp connect`
-//
-// *************************************
+/**
+ * The base Task runner for ZiON
+ *
+ * The gulpfile.js connects all other sub task runners.
+ * All the task runners are located at './zcore/gulp_tasks'
+ * 
+ *
+ * ZiON currently supports the following major commands:
+ *
+ * * gulp
+ * * gulp:bin (alies `gulp`)
+ * * gulp:product
+ * * gulp:compressed
+ *
+ * @link https://zioplates.com/
+ *
+ * @package ZiON
+ */
 
 
-global.gulp        = require('gulp');
-global.browserSync = require('browser-sync').create();
-
-var requireDir  = require('require-dir');
+var gulp        = require('gulp'),
+	requireDir  = require('require-dir');
 
 
 requireDir('./zcore/gulp_tasks');
 
-gulp.task('default', ['asset', 'compile', 'serve'],  function() {
-	console.log("\n\n*** Engine is firing up ***\n\n");
+gulp.task('default', ['bin'],  function() {
+	console.log("\n\n*** Firing up!! ***\n\n");
 });
