@@ -10,7 +10,7 @@
  * * gulp
  * * gulp:bin (alies `gulp`)
  * * gulp:product
- * * gulp:compressed
+ * * gulp:compress
  *
  * @link https://zioplates.com/
  *
