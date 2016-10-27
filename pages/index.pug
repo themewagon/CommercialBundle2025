@@ -1,8 +1,12 @@
 extends ../pug_modules/skeleton
 
 block content
+
+	include ../pug_modules/header
+	
 	h1.text-center 
-		img(src="assets/images/model.jpg")
 		br
 		br
-		| Hello da'ling!
+		| Hello da'ling! #{ZION_ENV}
+	
+	include ../pug_modules/footer
