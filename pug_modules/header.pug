@@ -1,6 +1,9 @@
-header.text-center
-	.container
-		br
-		br
-		br
-		img(src="./assets/images/logo.png", alt="ZiON")
+include ../pug_modules/elements
+
+header
+	+section(false, 'container')(class="color-white text-center")
+		.row
+			.col-sm-8.col-sm-offset-2
+				h1 aqua
+				.spacer-half
+				p.fs-2.l-h-2.opacity-75.font-italic aqua contain the common template elements that can be readily used and customized across pages and in different blocks.
