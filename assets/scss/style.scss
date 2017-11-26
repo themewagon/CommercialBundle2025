@@ -1,2 +1,57 @@
 @import "config";
 @import "../../zcore/assets/scss/core.scss";
+
+//body styles
+
+body{
+	padding: 52px;
+}
+
+
+//header-style
+.h-box{
+	min-height: calc(100vh - 104px);
+	margin-bottom: 52px;
+}
+
+
+//navigation styles
+.navbar-hideaway{
+	background: rgba(255,255,255,0);
+	margin-bottom: -154px;
+	color: rgb(42, 56, 85);
+}
+
+.znav-container .navbar a.navbar-brand {
+    text-transform: none;
+}
+
+.znav-white a.navbar-brand {
+    color: #ffffff;
+}
+
+.znav-white a:not(.btn) {
+    color: rgba(255, 255, 255, 1);
+}
+
+.znav-white a:not(.btn):hover, .znav-white a:not(.btn):focus, .znav-white a:not(.btn):active:focus {
+    color: #ffffff;
+}
+
+.znav-container ul li a:not(.btn){
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+.znav-container ul li a:not(.btn):active, .znav-container ul li a:not(.btn):hover, .znav-container ul li a:not(.btn):focus, .znav-container ul li a:not(.btn):active:focus {
+	border-color: white;
+}
+
+//link hover
+
+.hover-op a:hover{
+	color: map-get($colors, color-10);
+}
+
+.hoverbox-bg{
+	// background: red;
+}

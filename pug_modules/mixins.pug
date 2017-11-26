@@ -1,0 +1,64 @@
+
+mixin navigation
+	#znav-container.znav-white.znav-container.sticky-top.navbar-hideaway
+		.container.py-5
+			nav.navbar.navbar-expand-lg
+				a.navbar-brand.overflow-hidden.pr-3(href='index.html') The Hideaway Resort
+				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+					.hamburger.hamburger--emphatic
+						.hamburger-box
+							.hamburger-inner
+				#navbarNavDropdown.collapse.navbar-collapse
+					ul.navbar-nav.ml-6.font-2.fs-0
+						li
+							a(href='#') Gallery
+						li
+							a(href='#') Amneities
+						li
+							a(href='#') Packages
+						li
+							a(href='#') Our History
+					ul.navbar-nav.ml-auto 
+						li
+							a(href='https://themewagon.com/themes/elixir-elegant-html5-bootstrap-template-consultancy-agency-website/' target="Blank").btn.btn-outline-white.btn-sm.border-2x.fw-700 Book Your Stay
+
+
+mixin static-header
+	section.py-0.text-center
+		+background({image: src="assets/images/header-1.jpg", cssclass: ""})(style="background-position: left")
+		.container
+			.row.h-box.align-items-center.py-8
+				.col
+					p.color-white.fs-2.ls stone ridge / new york
+					h1.color-white The Hideaway Resort
+					 
+
+
+
+
+mixin footer
+	+section(false, 'container')(class="text-center")
+		.row.justify-content-center
+			.col-12
+				h5 The Hideaway Resort
+				h6.mt-6 Subscribe to our mailing list to receive updates and promotional offers.
+			.col-5.mt-4
+				form(method="post").mt-4
+					.row.align-items-center
+						.col-8
+							input.form-control(type="hidden" name="to" value="username@domain.extension")
+							.input-group
+								input(type="text" placeholder="Enter Email Here").form-control
+						.col-4
+							button.btn.btn-block(type="submit")
+										span Submit
+
+				p.mt-6 Photos Courtesy of 
+					a(href="#") Hasbrouck House
+			.col-12.mt-5
+				a(href="#").d-inline-block.mx-2 Home
+				a(href="#").d-inline-block.mx-2 Book Now
+				a(href="#").d-inline-block.mx-2 Contact
+				a(href="#").d-inline-block.mx-2 Events
+				a(href="#").d-inline-block.mx-2 Policies
+				a(href="#").d-inline-block.mx-2 Term + Conditions

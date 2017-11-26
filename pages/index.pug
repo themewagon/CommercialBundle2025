@@ -1,7 +1,69 @@
 extends ../pug_modules/skeleton
 
 block content
-	+section(false, "container")(class="py-0 text-center")
-		.row.h-100vh.align-items-center
-			.col
-				h1.my-0.fw-100 Let's do something interesting
+
+	+navigation
+
+	+static-header
+
+	+section(false, '')(class="text-center")
+		.row.justify-content-center
+			a(href="#").col-sm-6.col-md-4.col-lg-3
+				.hoverbox.py-8
+					+background({image:"https://static1.squarespace.com/static/5898b93886e6c0c6ce82f191/t/590cb8903a04111a3cbf3bef/1494271722382/?format=500w", cssclass:""})
+					h4.color-white Gallery
+					.hoverbox-content.full-height.justify-content-center.row.align-items-center.hoverbox-bg.p-5
+						.border.border-2x.border-color-white.w-100.h-100.py-7
+							| LDhfod
+					
+								
+			a(href="#").col-sm-6.col-md-4.col-lg-3
+				.hoverbox.py-8
+					+background({image:"https://static1.squarespace.com/static/5898b93886e6c0c6ce82f191/t/5910ca845016e1d346f4505e/1494272654392/03_20161004S1_BOUTIQUE_HOTEL_HASBROUCK_HOUSE_BAR_017.jpg?format=500w", cssclass:""})
+					h4.color-white Gallery
+					.hoverbox-content.full-height.justify-content-center.row.align-items-center.hoverbox-bg.p-5
+						.border.border-2x.border-color-white.w-100.h-100.py-7
+							| LDhfod
+					
+								
+			a(href="#").col-sm-6.col-md-4.col-lg-3
+				.hoverbox.py-8
+					+background({image:"https://static1.squarespace.com/static/5898b93886e6c0c6ce82f191/t/590b44cee6f2e17836ec542b/1494255305456/", cssclass:""})
+					h4.color-white Gallery
+					.hoverbox-content.full-height.justify-content-center.row.align-items-center.hoverbox-bg.p-5
+						.border.border-2x.border-color-white.w-100.h-100.py-7
+							| LDhfod
+					
+								
+		//- .row.justify-content-center
+			.col-sm-6.col-md-4.col-lg-3
+				.row.p-3
+					a(href="#").col(style="min-height:400px;")
+						+background({image:"https://static1.squarespace.com/static/5898b93886e6c0c6ce82f191/t/590cb8903a04111a3cbf3bef/1494271722382/?format=500w", cssclass:""})
+							a(href="#").hover-op
+								h4.py-9.color-white Galley
+			.col-sm-6.col-md-4.col-lg-3
+				.row.p-3
+					a(href="#").col(style="min-height:400px;")
+						+background({image:"https://static1.squarespace.com/static/5898b93886e6c0c6ce82f191/t/5910ca845016e1d346f4505e/1494272654392/03_20161004S1_BOUTIQUE_HOTEL_HASBROUCK_HOUSE_BAR_017.jpg?format=500w", cssclass:""})
+							a(href="#").hover-op
+								h4.py-9.color-white Amneities
+			.col-sm-6.col-md-4.col-lg-3
+				.row.p-3
+					a(href="#").col(style="min-height:400px;")
+						+background({image:"https://static1.squarespace.com/static/5898b93886e6c0c6ce82f191/t/590b44cee6f2e17836ec542b/1494255305456/", cssclass:""})
+							a(href="#").hover-op
+								h4.py-9.color-white Packages
+						
+			//- .col-sm-6.col-md-4.col-lg-3
+			//- 	h4 Amneities
+			//- 	a(href="#").d-inline-block
+			//- 		img(src="https://static1.squarespace.com/static/5898b93886e6c0c6ce82f191/t/5910ca845016e1d346f4505e/1494272654392/03_20161004S1_BOUTIQUE_HOTEL_HASBROUCK_HOUSE_BAR_017.jpg?format=500w" alt="")
+			//- 		p.color-white Amneities
+			//- .col-sm-6.col-md-4.col-lg-3
+			//- 	h4 Packages
+			//- 	a(href="#").d-inline-block
+			//- 		img(src="https://static1.squarespace.com/static/5898b93886e6c0c6ce82f191/t/590b44cee6f2e17836ec542b/1494255305456/" alt="")
+			//- 		p.color-white Packages
+						
+	+footer
