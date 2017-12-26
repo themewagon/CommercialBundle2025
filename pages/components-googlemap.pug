@@ -1,0 +1,81 @@
+extends ../pug_modules/skeleton
+
+block append styles
+	link(href="assets/lib/prism/prism.css" rel="stylesheet")
+
+block append scripts
+	script(src='assets/lib/prism/prism.js')
+	script(src="assets/js/googlemap.js")
+	script(src!='https://maps.googleapis.com/maps/api/js?key=AIzaSyCoK8GIrOHzHwnzHCyqrdtmTpUWcdrTTD8&callback=initMap' async)
+
+block append variables
+	-var pageTitle = 'Maps'
+	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
+
+
+block append content
+	+navigation
+
+	+classic-header('Google Map')
+	
+
+	+section(false, 'container')(class="")
+		.googlemap(data-latlng='48.8583701,2.2922873,17' data-scrollwheel='false' data-icon='assets/images/map-marker.png'  data-zoom='17' data-theme='Tripitty')
+			.marker-content.py-3
+				h5 Eiffel Tower
+				p
+					| Gustave Eiffel's iconic, wrought-iron 1889 tower,
+					br
+					|  with steps and elevators to observation decks.
+
+
+
+		h5.mt-5 HTML
+		pre
+			code.lang-html.
+				#{'<div data-latlng="48.8583701,2.2922873,17" data-scrollwheel="false" data-icon="assets/images/hotel-icon.png" data-zoom="2" data-theme="Tripitty" style="min-height: 300px" class="googlemap">\n\t<div class="marker-content py-3">\n\t\t<h5>Eiffel Tower</h5>\n\t\t<p>Gustave Eiffel\'s iconic, wrought-iron 1889 tower,<br/> with steps and elevators to observation decks.</p>\n\t</div>\n</div>'}
+
+		h5.mt-5 JavaScript
+		pre
+			code.lang-html.
+				#{'<script src="assets/js/googlemap.js"></script>\n<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>'}
+
+		h5.mt-5 Map color schemes
+		p Change the value of
+			code data-theme=''
+			| to any of the followings
+
+		ul
+			li
+				code Default
+			li
+				code Gray
+			li
+				code Midnight
+			li
+				code Hopper
+			li
+				code Beard
+			li
+				code AssassianCreed
+			li
+				code SubtleGray
+			li
+				code Tripitty
+
+		h5.mt-5 Example
+		p With 
+			code AssassianCreed 
+			| scheme
+		.googlemap(data-latlng='48.8583701,2.2922873,17' data-scrollwheel='false' data-icon='assets/images/map-marker.png' data-zoom='17' data-theme='AssassianCreed' style="height: 300px")
+			.marker-content.py-3
+				h5 Eiffel Tower
+				p
+					| Gustave Eiffel's iconic, wrought-iron 1889 tower,
+					br
+					|  with steps and elevators to observation decks.
+
+						
+	
+
+	+footer

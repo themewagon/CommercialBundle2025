@@ -1,0 +1,68 @@
+extends ../pug_modules/skeleton
+
+block append variables
+	-var pageTitle = 'Layout helpers'
+	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
+
+
+block append styles
+	link(href="assets/lib/prism/prism.css" rel="stylesheet")
+
+block append scripts
+	script(src='assets/lib/prism/prism.js')
+
+block append content
+	+navigation
+
+	+classic-header('Layout Helpers')
+
+
+	+section(false, 'container')(class="")
+		.row
+			.col
+				p Easily make an element as wide or as tall (relative to its parent) with our width and height utilities. Includes support for 
+					code.highlighter-rouge 25%
+					| , 
+					code.highlighter-rouge 50%
+					| , 
+					code.highlighter-rouge 75%
+					| , and 
+					code.highlighter-rouge 100%
+					|  by default.
+
+				.py-5
+					.background-11.color-1.p-2.border-dashed.mb-3.w-100
+						code .w-100
+					.background-11.color-1.p-2.border-dashed.mb-3.w-75
+						code .w-75
+					.background-11.color-1.p-2.border-dashed.mb-3.w-50
+						code .w-50
+					.background-11.color-1.p-2.border-dashed.mb-3.w-25
+						code .w-25
+
+
+				.row.color-1.py-3(style='height: 300px')
+					.col
+						.p-2.border-dashed.mb-3.h-100
+							code .h-100
+					.col
+						.p-2.border-dashed.mb-3.h-75
+							code .h-75
+					.col
+						.p-2.border-dashed.mb-3.h-50
+							code .h-50
+					.col
+						.p-2.border-dashed.mb-3.h-25
+							code .h-25
+
+				h5.mt-5 Special height classes
+				pre
+					code.lang-css.
+						#{'.h-full{ min-height: 100vh; }'}
+						#{'.h-half {min-height: 50vh; }'}
+						#{'.h-100vh{ height: 100vh !important; }'}
+
+						
+	
+
+	+footer

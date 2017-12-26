@@ -1,0 +1,214 @@
+extends ../pug_modules/skeleton
+
+block append styles
+	link(href="assets/lib/prism/prism.css" rel="stylesheet")
+
+block append scripts
+	script(src='assets/lib/prism/prism.js')
+block append variables
+	-var pageTitle = 'Buttons'
+	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
+
+block append content
+	+navigation
+
+	+classic-header('Buttons')
+
+
+	+section(false, 'container')(class="")
+		.row
+			.col
+				h4 Buttons Colors
+				p
+					strong Posh
+					|  use 
+					code .btn
+					|  class for default button style. Customize the color of a button using 
+					code .btn-*
+					|  and 
+					code .btn-outline-*
+					| . You can use the following classes.
+				
+				.my-5
+				h5 Solid Buttons
+				.py-3
+					a(href="#").btn.btn-secondary.mr-3.mb-3 .btn-secondary
+					a(href="#").btn.btn-primary.mr-3.mb-3 .btn-primary
+					a(href="#").btn.btn-info.mr-3.mb-3 .btn-info
+					a(href="#").btn.btn-success.mr-3.mb-3 .btn-success
+					a(href="#").btn.btn-warning.mr-3.mb-3 .btn-warning
+					a(href="#").btn.btn-danger.mr-3.mb-3 .btn-danger
+					a(href="#").btn.btn-dark.mb-3 .btn-dark
+				.my-4
+				pre
+					code.language-html.
+						#{'<a href="#" class="btn btn-secondary">.btn-secondary</a>\n<a href="#" class="btn btn-primary">.btn-primary</a>\n<a href="#" class="btn btn-info">btn-info</a>\n<a href="#" class="btn btn-success">.btn-success</a>\n<a href="#" class="btn btn-warning">.btn-warning</a>\n<a href="#" class="btn btn-danger">.btn-danger</a>\n<a href="#" class="btn btn-dark">.btn-dark</a>'}
+				.my-5
+				h5 Outline Buttons
+				.py-3
+					a(href="#").btn.btn-outline-primary.mr-3.mb-3 .btn-outline-primary
+					a(href="#").btn.btn-outline-info.mr-3.mb-3 btn-outline-info
+					a(href="#").btn.btn-outline-success.mr-3.mb-3 .btn-outline-success
+					a(href="#").btn.btn-outline-danger.mr-3.mb-3 .btn-outline-danger
+					a(href="#").btn.btn-outline-dark.mb-3 .btn-outline-dark
+				.my-4
+				pre
+					code.language-html.
+						#{'<a href="#" class="btn btn-outline-primary">.btn-outline-primary</a>\n<a href="#" class="btn btn-outline-info">btn-outline-info</a>\n<a href="#" class="btn btn-outline-success">.btn-outline-success</a>\n<a href="#" class="btn btn-outline-danger">.btn-outline-danger</a>\n<a href="#" class="btn btn-outline-dark">.btn-outline-dark</a>'}
+
+				.my-5
+				h5 Inverted Buttons
+				.p-3.background-1
+					a(href='#').btn.btn-white.mr-3.mt-3 .btn-white
+					a(href="#").btn.btn-outline-white.mr-3.mt-3 .btn-outline-white
+					a(href="#").btn.btn-outline-warning.mt-3 .btn-outline-warning
+				.my-4
+				pre
+					code.language-html.
+						#{'<a href="#" class="btn btn-white">.btn-white</a>\n<a href="#" class="btn btn-outline-white">btn-outline-white</a>\n<a href="#" class="btn btn-outline-warning">.btn-outline-warning</a>'}
+				
+				.my-6
+				h4 Buttons Sizes
+				p
+					| Customize the size of a button using 
+					code .btn-xs
+					|	, 
+					code .btn-sm
+					|  and 
+					code .btn-lg
+
+				.py-3
+					a(href="#").btn.btn-outline-primary.btn-xs.mr-3.mb-3 .btn-xs
+					a(href="#").btn.btn-outline-primary.btn-sm.mr-3.mb-3 .btn-sm
+					a(href="#").btn.btn-outline-primary.mr-3.mb-3 .btn
+					a(href="#").btn.btn-outline-primary.btn-lg.mb-3 .btn-lg
+
+				.my-4
+				pre
+					code.language-html.
+						#{'<a class="btn btn-outline-primary btn-xs" href="#">.btn-xs</a>\n<a class="btn btn-outline-primary btn-sm" href="#">.btn-sm</a>\n<a class="btn btn-outline-primary" href="#">.btn</a>\n<a class="btn btn-outline-primary btn-lg" href="#">.btn-lg</a>'}
+				
+				.my-6
+				h4 Buttons Shapes
+				p
+					| Customize the shape of a button using 
+					code .btn
+					|  and 
+					code .btn-capsule
+
+				.py-3
+					a(href="#").btn.btn-primary.mr-3 .btn
+					a(href="#").btn.btn-primary.btn-capsule .btn-capsule
+
+				.my-4
+				pre
+					code.language-html.
+						#{'<a href="#" class="btn btn-primary">.btn</a>\n<a href="#" class="btn btn-primary btn-capsule">.btn-capsule</a>'}				
+
+				.my-6
+				h4 Buttons with Icon
+				p
+					| Use 
+					code .btn-icon-left
+					|  or 
+					code .btn-icon-right
+					|  class for the icon position. For outline button, use 
+					code .btn-outline-*
+					|  . To make capsule like button, you can use
+					code .btn-capsule
+					|  class.
+				.pt-3
+					a(href="#").btn.btn-icon.btn-primary.btn-icon-left.mr-4.mb-4
+						span.fa.fa-gitlab.mr-3
+						| .btn-icon
+					a(href="#").btn.btn-icon.btn-primary.btn-icon-right.mr-4.mb-4
+						span.fa.fa-gitlab.ml-3
+						| .btn-icon
+					a(href="#").btn.btn-icon.btn-outline-primary.btn-icon-left.mr-4.mb-4
+						span.fa.fa-gitlab.mr-3
+						| .btn-icon
+					a(href="#").btn.btn-icon.btn-outline-primary.btn-icon-right.mr-4.mb-4
+						span.fa.fa-gitlab.ml-3
+						| .btn-icon
+
+					br
+						
+					a(href="#").btn.btn-icon.btn-primary.btn-icon-left.btn-capsule.mr-4.mb-4
+						span.fa.fa-gitlab.mr-3
+						| .btn-icon
+					a(href="#").btn.btn-icon.btn-primary.btn-icon-right.btn-capsule.mr-4.mb-4
+						span.fa.fa-gitlab.ml-3
+						| .btn-icon
+					a(href="#").btn.btn-icon.btn-outline-primary.btn-icon-left.btn-capsule.mr-4.mb-4
+						span.fa.fa-gitlab.mr-3
+						| .btn-icon
+					a(href="#").btn.btn-icon.btn-outline-primary.btn-icon-right.btn-capsule.mr-4.mb-4
+						span.fa.fa-gitlab.ml-3
+						| .btn-icon
+				
+				.my-4
+				pre
+					code.language-html.
+						#{'<a href="#" class="btn btn-icon btn-primary btn-icon-left">\n\t<span class="fa fa-gitlab">\n\t</span> .btn-icon\n</a>\n<a href="#" class="btn btn-icon btn-primary btn-icon-right">\n\t<span class="fa fa-gitlab">\n\t</span> .btn-icon\n</a>\n<a href="#" class="btn btn-icon btn-outline-primary btn-icon-left">\n\t<span class="fa fa-gitlab">\n\t</span> .btn-icon\n</a>\n<a href="#" class="btn btn-icon btn-outline-primary btn-icon-right">\n\t<span class="fa fa-gitlab">\n\t</span> .btn-icon\n</a>\n<a href="#" class="btn btn-icon btn-primary btn-icon-left btn-capsule">\n\t<span class="fa fa-gitlab">\n\t</span> .btn-icon\n</a>\n<a href="#" class="btn btn-icon btn-primary btn-icon-right btn-capsule">\n\t<span class="fa fa-gitlab">\n\t</span> .btn-icon\n</a>\n<a href="#" class="btn btn-icon btn-outline-primary btn-icon-left btn-capsule">\n\t<span class="fa fa-gitlab">\n\t</span> .btn-icon\n</a>\n<a href="#" class="btn btn-icon btn-outline-primary btn-icon-right btn-capsule">\n\t<span class="fa fa-gitlab">\n\t</span> .btn-icon\n</a>'}
+
+				.my-5
+				h5 Special Buttons
+				p
+					|  You can use the classes 
+					code .btn-facebook
+					| , 
+					code .btn-twitter
+					| , 
+					code .btn-google-plus
+					| , 
+					code .btn-github
+					|  etc. to color buttons with their corresponding brand colors.
+				.py-3
+					a(href="#").btn.btn-icon.btn-facebook.btn-icon-left.mr-3.mt-3
+						span.fa.fa-facebook
+						| Join Facebook
+					a(href="#").btn.btn-icon.btn-twitter.btn-icon-left.mr-3.mt-3
+						span.fa.fa-twitter
+						| Join Twitter
+					a(href="#").btn.btn-icon.btn-google-plus.btn-icon-left.mr-3.mt-3
+						span.fa.fa-google-plus
+						| Join Google+
+					a(href="#").btn.btn-icon.btn-github.btn-icon-left.mr-3.mt-3
+						span.fa.fa-github
+						| See Github
+
+				.my-4
+				pre
+					code.language-html.
+						#{'<a href="#" class="btn btn-icon btn-facebook btn-icon-left">\n\t<span class="fa fa-facebook"></span> Join facebook\n</a>\n<a href="#" class="btn btn-icon btn-twitter btn-icon-left">\n\t<span class="fa fa-twitter"></span>	Join Twitter\n</a>\n<a href="#" class="btn btn-icon btn-google-plus btn-icon-left">\n\t<span class="fa fa-google-plus"></span>	Join Google+\n</a>\n<a href="#" class="btn btn-icon btn-github btn-icon-left">\n\t<span class="fa fa-github"></span> See Github\n</a>'}
+				.my-6
+				h5 Play Buttons
+				.background-2.p-3
+					a(href='#')
+						img(src='assets/images/icon-play.svg' width=80)
+					a(href='#').ml-5
+						img(src='assets/images/icon-play-o.svg' width=80)
+				.my-6
+				h4 Buttons Group
+				p
+					| Group a series of buttons together on a single line with the button group. Wrap a series of buttons with 
+					code .btn
+					|	in 
+					code .btn-group
+					|  .
+
+				.my-4
+				.btn-group.btn-capsule.d-none.d-md-flex(role='group', aria-label='...')
+					button.btn.btn-capsule.btn-secondary.background-white(type='button')
+						span.color-primary .btn-secondary
+					button.btn.btn-capsule.btn-secondary.background-white(type='button')
+						span.color-primary .btn-secondary
+					button.btn.btn-capsule.btn-secondary.background-white(type='button')
+						span.color-primary .btn-secondary
+
+				.my-4
+				pre
+					code.language-html.
+						#{'<div class="btn-group">\n\t<button class="btn btn-secondary">.btn-secondary</button>\n\t<button class="btn btn-secondary">.btn-secondary</button>\n\t<button class="btn btn-secondary">.btn-secondary</button>\n</div>'}
+
+	+footer

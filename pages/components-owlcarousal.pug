@@ -1,0 +1,444 @@
+extends ../pug_modules/skeleton
+
+block append styles
+	link(href="assets/lib/prism/prism.css" rel="stylesheet")
+	link(href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet")
+	link(href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet")
+
+block append scripts
+	script(src='assets/lib/prism/prism.js')
+	script(src="assets/lib/owl.carousel/dist/owl.carousel.min.js")
+
+block append variables
+	-var pageTitle = 'Owl Carousel'
+	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
+
+
+
+block append content
+	+navigation
+
+	+classic-header('Owl Carousal')
+
+	+section(false, 'container')(class=' color-5 pt-0')
+		.owl-carousel.owl-theme.owl-nav-outer.owl-dot-round.mt-8(data-options!={items: 3})
+			.item.mx-2
+				img.radius-secondary(src='assets/images/portrait-3.jpg' )
+			.item.mx-2
+				img.radius-secondary(src='assets/images/portrait-4.jpg')
+			.item.mx-2
+				img.radius-secondary(src='assets/images/portrait-5.jpg')
+			.item.mx-2
+				img.radius-secondary(src='assets/images/portrait-6.jpg')
+			.item.mx-2
+				img.radius-secondary(src='assets/images/portrait-7.jpg')
+			.item.mx-2
+				img.radius-secondary(src='assets/images/portrait-1.jpg')
+		h5.mt-6 HTML
+		pre.mb-5
+			code.lang-html.
+				#{'<div data-dots="true" data-nav="true" data-items=\'{"0":{"items":2},"600":{"items":2}}\' data-autoplay="true" data-margin="30" data-loop="true" class="owl-carousel owl-theme owl-nav-outer owl-dot-round">\n\t<div class="item"><img src="assets/images/s-01.jpg" class="radius-primary"/></div>\n\t<div class="item"><img src="assets/images/s-02.jpg" class="radius-primary"/></div>\n\t<div class="item"><img src="assets/images/s-03.jpg" class="radius-primary"/></div>\n\t<div class="item"><img src="assets/images/s-04.jpg" class="radius-primary"/></div>\n\t<div class="item"><img src="assets/images/s-05.jpg" class="radius-primary"/></div>\n\t<div class="item"><img src="assets/images/s-06.jpg" class="radius-primary"/></div>\n</div>'}
+		h5.mt-5 JavaScript
+		pre
+			code.lang-html.
+				#{'<script src="assets/lib/owl.carousel/dist/owl.carousel.min.js"></script>'}
+		h5.mt-5 CSS
+		pre
+			code.lang-html.
+				#{'<link href="assets/lib/owl.carousel/dist/assets/owl.carousel.min.css" rel="stylesheet">\n<link href="assets/lib/owl.carousel/dist/assets/owl.theme.default.min.css" rel="stylesheet">'}
+		h5.mt-5 Navigation positions and shapes
+		p Use the following classes or their combinations along with 
+			code .owl-carousel.owl-theme
+			|  to update the navigtation and dots scheme:
+
+		ol
+			li
+				code .owl-dots-inner
+			li
+				code .owl-dot-round
+			li
+				code .owl-nav-outer
+			li
+				code .owl-nav-square
+		h5.mt-5 Options
+		.table-responsive
+			table.table
+				thead
+					tr
+						th data-options
+						th object
+				tbody
+					tr
+						td Example
+						td
+							pre
+								code.lang-css #{'data-options={"dots": true, "autoplay": true, "loop": true, "items": 3}}'}
+
+
+		.table-responsive
+			table.table
+				thead
+					tr
+						th Option
+						th Type
+						th Defaults
+						th Description
+				tbody
+					tr
+						td#items items
+						td 
+							code Number
+						td
+							code 3
+						td The number of items you want to see on the screen.
+					tr
+						td#margin margin
+						td 
+							code Number
+						td
+							code 0
+						td margin-right(px) on item.
+					tr
+						td#loop loop
+						td 
+							code Boolean
+						td
+							code false
+						td Infinity loop. Duplicate last and first items to get loop illusion.
+					tr
+						td#center center
+						td 
+							code Boolean
+						td
+							code false
+						td Center item. Works well with even an odd number of items.
+					tr
+						td#mousedrag mouseDrag
+						td 
+							code Boolean
+						td
+							code true
+						td Mouse drag enabled.
+					tr
+						td#touchdrag touchDrag
+						td 
+							code Boolean
+						td
+							code true
+						td Touch drag enabled.
+					tr
+						td#pulldrag pullDrag
+						td 
+							code Boolean
+						td
+							code true
+						td Stage pull to edge.
+					tr
+						td#freedrag freeDrag
+						td 
+							code Boolean
+						td
+							code false
+						td Item pull to edge.
+					tr
+						td#stagepadding stagePadding
+						td 
+							code Number
+						td
+							code 0
+						td Padding left and right on stage (can see neighbours).
+					tr
+						td#merge merge
+						td 
+							code Boolean
+						td
+							code false
+						td Merge items. Looking for data-merge='{number}' inside item..
+					tr
+						td#mergefit mergeFit
+						td 
+							code Boolean
+						td
+							code true
+						td Fit merged items if screen is smaller than items value.
+					tr
+						td#autowidth autoWidth
+						td 
+							code Boolean
+						td
+							code false
+						td Set non grid content. Try using width style on divs.
+					tr
+						td#startposition startPosition
+						td 
+							code Number/String
+						td
+							code 0
+						td Start position or URL Hash string like '#id'.
+					tr
+						td#urlhashlistener URLhashListener
+						td 
+							code Boolean
+						td
+							code false
+						td Listen to url hash changes. data-hash on items is required.
+					tr
+						td#nav nav
+						td 
+							code Boolean
+						td
+							code false
+						td Show next/prev buttons.
+					tr
+						td#rewind rewind
+						td 
+							code Boolean
+						td
+							code true
+						td Go backwards when the boundary has reached.
+					tr
+						td#navtext navText
+						td 
+							code Array
+						td
+							code [&#x27;next&#x27;,&#x27;prev&#x27;]
+						td HTML allowed.
+					tr
+						td#navelement navElement
+						td 
+							code String
+						td
+							code div
+						td DOM element type for a single directional navigation link.
+					tr
+						td#slideby slideBy
+						td 
+							code Number/String
+						td
+							code 1
+						td Navigation slide by x. 'page' string can be set to slide by page.
+					tr
+						td#dots dots
+						td 
+							code Boolean
+						td
+							code true
+						td Show dots navigation.
+					tr
+						td#dotseach dotsEach
+						td 
+							code Number/Boolean
+						td
+							code false
+						td Show dots each x item.
+					tr
+						td#dotdata dotData
+						td 
+							code Boolean
+						td
+							code false
+						td Used by data-dot content.
+					tr
+						td#lazyload lazyLoad
+						td 
+							code Boolean
+						td
+							code false
+						td
+							| Lazy load images. data-src and data-src-retina for highres. Also load images into background inline style if element is not <img>
+					tr
+						td#lazycontent lazyContent
+						td 
+							code Boolean
+						td
+							code false
+						td
+							| lazyContent was introduced during beta tests but i removed it from the final release due to bad implementation. It is a nice options so i will work on it in the nearest feature.
+					tr
+						td#autoplay autoplay
+						td 
+							code Boolean
+						td
+							code false
+						td Autoplay.
+					tr
+						td#autoplaytimeout autoplayTimeout
+						td 
+							code Number
+						td
+							code 5000
+						td Autoplay interval timeout.
+					tr
+						td#autoplayhoverpause autoplayHoverPause
+						td 
+							code Boolean
+						td
+							code false
+						td Pause on mouse hover.
+					tr
+						td#smartspeed smartSpeed
+						td 
+							code Number
+						td
+							code 250
+						td Speed Calculate. More info to come..
+					tr
+						td#fluidspeed fluidSpeed
+						td 
+							code Boolean
+						td
+							code Number
+						td Speed Calculate. More info to come..
+					tr
+						td#autoplayspeed autoplaySpeed
+						td 
+							code Number/Boolean
+						td
+							code false
+						td autoplay speed.
+					tr
+						td#navspeed navSpeed
+						td 
+							code Number/Boolean
+						td
+							code false
+						td Navigation speed.
+					tr
+						td#dotsspeed dotsSpeed
+						td 
+							code Boolean
+						td
+							code Number/Boolean
+						td Pagination speed.
+					tr
+						td#dragendspeed dragEndSpeed
+						td 
+							code Number/Boolean
+						td
+							code false
+						td Drag end speed.
+					tr
+						td#callbacks callbacks
+						td 
+							code Boolean
+						td
+							code true
+						td Enable callback events.
+					tr
+						td#responsive responsive
+						td 
+							code Object
+						td
+							code empty object
+						td
+							| Object containing responsive options. Can be set to false to remove responsive capabilities.
+					tr
+						td#responsiverefreshrate responsiveRefreshRate
+						td 
+							code Number
+						td
+							code 200
+						td Responsive refresh rate.
+					tr
+						td#responsivebaseelement responsiveBaseElement
+						td 
+							code DOM element
+						td
+							code window
+						td
+							| Set on any DOM element. If you care about non responsive browser (like ie8) then use it on main wrapper. This will prevent from crazy resizing.
+					tr
+						td#video video
+						td 
+							code Boolean
+						td
+							code false
+						td Enable fetching YouTube/Vimeo/Vzaar videos.
+					tr
+						td#videoheight videoHeight
+						td 
+							code Number/Boolean
+						td
+							code false
+						td Set height for videos.
+					tr
+						td#videowidth videoWidth
+						td 
+							code Number/Boolean
+						td
+							code false
+						td Set width for videos.
+					tr
+						td#animateout animateOut
+						td 
+							code String/Boolean
+						td
+							code false
+						td Class for CSS3 animation out.
+					tr
+						td#animatein animateIn
+						td 
+							code String/Boolean
+						td
+							code false
+						td Class for CSS3 animation in.
+					tr
+						td#fallbackeasing fallbackEasing
+						td 
+							code String
+						td
+							code swing
+						td Easing for CSS2 $.animate.
+					tr
+						td#info info
+						td 
+							code Function
+						td
+							code false
+						td
+							| Callback to retrieve basic information (current item/pages/widths). Info function second parameter is Owl DOM object reference.
+					tr
+						td#nesteditemselector nestedItemSelector
+						td 
+							code String/Class
+						td
+							code false
+						td
+							| Use it if owl items are deep nested inside some generated content. E.g 'youritem'. Dont use dot before class name.
+					tr
+						td#itemelement itemElement
+						td 
+							code String
+						td
+							code div
+						td DOM element type for owl-item.
+					tr
+						td#stageelement stageElement
+						td 
+							code String
+						td
+							code div
+						td DOM element type for owl-stage.
+					tr
+						td#navcontainer navContainer
+						td 
+							code String/Class/ID/Boolean
+						td
+							code false
+						td Set your own container for nav.
+					tr
+						td#dotscontainer dotsContainer
+						td 
+							code String/Class/ID/Boolean
+						td
+							code false
+						td Set your own container for nav.
+
+
+		p.lead For more Details see 
+			a(href='https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html' target='_blank') Owl Carousel Documentation &xrarr;	
+
+						
+	
+
+	+footer

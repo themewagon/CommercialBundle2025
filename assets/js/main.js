@@ -1,5 +1,23 @@
-console.log('%c Proudly Crafted with ZiOn.', 'background: #222; color: #bada55');
-
 // @if ZION_ENV = 'DEBUG'
-//alert("debug mode!");
+//      alert("debug mode!");
 // @endif 
+
+
+// Preloader
+$.holdReady( true );
+
+$('body').imagesLoaded({ background: ".background-holder" }, function(){
+    $('#preloader').removeClass("loading");
+    $.holdReady( false );
+    setTimeout(function() {
+        $('#preloader').remove();
+    }, 800);
+});
+
+// Zanimation
+$(window).on('load', function(){
+    $('*[data-inertia]').each(function(){
+        $(this).inertia();
+    });
+
+});

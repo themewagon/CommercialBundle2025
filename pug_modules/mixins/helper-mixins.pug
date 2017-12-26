@@ -1,0 +1,18 @@
+mixin feature(image, title, price)
+	.pos-relative.h-100.p-lg-6.p-3
+		+background({image:"assets/images/feature/" + image + ".jpg", cssclass:"overlay overlay-2"})
+		.border.border-white.px-2.px-lg-4.py-5.py-lg-7.color-white
+			h3.mb-2.mb-lg-4.text-uppercase.fs-1.fs-lg-3= title
+			h4.text-uppercase.define-hr.fs--1.fs-lg-2 from #{price}
+		div.d-none.d-lg-block
+			a(href="#").btn.btn-lg.btn-white.mt--1 Book now
+			a(href="#").color-white.d-block.mt-3 Click here for more details
+		div.d-lg-none
+			a(href="#").btn.btn-sm.btn-white.mt--1 Book now
+			a(href="#").color-white.d-block.mt-3.fs--1 Click here for more details
+
+mixin classic-header(title)
+	+section({image: "a", cssclass: "overlay overlay-2"}, "container")
+		.row.align-items-center.justify-content-center.text-center
+			.col
+				h1.color-white=title

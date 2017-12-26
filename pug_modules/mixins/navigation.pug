@@ -1,0 +1,70 @@
+mixin navigation
+	#znav-container.znav-hideaway.znav-container.navbar-hideaway
+		.container.py-5
+			nav.navbar.navbar-expand-lg
+				a.navbar-brand.overflow-hidden.pr-3.fs-3.d-none.d-lg-inline-block(href='index.html')  Hideaway Resort
+				a.navbar-brand.overflow-hidden.pr-3.fs-lg-3.fs-0.d-lg-none(href='index.html') Hideaway
+				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+					.hamburger.hamburger--emphatic
+						.hamburger-box
+							.hamburger-inner
+				#navbarNavDropdown.collapse.navbar-collapse
+					ul.navbar-nav.ml-6.font-2.fs-0
+						li
+							a(href='JavaScript:void(0)') Home
+							ul.dropdown.fs--1
+								li
+									a(href="sliding-header.html") Sliding Header
+								li
+									a(href="sliding-header-classic.html") Sliding Header Classic
+								li
+									a(href="static-header.html") Static Header
+								li
+									a(href="static-header-classic.html") Static Header Classic
+								li
+									a(href="video-background.html") Video Background
+								li
+									a(href="video-background-classic.html") Video Background Classic
+								li
+									a(href="self-hosted-video-background.html") Self Hosted Video
+								li
+									a(href="self-hosted-video-background-classic.html") Self Hosted Video Classic
+						li
+							a(href='JavaScript:void(0)') Pages
+							ul.dropdown.fs--1
+								li
+									a(href="gallery.html") Gallery
+								li
+									a(href="amenities.html") Amenities
+								li
+									a(href="packages.html") Packages
+								li
+									a(href='history.html') Our History
+						li
+							a(href='JavaScript:void(0)') Elements
+							ul.dropdown.fs--1
+								li
+									a(href="components-buttons.html") Buttons
+								li
+									a(href="components-colors.html") Colors
+								li
+									a(href="components-googlemap.html") Google Map
+								li
+									a(href="components-grid.html") Grid
+								li
+									a(href="components-icons.html") Icons
+								li
+									a(href="components-layouthelpers.html") Layout Helpers
+								li
+									a(href="components-modal-video.html") Modal Video
+								li
+									a(href="components-owlcarousal.html") Owl Carousal
+								li
+									a(href="components-slider.html") Slider
+								li
+									a(href="components-typography.html") Typography
+						li
+							a(href='contact.html') Contact
+					ul.navbar-nav.ml-auto 
+						li
+							a(href='#' target="Blank").btn.btn-outline-white.border-2x.fw-700 Book Your Stay

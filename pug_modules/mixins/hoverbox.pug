@@ -1,0 +1,9 @@
+mixin hoverbox(link, name)
+	.hoverbox
+		//- .hvr-blur.hvr-scale
+		img.hvr-blur.hvr-scale(src=link)
+		.hoverbox-primary-content.as-hoverbox-content.d-flex.align-items-center.justify-content-center.h-100
+			h3.color-white= name
+		.hoverbox-content.p-4
+			.border.border-2x.border-color-primary.hoverbox-bg.d-flex.align-items-center.justify-content-center.h-100
+				// h3.color-white= name

@@ -1,0 +1,360 @@
+extends ../pug_modules/skeleton
+
+
+block append styles
+	link(href="assets/lib/prism/prism.css" rel="stylesheet")
+
+
+block append scripts
+	script(src='assets/lib/prism/prism.js')
+	
+
+
+block append variables
+	-var pageTitle = 'Typography'
+	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
+
+block append content
+	+navigation
+
+	+classic-header('Typography')
+
+
+	+section(false, 'container')(class="py-8")
+		h4 Font Family
+		p 
+			| You have two sets of 
+			code font-family
+			|  available to use in Elixir.
+		.my-4
+		.fs-2
+			.font-1 Montserrat
+			.font-2 Open Sans
+		
+		
+		pre
+			code.language-html.
+				#{'<div class="font-1">Montserrat</div>\n<div class="font-2">Open Sans</div>'}
+
+		.my-6
+
+		h4 Headings
+		p
+			strong Elixir 
+			| has all the html headings, 
+			code #{'<h1>'}
+			|  through 
+			code #{'<h6>'}
+			| , styled for you. Also you can use
+			code .h1
+			|  through 
+			code .h6
+			|  classes when you want to match the font styling of a heading but still want your text to be displayed inline.
+
+		.my-5
+
+		h1 Heading 1
+		h2 Heading 2
+		h3 Heading 3
+		h4 Heading 4
+		h5 Heading 5
+		h6 Heading 6
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>\n<h5>Heading 5</h5>\n<h6>Heading 6</h6>'}
+
+		.my-6
+
+		h4 Paragraphs
+		p
+			| This is a paragraph text. Following text are dummy copy text. Donec feugiat lorem dolor, eu fringilla urna tincidunt quis. In vitae dignissim lectus. Maecenas varius libero non metus rhoncus sagittis. Proin posuere iaculis auctor. Vivamus orci lorem, sollicitudin at convallis in, feugiat eget felis. Integer maximus, metus sit amet imperdiet semper, erat felis vulputate odio, nec malesuada metus.
+
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<p>\n\tYour paragraph text goes here.\n</p>'}
+		
+		.my-6
+
+		h4 Lead Paragraph and Drop cap
+
+		.my-4
+
+		p
+			| Make a paragraph stand out by adding 
+			code .lead
+			|  and for drop cap, use 
+			code .dropcap
+			|  class.
+		.my-4
+		p.dropcap.lead
+			| Aliquam a fermentum tortor, nec fringilla eros. Donec molestie lorem elit, eget eleifend neque dignissim nec. Suspendisse ullamcorper dapibus dolor eget auctor. Etiam tempor dui nec eros blandit tincidunt.
+
+		p.lead
+			| Curabitur ut sapien pretium nulla porttitor porta sit amet eu neque. Nunc nec erat odio. Praesent tristique pulvinar erat, quis cursus sem ultricies sed. Suspendisse ullamcorper dapibus dolor eget auctor. Ut quis egestas nibh. Aliquam a fermentum tortor, nec fringilla eros. Donec molestie lorem elit, eget eleifend neque dignissim nec. Etiam tempor dui nec eros blandit tincidunt.
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<p class="dropcap lead">\n\tYour paragraph goes here.\n</p>\n<p class="lead">\n\tYour paragraph goes here.\n</p>'}
+
+		.my-6
+
+		h4 Font styles
+		.my-5
+		h5 Font weights
+		pre
+			code.lang-css.
+				#{'.fw-100{font-weight: 100 !important;}\n.fw-200{font-weight: 200 !important;}\n.fw-300{font-weight: 300 !important;}\n.fw-400{font-weight: 400 !important;}\n.fw-500{font-weight: 500 !important;}\n.fw-600{font-weight: 600 !important;}\n.fw-700{font-weight: 700 !important;}\n.fw-800{font-weight: 800 !important;}\n.fw-900{font-weight: 900 !important;}'}
+		.my-5
+		h5 Colors
+		p
+			| Use the folloing classes to change the text color.
+		
+		.my-4
+		h5.color-primary .color-primary
+		h5.color-info .color-info
+		h5.color-success .color-success
+		h5.color-warning .color-warning
+		h5.color-danger .color-danger
+		h5.color-black .color-black
+		h5.color-1 .color-1
+		h5.color-2 .color-2
+		h5.color-3 .color-3
+		h5.color-4 .color-4
+		h5.color-5 .color-5
+		h5.color-6 .color-6
+		h5.color-7 .color-7
+		h5.color-8 .color-8
+		h5.color-9
+			span.background-0 .color-9
+		h5.color-10
+			span.background-1 .color-10
+		h5.color-11
+			span.background-2 .color-11
+		h5.color-white
+			span.background-2 .color-white
+		.my-4
+		pre
+			code.language-html.
+				#{'<h5 class="color-primary">.color-primary</h5>'}
+
+		.my-5
+		h5 Sizes
+		p
+			| If you want different sizes of fonts, you may use the folloing classes.
+		
+		.my-4
+		h6.fs--1 .fs--1
+		h6.fs-0 .fs-0
+		h6.fs-1 .fs-1
+		h6.fs-2 .fs-2
+		h6.fs-4 .fs-4
+		h6.fs-5 .fs-5
+		h6.fs-6 .fs-6
+		h6.fs-7 .fs-7
+		h6.fs-8 .fs-8
+
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<h6 class="fs--1">.fs--1</h6>\n<h6 class="fs-0">.fs-0</h6>'}
+
+		.my-5
+		h5 Alignments
+		
+		.row
+			.col-sm-6
+				.my-4
+				.text-left
+					h6 Left aligned
+					p
+						| Pellentesque cursus placerat hendrerit. Donec sed erat nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vitae consequat erat. Quisque faucibus felis et fringilla imperdiet. Etiam at porttitor elit, quis convallis massa. Ut id risus sapien. Praesent sit amet arcu a eros laoreet facilisis id eget risus.
+			
+			.col-sm-6
+				.my-4
+				.text-right
+					h6 Right aligned
+					p
+						| Pellentesque cursus placerat hendrerit. Donec sed erat nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vitae consequat erat. Quisque faucibus felis et fringilla imperdiet. Etiam at porttitor elit, quis convallis massa. Ut id risus sapien. Praesent sit amet arcu a eros laoreet facilisis id eget risus.
+			
+			.col-sm-6
+				.my-4
+				.text-center
+					h6 Center aligned
+					p
+						| Pellentesque cursus placerat hendrerit. Donec sed erat nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vitae consequat erat. Quisque faucibus felis et fringilla imperdiet. Etiam at porttitor elit, quis convallis massa. Ut id risus sapien. Praesent sit amet arcu a eros laoreet facilisis id eget risus.
+			.col-sm-6
+				.my-4
+				.text-justify
+					h6 Justified
+					p
+						| Pellentesque cursus placerat hendrerit. Donec sed erat nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vitae consequat erat. Quisque faucibus felis et fringilla imperdiet. Etiam at porttitor elit, quis convallis massa. Ut id risus sapien. Praesent sit amet arcu a eros laoreet facilisis id eget risus.
+
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<p class="text-left">\n\tYour paragraph goes here.\n</p>\n<p class="text-right">\n\tYour paragraph goes here.\n</p>\n<p class="text-center">\n\tYour paragraph goes here.\n</p>\n<p class="text-justify">\n\tYour paragraph goes here.\n</p>'}
+		
+		.my-5
+		h5 Transformation
+		
+		.my-4
+		h6.text-lowercase Lowercased text
+		h6.text-uppercase Uppercased text
+		h6.text-capitalize Capitalized text
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<h5 class="text-lowercase">Lowercased text.</h5>\n<h5 class="text-uppercase">Uppercased text.</h5>\n<h5 class="text-capitalize">Capitalized text.</h5>'}
+
+		//- Inline text elemnts
+		.my-5
+
+		h5 Inline styles
+		p 
+			| Use these tags for inline styling. Feel free to use 
+			code #{'<b>'}
+			|  and 
+			code #{'<em>'}
+			|  tags insted of 
+			code #{'<strong>'}
+			|  and 
+			code #{'<i>'}
+			|  tags.
+		
+		.my-4
+
+		.row
+			.col-sm-5.l-h-0
+				p 
+					mark Highlight text
+				p
+					del Deleted text
+				p
+					u Underlined text
+				p
+					small Small text
+				p
+					strong Bold text
+				p
+					i Italic text
+			.col-sm-6.col-sm-offset-1
+				pre
+					code.language-html.
+						#{'<mark>mark</mark> text\n<del>Deleted text</del>\n<u>Underlined text</u>\n<small>Small text</small>\n<strong>Bold text</strong>\n<i>Italic text</i>'}
+
+		//- Blockquotes
+		.my-6
+
+		h4 Blockquotes
+		
+		
+		.my-4
+		blockquote.blockquote.my-5.font-2
+			p.fs-2.color-4.lh-2.font-italic If you want to get laid, go to college. If you want an education, go to the library.”
+			footer.blockquote-footer Frank Zappa
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<blockquote class="blockquote my-5 font-2">\n\t<p class="fs-2 color-4 lh-2 font-italic">If you want to get laid, go to college. If you want an education, go to the library.”</p>\n\t<footer class="blockquote-footer">Frank Zappa</footer>\n</blockquote>'}
+
+		.my-4
+		h5 Alternate displays
+		.my-4
+		p
+			| Add 
+			code .blockquote-reverse
+			|  for a blockquote with right-aligned content.
+
+		.my-4
+		blockquote.blockquote-reverse.my-5.font-2
+			p.fs-2.color-4.lh-2.font-italic If you want to get laid, go to college. If you want an education, go to the library.”
+			footer.blockquote-footer Frank Zappa
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<blockquote class="blockquote-reverse my-5 font-2">\n\t<p class="fs-2 color-4 lh-2 font-italic">If you want to get laid, go to college. If you want an education, go to the library.”</p>\n\t<footer class="blockquote-footer">Frank Zappa</footer>\n</blockquote>'}
+
+		//- List
+		.my-6
+		h4 Lists
+
+		.my-5
+		h5 Unordered
+		p
+			| A list of items in which the order does not explicitly matter.
+
+		ul
+			li Lorem ipsum dolor sit amet
+			li Consectetur adipiscing elit
+			li Nulla volutpat aliquam velit
+				ul
+					li Phasellus iaculis neque
+					li Purus sodales ultricies
+			li Faucibus porta lacus fringilla vel
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<ul>\n\t<li>Lorem ipsum dolor sit amet</li>\n\t<li>Consectetur adipiscing elit</li>\n\t<li>Nulla volutpat aliquam velit\n\t\t<ul>\n\t\t\t<li>Phasellus iaculis neque</li>\n\t\t\t<li>Purus sodales ultricies</li>\n\t\t</ul>\n\t</li>\n\t<li>Faucibus porta lacus fringilla vel</li>\n</ul>'}
+
+		.my-5
+		h5 Ordered
+		p
+			| A list of items in which the order does explicitly matter.
+
+		ol
+			li Lorem ipsum dolor sit amet
+			li Consectetur adipiscing elit
+			li Nulla volutpat aliquam velit
+				ol
+					li Phasellus iaculis neque
+					li Purus sodales ultricies
+			li Faucibus porta lacus fringilla vel
+
+		.my-4
+		pre
+			code.language-html.
+				#{'<ol>\n\t<li>Lorem ipsum dolor sit amet</li>\n\t<li>Consectetur adipiscing elit</li>\n\t<li>Nulla volutpat aliquam velit\n\t\t<ol>\n\t\t\t<li>Phasellus iaculis neque</li>\n\t\t\t<li>Purus sodales ultricies</li>\n\t\t</ol>\n\t</li>\n\t<li>Faucibus porta lacus fringilla vel</li>\n</ol>'}
+
+		.my-5
+		h5 No Style
+		p
+			| A list of items in which the order does not explicitly matter.
+
+		ul.no-style
+			li Lorem ipsum dolor sit amet
+			li Consectetur adipiscing elit
+			li Nulla volutpat aliquam velit
+				ul.no-style
+					li Phasellus iaculis neque
+					li Purus sodales ultricies
+			li Faucibus porta lacus fringilla vel
+
+		.my-5
+		h5 Styled Checkmark
+		p
+			| A list of items in which the order does not explicitly matter.
+
+		ul.style-check
+			li Lorem ipsum dolor sit amet
+			li Consectetur adipiscing elit
+			li Nulla volutpat aliquam velit
+				ul.no-style
+					li Phasellus iaculis neque
+					li Purus sodales ultricies
+			li Faucibus porta lacus fringilla vel
+
+						
+	
+
+	+footer

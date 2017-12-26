@@ -1,0 +1,29 @@
+extends ../pug_modules/skeleton
+
+block append styles
+	link(href="assets/lib/lightbox2/dist/css/lightbox.css" rel="stylesheet")
+	link(href="assets/lib/flexslider/flexslider.css" rel="stylesheet")
+
+block append scripts
+	script(src='assets/lib/lightbox2/dist/js/lightbox.js')
+	script(src='assets/lib/flexslider/jquery.flexslider-min.js')
+
+block content
+
+	+navigation
+
+	+sliding-header
+
+	+about
+
+	+cta
+
+	+section(false, 'container')(class="text-center")
+		.row
+			.col-lg-6
+				+contact
+
+			.col-lg-6.mt-6.mt-lg-0
+				+connect
+						
+	+footer

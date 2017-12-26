@@ -1,0 +1,29 @@
+mixin footer
+	+section(false, 'container')(class="text-center background-11")
+		.row.justify-content-center
+			.col-12
+				h4.color-primary The 
+					em Hideaway 
+					| Resort
+				p.mt-3.mt-lg-4 Subscribe to our mailing list to receive updates and promotional offers.
+			.col-lg-5.mt-lg-4
+				form(method="post").mt-4
+					.row.align-items-center
+						.col-lg-8
+							input.form-control(type="hidden" name="to" value="username@domain.extension")
+							.input-group
+								input(type="text" placeholder="Enter Email Here").form-control.border-color-primary
+						.col-lg-4.mt-3.mt-lg-0
+							button.btn.btn-block.btn-outline-primary(type="submit")
+										span Submit
+
+				p.mt-lg-4 Photos Courtesy of 
+					a(href="#")
+						em Hasbrouck House
+			.col-12.mt-5
+				a(href="#").d-inline-block.mx-2.color-7 Home
+				a(href="#").d-inline-block.mx-2.color-7 Book Now
+				a(href="#").d-inline-block.mx-2.color-7 Contact
+				a(href="#").d-inline-block.mx-2.color-7 Events
+				a(href="#").d-inline-block.mx-2.color-7 Policies
+				a(href="#").d-inline-block.mx-2.color-7 Term + Conditions

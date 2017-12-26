@@ -1,6 +1,11 @@
 @import "config";
 @import "../../zcore/assets/scss/core.scss";
 
+//html
+html{
+	// font-size: 18px;
+}
+
 //body styles
 
 body{
@@ -13,49 +18,119 @@ body{
 	min-height: calc(100vh - 104px);
 	margin-bottom: 52px;
 }
+.h-classic-box{
+	min-height: calc(75vh - 104px);
+	margin-bottom: 52px;
+}
 
 
-//navigation styles
+
+
+//////////// hideaway //////////////
 .navbar-hideaway{
 	background: rgba(255,255,255,0);
 	margin-bottom: -154px;
-	color: rgb(42, 56, 85);
+	// color: rgb(42, 56, 85);
 }
+
 
 .znav-container .navbar a.navbar-brand {
     text-transform: none;
 }
 
-.znav-white a.navbar-brand {
-    color: #ffffff;
+.znav-container a:not(.btn) {
+    color: rgba(250, 250, 250, 1);
 }
 
-.znav-white a:not(.btn) {
+.znav-hideaway{
+    background-color: transparent;
+    border-bottom-width: 0;
+    .megamenu, .dropdown{
+        background-color: map-get($colors, primary) !important;
+    }
+}
+.znav-hideaway-primary-inverse{
+	@include znav-color(map-get($colors, primary), map-get($colors, white));
+	.dropdown, .megamenu{ @include mq($from: desktop) { box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08); } }
+}
+
+
+//hover-box
+.hoverbox-bg{
+	background: rgba(78, 27, 5, 0.5);
+}
+
+//button
+.btn{
+	font-family: $font-2;
+	letter-spacing: 0.1em;
+	padding: 0.75rem 1.125rem;
+	&.btn-lg{
+		font-size: modular-scale(-1);
+		padding: 1.5625rem 2.875rem;
+		text-transform: uppercase;
+	}
+}
+
+.btn-outline-white:hover, .btn-outline-white:active, .btn-outline-white:focus, .btn-outline-white:active:focus {
+    background-color: map-get($colors, primary);
+    color: #ffffff;
+    border-color: map-get($colors, primary);
+}
+
+
+.btn-white:hover, .btn-white:active, .btn-white:focus, .btn-white:active:focus {
+    background-color: map-get($colors, primary);
+    color: #ffffff;
+    border-color: map-get($colors, primary);
+}
+
+
+.mt--1{
+	margin-top: -2.25rem;
+}
+
+p{
+	line-height: 1.6;
+	margin-bottom: 1.6rem;
+	color: map-get($colors, 6);
+}
+
+
+.dropcap::first-letter { 
+    font-size: 3.25em;
+    font-weight: 300;
+    font-family: $font-1;
+    float: left;
+    line-height: 0.82;
+    margin-right: 8px;
+    color: rgba(78, 27, 5, 0.8);
+}
+
+
+.define-hr{
+	position: relative;
+	display: inline-block;
+	&:after, &:before{
+		position: absolute;
+		content: "";
+		height: 1px;
+		background-color: white;
+		width: 30px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&:after{
+		right: calc( 100% + 5px);
+		left: auto;
+	}
+	&:before{
+		right: auto;
+		left: calc( 100% + 5px);
+	}
+}
+
+
+.flex-direction-nav a:before {
     color: rgba(255, 255, 255, 1);
 }
-
-.znav-white a:not(.btn):hover, .znav-white a:not(.btn):focus, .znav-white a:not(.btn):active:focus {
-    color: #ffffff;
-}
-
-.znav-container ul li a:not(.btn){
-    text-decoration: none;
-    border: 1px solid transparent;
-}
-.znav-container ul li a:not(.btn):active, .znav-container ul li a:not(.btn):hover, .znav-container ul li a:not(.btn):focus, .znav-container ul li a:not(.btn):active:focus {
-	border-color: white;
-}
-
-//link hover
-
-.hover-op a:hover{
-	color: map-get($colors, color-10);
-}
-
-.hoverbox-bg{
-	background: rgba(0, 0, 0, 0.4);
-}
-
-
-
-// For zcore
