@@ -7,87 +7,201 @@ html{
 }
 
 //body styles
+body{ margin: 13px;}
+@include mq($from: mobile) { body{ margin: 26px; } }
+@include mq($from: tablet) { body{ margin: 52px; } }
 
-body{
-	padding: 52px;
+/* Preloader */
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9999;
+	background-color: map-get($colors, primary);
+	transition: opacity 0.8s cubic-bezier(.77, 0, .18, 1);
+	opacity: 0;
+	&.loading{
+	opacity: 1;
+	}
+}
+// Loading
+@keyframes loading {
+    0% {
+        transform: translateX(-100%)
+    }
+    100% {
+        transform: translateX(100%)
+    }
 }
 
+.loader-box{
+	overflow-x: hidden;
+	border-radius: 2px;
+	width: 220px;
+	.loader{
+		height: 2px;
+		border-radius: 2px;
+		width: 100%;
+		background: white;
+		animation-timing-function: cubic-bezier(.77,0,.18,1);
+		animation: loading 0.8s infinite;
+	}
+}
 
 //header-style
 .h-box{
 	min-height: calc(100vh - 104px);
-	margin-bottom: 52px;
 }
 .h-classic-box{
 	min-height: calc(75vh - 104px);
-	margin-bottom: 52px;
+}
+.ie{
+    @include mq($from: wide) {
+        .h-box{
+			height: calc(100vh - 104px);
+		}
+		.h-classic-box{
+			height: calc(75vh - 104px);
+		}
+    }
+}
+.down-indicator{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	color: white;
+	padding: map-get($spacers, 2);
+	z-index: 99;
+	&::after{
+		content: "\f107";
+		font-family: FontAwesome;
+		font-size: modular-scale(5);
+		display: inline-block;
+	}
+	@include hover-focus {
+		color: white;
+	}
 }
 
-
+@include mq($from: desktop) {
+	.sticky-lg-top{
+		top: 0;
+		position: sticky;
+	}
+}
 
 
 //////////// hideaway //////////////
-.navbar-hideaway{
-	background: rgba(255,255,255,0);
-	margin-bottom: -154px;
-	// color: rgb(42, 56, 85);
+// .znav-hideaway{
+// 	background: rgba(255,255,255,0);
+// 	position: absolute !important;
+//     border-bottom-width: 0;
+//     margin-top: map-get($spacers, 4);
+//     .navbar {
+//     	a.navbar-brand {
+//     		text-transform: none;
+//     	}
+//     }
+//     a:not(.btn) {
+// 	    color: rgba(250, 250, 250, 1);
+// 	}
+// 	
+//     .megamenu, .dropdown{
+//         background-color: map-get($colors, primary) !important;
+//     }
+// }
+.has-dropdown .dropdown{
+	width: 180px;
+}
+@include mq($until: desktop) {
+	#navbarNavDropdown{
+		background-color: map-get($colors, 1);
+		padding-left: map-get($spacers, 4);
+		padding-right: map-get($spacers, 3);
+	}
 }
 
 
-.znav-container .navbar a.navbar-brand {
-    text-transform: none;
-}
-
-.znav-container a:not(.btn) {
-    color: rgba(250, 250, 250, 1);
-}
-
-.znav-hideaway{
-    background-color: transparent;
-    border-bottom-width: 0;
-    .megamenu, .dropdown{
-        background-color: map-get($colors, primary) !important;
+//hoverbox
+.hoverbox {
+    .hoverbox-bg{ background: rgba(0, 0, 0, 0.25); transition: background 0.2s ease-in-out;}
+    .hvr-scale{ transition: transform 0.2s ease-in-out;  transition-delay: 0.1s;}
+    @include hover-focus {
+        .hvr-scale{ transform: scale(1.2);}
     }
 }
-.znav-hideaway-primary-inverse{
-	@include znav-color(map-get($colors, primary), map-get($colors, white));
-	.dropdown, .megamenu{ @include mq($from: desktop) { box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08); } }
-}
 
-
-//hover-box
+/*---------------*/
+/***** Hideaway hover *****/
+/*---------------*/
 .hoverbox-bg{
-	background: rgba(78, 27, 5, 0.5);
+	position: relative;
+}
+.hoverbox-bg::after, .hoverbox-bg::before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+}
+.hoverbox-bg::after {
+	transform: scale(1, 0);
+	border-left: 2px solid rgba(255, 255, 255, 0.75);
+	border-right: 2px solid rgba(255, 255, 255, 0.75);
+}
+.hoverbox-bg::before {
+	transform: scale(0, 1);
+	border-top: 2px solid rgba(255, 255, 255, 0.75);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.75);
+}
+.hoverbox{
+	@include hover-focus {
+		.hoverbox-bg::after, .hoverbox-bg::before{
+			transform: scale(1);
+		}
+	}
 }
 
-//button
-.btn{
+//button | inputs
+.btn, .form-control{
 	font-family: $font-2;
-	letter-spacing: 0.1em;
-	padding: 0.75rem 1.125rem;
+	border-radius: 0;
+	letter-spacing: 0.05em;
+	font-weight: 500;
+}
+.btn{
 	&.btn-lg{
 		font-size: modular-scale(-1);
 		padding: 1.5625rem 2.875rem;
 		text-transform: uppercase;
+		&.btn-icon{
+			padding-left: map-get($spacers, 7);
+		}
+	}
+	&[class*="btn-outline-"]{
+		border-width: 2px;
 	}
 }
 
-.btn-outline-white:hover, .btn-outline-white:active, .btn-outline-white:focus, .btn-outline-white:active:focus {
-    background-color: map-get($colors, primary);
-    color: #ffffff;
-    border-color: map-get($colors, primary);
+.btn-packages{
+	position: absolute;
+	bottom: 2.25em;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: all 0.2s cubic-bezier(.77,0,.18,1);
 }
-
-
-.btn-white:hover, .btn-white:active, .btn-white:focus, .btn-white:active:focus {
-    background-color: map-get($colors, primary);
-    color: #ffffff;
-    border-color: map-get($colors, primary);
-}
-
-
-.mt--1{
-	margin-top: -2.25rem;
+.packages{
+	@include hover-focus {
+		.btn-packages{
+			opacity: 1;
+		}
+	}
 }
 
 p{
@@ -111,6 +225,7 @@ p{
 .define-hr{
 	position: relative;
 	display: inline-block;
+	margin-bottom: 0;
 	&:after, &:before{
 		position: absolute;
 		content: "";
@@ -133,4 +248,8 @@ p{
 
 .flex-direction-nav a:before {
     color: rgba(255, 255, 255, 1);
+}
+
+.mb_YTPBar{
+	display: none !important;
 }

@@ -14,14 +14,14 @@ block append scripts
 	script(src='assets/lib/prism/prism.js')
 
 block append content
+	
 	+navigation
 
-	+classic-header('Modal Video')
-
-
-	+section(false, 'container')(class="background-white")
-		.row
-			.col
+	+classic-header("elements-header", 'Video modals', "Modular elements")
+	
+	+section(false, 'container')
+		.row.justify-content-center
+			.col-lg-10
 				h4.mt-5 Modal Video
 				a.video-modal.btn.btn-primary.color-white.mr-3(href='https://www.youtube.com/watch?v=c8aFcHFu8QM' data-start='16' data-end='168') Youtube
 				
@@ -39,8 +39,5 @@ block append content
 				pre
 					code.lang-html.
 						#{'<link href="assets/lib/remodal/dist/remodal.css" rel="stylesheet"/>\n<link href="assets/lib/remodal/dist/remodal-default-theme.css" rel="stylesheet"/>'}
-
-						
-	
 
 	+footer

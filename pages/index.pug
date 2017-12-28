@@ -8,22 +8,19 @@ block append scripts
 	script(src='assets/lib/lightbox2/dist/js/lightbox.js')
 	script(src='assets/lib/flexslider/jquery.flexslider-min.js')
 
-block content
+block append content
 
 	+navigation
+	
+	.flexslider.flexslider-simple.h-box.parallax
+		ul.slides
+			li(data-zanim-timeline!={})
+				+flexheader("main-header-3", ["The", "Hideaway", "Inn"], "h-box")
+			li(data-zanim-timeline!={})
+				+flexheader("main-header-1", ["Live", "Wonderful", "life"], "h-box")
+			li(data-zanim-timeline!={})
+				+flexheader("main-header-2", ["Perfect", "Vacation", "Place"], "h-box")
 
-	+sliding-header
-
-	+about
-
-	+cta
-
-	+section(false, 'container')(class="text-center")
-		.row
-			.col-lg-6
-				+contact
-
-			.col-lg-6.mt-6.mt-lg-0
-				+connect
+	+home
 						
 	+footer

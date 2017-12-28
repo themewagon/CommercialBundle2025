@@ -5,23 +5,20 @@ block append styles
 
 block append scripts
 	script(src='assets/lib/prism/prism.js')
-block append variables
-	-var pageTitle = 'Buttons'
-	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
 
 block append content
+	
 	+navigation
 
-	+classic-header('Buttons')
-
+	+classic-header("elements-header", 'Buttons', "Modular elements")
 
 	+section(false, 'container')(class="")
-		.row
-			.col
+		.row.justify-content-center
+			.col-lg-10
 				h4 Buttons Colors
 				p
-					strong Posh
-					|  use 
+					strong Hideaway
+					|  uses 
 					code .btn
 					|  class for default button style. Customize the color of a button using 
 					code .btn-*
@@ -185,9 +182,9 @@ block append content
 				h5 Play Buttons
 				.background-2.p-3
 					a(href='#')
-						img(src='assets/images/icon-play.svg' width=80)
+						img(src='assets/images/icon-play.svg' alt="" width=80)
 					a(href='#').ml-5
-						img(src='assets/images/icon-play-o.svg' width=80)
+						img(src='assets/images/icon-play-o.svg' alt="" width=80)
 				.my-6
 				h4 Buttons Group
 				p

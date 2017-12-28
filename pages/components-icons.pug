@@ -1,18 +1,20 @@
 extends ../pug_modules/skeleton
 
-block append variables
-	-var pageTitle = 'Grid system'
-	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
+block append styles
+	link(href="assets/lib/prism/prism.css" rel="stylesheet")
+
+block append scripts
+	script(src='assets/lib/prism/prism.js')
 
 block append content
+	
 	+navigation
 
-	+classic-header('Icons')
-
-
-	+section(false, 'container')(class="")
-		.row
-			.col
+	+classic-header("elements-header", 'Icons', "Modular elements")
+	
+	+section(false, 'container')
+		.row.justify-content-center
+			.col-lg-10
 				.text-center
 					pre.mx-2.mb-5
 						code.lang-html.
@@ -6275,8 +6277,5 @@ block append content
 					.border.color-9.d-inline-block.p-3.mx-2.mb-4
 						span.color-1.fs-3.icon-Zootool
 						input.form-control.input-sm.mt-3(type='text' style='width: 128px' value="icon-Zootool")
-
-						
-	
 
 	+footer

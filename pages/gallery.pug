@@ -3,10 +3,11 @@ extends ../pug_modules/skeleton
 block append scripts
 	script(src="assets/lib/isotope-layout/dist/isotope.pkgd.min.js")
 
-block content
+block append content
 
+	+navigation
 
-	+navigation-inner
+	+classic-header("main-header-1", "Gallery")
 
 	+gallery
 

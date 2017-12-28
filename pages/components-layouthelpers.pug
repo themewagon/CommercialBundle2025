@@ -1,10 +1,5 @@
 extends ../pug_modules/skeleton
 
-block append variables
-	-var pageTitle = 'Layout helpers'
-	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
-
-
 block append styles
 	link(href="assets/lib/prism/prism.css" rel="stylesheet")
 
@@ -12,14 +7,14 @@ block append scripts
 	script(src='assets/lib/prism/prism.js')
 
 block append content
+	
 	+navigation
 
-	+classic-header('Layout Helpers')
-
-
-	+section(false, 'container')(class="")
-		.row
-			.col
+	+classic-header("elements-header", 'Layout helpers', "Modular elements")
+	
+	+section(false, 'container')
+		.row.justify-content-center
+			.col-lg-10
 				p Easily make an element as wide or as tall (relative to its parent) with our width and height utilities. Includes support for 
 					code.highlighter-rouge 25%
 					| , 
@@ -61,8 +56,5 @@ block append content
 						#{'.h-full{ min-height: 100vh; }'}
 						#{'.h-half {min-height: 50vh; }'}
 						#{'.h-100vh{ height: 100vh !important; }'}
-
-						
-	
 
 	+footer

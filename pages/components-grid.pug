@@ -5,20 +5,16 @@ block append styles
 
 block append scripts
 	script(src='assets/lib/prism/prism.js')
-		
-block append variables
-	-var pageTitle = 'Grid system'
-	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
 
 block append content
+	
 	+navigation
 
-	+classic-header('Grid')
+	+classic-header("elements-header", 'Grid system', "Modular elements")
 
-
-	+section(false, 'container')(class="")
-			.row
-			.col
+	+section(false, 'container')
+		.row.justify-content-center
+			.col-lg-10
 				h4 Bootstrap 4 grid system
 				p
 					| We use bootstrap 4 grid system. For more details see 
@@ -103,8 +99,5 @@ block append content
 						.py-5.border-dashed.color-8.background-11
 					.col-1
 						.py-5.border-dashed.color-8.background-11
-
-						
-	
 
 	+footer

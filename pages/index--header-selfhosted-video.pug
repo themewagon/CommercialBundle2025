@@ -1,0 +1,25 @@
+extends ../pug_modules/skeleton
+
+block append styles
+	link(href="assets/lib/lightbox2/dist/css/lightbox.css" rel="stylesheet")
+
+block append scripts
+	script(src='assets/lib/lightbox2/dist/js/lightbox.js')
+	script(src='assets/lib/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js')
+
+block append content
+
+	+navigation
+
+	+section({image: 'assets/images/video.jpg', video: 'assets/videos/', cssclass:''}, "container").py-0.text-center
+		a.down-indicator(href="#target-down-indicator")
+		.row.h-box.align-items-center.py-8(data-zanim-timeline!={} data-zanim-trigger="scroll")
+			.col
+				h6.text-uppercase.color-white.fs--1.fs-lg-0.font-2.ls(data-zanim!={delay: 0.2}) west virginia / united states
+				h1.color-white.fs-5.fs-lg-7(data-zanim!={delay: 0.1}) The 
+					em Hideaway 
+					| Resort
+
+	+home
+						
+	+footer

@@ -1,29 +1,30 @@
 mixin footer
-	+section(false, 'container')(class="text-center background-11")
+	+section({image: "assets/images/footer-bg.jpg", cssclass: "overlay overlay-2", attrs: {style: "background-position: top;"}}, 'container').text-center.pb-3
 		.row.justify-content-center
 			.col-12
-				h4.color-primary The 
+				h4.mb-2.color-white Join  the 
 					em Hideaway 
-					| Resort
-				p.mt-3.mt-lg-4 Subscribe to our mailing list to receive updates and promotional offers.
-			.col-lg-5.mt-lg-4
-				form(method="post").mt-4
-					.row.align-items-center
-						.col-lg-8
+					| Newsletters
+				p.mb-0.color-9 Subscribe to our mailing list to receive updates and promotional offers.
+			.col-md-10.col-lg-7.col-xl-5.mt-4
+				form(method="post")
+					.row.align-items-center.no-gutters
+						.col-md-8.px-2
 							input.form-control(type="hidden" name="to" value="username@domain.extension")
-							.input-group
-								input(type="text" placeholder="Enter Email Here").form-control.border-color-primary
-						.col-lg-4.mt-3.mt-lg-0
-							button.btn.btn-block.btn-outline-primary(type="submit")
+							input(type="text" placeholder="Enter Email Here").form-control.border-color-white
+						.col-md-4.px-2.mt-3.mt-md-0
+							button.btn.btn-block.btn-white(type="submit")
 										span Submit
-
-				p.mt-lg-4 Photos Courtesy of 
-					a(href="#")
-						em Hasbrouck House
-			.col-12.mt-5
-				a(href="#").d-inline-block.mx-2.color-7 Home
-				a(href="#").d-inline-block.mx-2.color-7 Book Now
-				a(href="#").d-inline-block.mx-2.color-7 Contact
-				a(href="#").d-inline-block.mx-2.color-7 Events
-				a(href="#").d-inline-block.mx-2.color-7 Policies
-				a(href="#").d-inline-block.mx-2.color-7 Term + Conditions
+	
+		.row.mt-8
+			.col-lg-auto.ml-lg-auto.order-lg-2.mb-2.mb-lg-0
+				a(href="#").d-inline-block.mx-2.color-8 Home
+				a(href="#").d-inline-block.mx-2.color-8 Book Now
+				a(href="#").d-inline-block.mx-2.color-8 Contact
+				a(href="#").d-inline-block.mx-2.color-8 Events
+				a(href="#").d-inline-block.mx-2.color-8 Policies
+				a(href="#").d-inline-block.mx-2.color-8 Term + Conditions
+			.col-lg.text-lg-left
+				.color-8 &copy; Hideaway 2018 | Template crafted by 
+					a(href="https://themewagon.com/" target="_blank").color-8 Themewagon
+			

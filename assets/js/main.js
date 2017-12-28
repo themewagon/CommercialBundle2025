@@ -19,5 +19,4 @@ $(window).on('load', function(){
     $('*[data-inertia]').each(function(){
         $(this).inertia();
     });
-
 });

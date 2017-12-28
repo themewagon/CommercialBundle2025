@@ -8,20 +8,12 @@ block append scripts
 	script(src='assets/lib/lightbox2/dist/js/lightbox.js')
 	script(src='assets/lib/flexslider/jquery.flexslider-min.js')
 
-block content
+block append content
 
 	+navigation
 
-	+static-classic-header
+	+classic-header("main-header-1", "Contact", "west virginia / united states")
 
-	+contact-form
-
-	//- +section(false, 'container')(class="text-center")
-		.row
-			.col-lg-6
-				+contact
-
-			.col-lg-6.mt-6.mt-lg-0
-				+connect
+	+contact
 						
 	+footer

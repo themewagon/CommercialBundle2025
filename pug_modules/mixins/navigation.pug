@@ -1,34 +1,35 @@
 mixin navigation
-	#znav-container.znav-hideaway.znav-container.navbar-hideaway
-		.container.py-5
+	#znav-container.znav-container.znav-transparent.mt-4
+		.container
 			nav.navbar.navbar-expand-lg
-				a.navbar-brand.overflow-hidden.pr-3.fs-3.d-none.d-lg-inline-block(href='index.html')  Hideaway Resort
-				a.navbar-brand.overflow-hidden.pr-3.fs-lg-3.fs-0.d-lg-none(href='index.html') Hideaway
+				a.navbar-brand.overflow-hidden.pr-3.fs-3(href='index.html')
+					| Hideaway 
+					span.d-none.d-lg-inline-block Resort
 				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
 					.hamburger.hamburger--emphatic
 						.hamburger-box
 							.hamburger-inner
 				#navbarNavDropdown.collapse.navbar-collapse
-					ul.navbar-nav.ml-6.font-2.fs-0
+					ul.navbar-nav.font-2.fs-0
 						li
 							a(href='JavaScript:void(0)') Home
 							ul.dropdown.fs--1
 								li
-									a(href="sliding-header.html") Sliding Header
+									a(href="index.html") Slider Header
 								li
-									a(href="sliding-header-classic.html") Sliding Header Classic
+									a(href="index--header-slider-classic.html") Slider Classic
 								li
-									a(href="static-header.html") Static Header
+									a(href="index--header-static.html") Static Header
 								li
-									a(href="static-header-classic.html") Static Header Classic
+									a(href="index--header-static-classic.html") Static Classic
 								li
-									a(href="video-background.html") Video Background
+									a(href="index--header-youtube-video.html") Youtube Background 
 								li
-									a(href="video-background-classic.html") Video Background Classic
+									a(href="index--header-youtube-video-classic.html") Youtube Classic
 								li
-									a(href="self-hosted-video-background.html") Self Hosted Video
+									a(href="index--header-selfhosted-video.html") Self-hosted Video
 								li
-									a(href="self-hosted-video-background-classic.html") Self Hosted Video Classic
+									a(href="index--header-selfhosted-video-classic.html") Self-hosted Classic
 						li
 							a(href='JavaScript:void(0)') Pages
 							ul.dropdown.fs--1
@@ -40,6 +41,8 @@ mixin navigation
 									a(href="packages.html") Packages
 								li
 									a(href='history.html') Our History
+						li
+							a(href='contact.html') Contact
 						li
 							a(href='JavaScript:void(0)') Elements
 							ul.dropdown.fs--1
@@ -63,8 +66,14 @@ mixin navigation
 									a(href="components-slider.html") Slider
 								li
 									a(href="components-typography.html") Typography
+					ul.navbar-nav.ml-auto
+						li.text-center
+							a(href='#').pl-3.pl-lg-0.d-inline-block
+								span.fa.fa-facebook
+							a(href='#').pl-3.pl-lg-1.d-inline-block
+								span.fa.fa-twitter
+							a(href='#').pl-3.pl-lg-1.d-inline-block
+								img(src="assets/images/instagram.svg" alt="" width=12)
+								//- span.fa.fa-instagram
 						li
-							a(href='contact.html') Contact
-					ul.navbar-nav.ml-auto 
-						li
-							a(href='#' target="Blank").btn.btn-outline-white.border-2x.fw-700 Book Your Stay
+							a(href='#' target="Blank").btn.btn-outline-white.btn-sm.border-2x.fw-700 Book Now

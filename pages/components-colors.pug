@@ -7,54 +7,50 @@ block append styles
 block append scripts
 	script(src='assets/lib/prism/prism.js')
 
-block append variables
-	-var pageTitle = 'Colors'
-	-var subTitle = 'All modular elements can be readily used and customized in every layout across pages.'
-
 block append content
+	
 	+navigation
 
-	+classic-header('Colors')
-
+	+classic-header("elements-header", 'Colors', "Modular elements")
 
 	+section(false, 'container')(class="px-4")
-		.row.font-1.color-white.palette
-			.col-lg-6.mb-4
+		.row.justify-content-center.font-1.color-white.palette
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-primary.radius-secondary.py-4.text-center.color-white
 					.col
 						code .color-primary
 						br
 						code .background-primary
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-info.radius-secondary.py-4.text-center
 					.col
 						code .color-info
 						br
 						code .background-info
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-success.radius-secondary.py-4.text-center
 					.col
 						code .color-success
 						br
 						code .background-success
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-warning.radius-secondary.py-4.text-center.color-black
 					.col
 						code .color-warning
 						br
 						code .background-warning
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-danger.radius-secondary.py-4.text-center
 					.col
 						code .color-danger
 						br
 						code .background-danger
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-black.radius-secondary.py-4.text-center
 					.col
@@ -64,42 +60,40 @@ block append content
 
 			- var n = 1;
 			while n < 9
-				.col-lg-6.mb-4
+				.col-lg-5.mb-4
 					.row.align-items-center
 						.col-4.col-sm-3.radius-secondary.py-4.text-center(class="background-"+n)
 						.col
 							code .color-#{n}
 							br
 							code .background-#{n++}
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-9.radius-secondary.py-4.text-center.color-3
 					.col
 						code .color-9
 						br
 						code .background-9
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-10.radius-secondary.py-4.text-center.border.color-4
 					.col
 						code .color-10
 						br
 						code .background-10
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-11.radius-secondary.py-4.text-center.border.color-5
 					.col
 						code .color-11
 						br
 						code .background-11
-			.col-lg-6.mb-4
+			.col-lg-5.mb-4
 				.row.align-items-center
 					.col-4.col-sm-3.background-white.radius-secondary.py-4.text-center.border.color-5
 					.col
 						code .color-white
 						br
 						code .background-white
-						
-	
 
 	+footer
