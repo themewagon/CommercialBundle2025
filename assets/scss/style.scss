@@ -171,10 +171,10 @@ body{ margin: 13px;}
 .btn, .form-control{
 	font-family: $font-2;
 	border-radius: 0;
-	letter-spacing: 0.05em;
 	font-weight: 500;
 }
 .btn{
+	letter-spacing: 0.05em;
 	&.btn-lg{
 		font-size: modular-scale(-1);
 		padding: 1.5625rem 2.875rem;
