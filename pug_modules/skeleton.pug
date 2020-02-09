@@ -4,6 +4,7 @@ include mixins
 
 block variables
 	- var title = "Hideaway"
+	- var API_GMAP = 'AIzaSyARdVcREeBK44lIWnv5-iPijKqvlSAVwbw';
 
 block append styles
 	link(href='assets/lib/loaders.css/loaders.min.css' rel="stylesheet")
@@ -15,7 +16,7 @@ block append styles
 
 block append scripts
 	script(src="assets/js/googlemap.js")
-	script(src!='https://maps.googleapis.com/maps/api/js?key=AIzaSyCoK8GIrOHzHwnzHCyqrdtmTpUWcdrTTD8&callback=initMap' async)
+	script(src!=`https://maps.googleapis.com/maps/api/js?key=${API_GMAP}&callback=initMap` async)
 
 	script(src="assets/lib/imagesloaded/imagesloaded.pkgd.min.js")
 	script(src="assets/lib/jquery-menu-aim/jquery.menu-aim.js")
