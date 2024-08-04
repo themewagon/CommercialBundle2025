@@ -1,0 +1,24 @@
+extends LayoutTheme
+
+include ../mixins/common/card
+
+
+prepend styles 
+  link(rel="stylesheet", href=`${CWD}vendors/prism/prism.css`)
+
+prepend scripts
+  script(src=`${CWD}vendors/prism/prism.js`)
+
+block content 
+  +Section({image: `${CWD}assets/images/elements-header.jpg`, className: 'overlay overlay-2', attrs: {"data-parallax":"data-parallax"}},container).has-parallax.py-0
+    .row.align-items-center.justify-content-center.text-center.pt-8.pb-6.vh-50(data-zanim-timeline!={} data-zanim-triggr!='scroll' style="min-height: 300px;") 
+      .col
+        .overflow-hidden
+          h5.fs-10.fs-lg-9.ls-3.text-white.text-uppercase.font-base(data-zanim-xs!={delay:1}) Modular elements
+        .overflow-hidden
+          h1.fs-4.fs-lg-2.text-white(data-zanim-xs!={delay:1.1}) #{ pageTitle || 'Components' }
+
+  +Section(container)
+    .row.justify-content-center 
+      .col-lg-10
+        block component

@@ -1,0 +1,15 @@
+extends ../layouts/LayoutDocs
+include ../mixins/docs/Gulp
+
+
+prepend styles 
+
+prepend scripts
+
+
+append variables
+  - var pageTitle = 'Gulp'
+  - var pageDes = 'Build, Serve and watch your project'
+
+append docs 
+  +Gulp

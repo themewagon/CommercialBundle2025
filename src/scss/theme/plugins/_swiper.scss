@@ -1,0 +1,135 @@
+
+:root {
+  --swiper-navigation-color: var(--#{$prefix}gray-1000);
+}
+
+.swiper-theme-container {
+  position: relative;
+  .swiper-nav{
+    margin-top: 0;
+    cursor: pointer;
+    [class*=swiper-]{
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity 0.4s ease-in-out;
+      border-radius: 50%;
+      z-index: 1;
+      width: 3.125rem;
+      height: 3.125rem;
+      color: var(--#{$prefix}gray-700);
+      background-color: rgba($white, 0.8) !important;
+      margin: 0;
+      @include hover-focus {
+        background-color: $white !important;
+        opacity: 1;
+      }
+    }
+  }
+  .swiper-button-prev:after,
+  .swiper-button-next:after {
+    font-family: swiper-icons;
+    font-size: 10px;
+    font-weight: $font-weight-bolder;
+    text-transform: none !important;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+  @include hover-focus { .swiper-nav { [class*=swiper-] { opacity: 0.8; } } }
+
+
+  &.theme-slider{
+    .swiper-nav{
+      .swiper-button-prev{ 
+        left: 1.8rem;
+      }
+      .swiper-button-next{ 
+        right: 1.8rem;
+      }
+    }
+  }
+  &.swiper-slider{
+    .swiper-nav{
+      [class*=swiper-]{
+        color: var(--#{$prefix}gray-700);
+        background-color: rgba($gray-200, 0.8) !important;
+        margin: 0;
+        @include hover-focus {
+          background-color: $gray-200 !important;
+          opacity: 1;
+        }
+      }
+    }
+    .swiper-button-prev{ 
+      left : -2rem;
+      @include media-breakpoint-up(md){
+        left: -4rem;
+      }
+      [dir='rtl'] & {
+        left: unset;
+        right: -3rem;
+      }
+    }
+    .swiper-button-next{ 
+      right: -2rem;
+      @include media-breakpoint-up(md){
+        right: -4rem;
+      }
+      [dir='rtl'] & {
+        right: unset;
+        left: -3rem;
+      }
+    }
+    .swiper-pagination-bullet{
+      height: 10px !important;
+      width: 10px !important;
+    }
+
+    .swiper-pagination-bullet-active{
+      background: var(--#{$prefix}primary) !important ;
+    }
+  }
+
+  &.home-slider{
+    .swiper-nav{
+      [class*=swiper-]{
+        color: $gray-100!important;
+        background-color: transparent !important;
+        margin: 0;
+        @include hover-focus {
+          background-color: transparent !important;
+          opacity: 1;
+        }
+      }
+      .swiper-button-prev{ 
+        left: 0rem;
+      }
+      .swiper-button-next{ 
+        right: 0rem;
+      }
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      font-size: 1.3rem;
+    }
+  }
+  .thumb{
+    .swiper-wrapper {
+      &:first-child {
+        border-top-left-radius: var(--#{$prefix}border-radius-lg);
+        border-bottom-left-radius: var(--#{$prefix}border-radius-lg);
+      }
+      &:last-child {
+        border-top-right-radius: var(--#{$prefix}border-radius-lg) !important;
+        border-bottom-right-radius: var(--#{$prefix}border-radius-lg) !important;
+      }
+    }
+    .swiper-slide{
+        opacity: 0.7 !important;
+    }
+    .swiper-slide-thumb-active{
+      opacity: 1 !important;
+    }
+  }
+}

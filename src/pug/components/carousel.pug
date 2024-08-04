@@ -1,0 +1,48 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Carousel
+
+append variables
+  -
+    var carouselItems = [
+      {
+        imageSrc: 'assets/images/main-header-1.jpg',
+        title: 'Slider One'
+      },
+      {
+        imageSrc: 'assets/images/main-header-3.jpg',
+        title: 'Slider Two'
+      }
+    ]
+
+prepend styles 
+  link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+prepend scripts
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`) 
+
+append variables
+  - var pageTitle = 'Carousel'
+
+append component 
+
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/components/carousel/`,
+    name: pageTitle,
+  })
+
+  +ComponentCard({
+    title: 'Basic Example',
+    prismClass: 'mt-4'
+  }).mt-5
+    +CarouselBasicExample
+
+  +ComponentCard({
+    title: 'Indicators',
+    prismClass: 'mt-4'
+  }).mt-5
+    +CarouselWithIndicatorExample
+
+  +ComponentCard({
+    title: 'Autoplay',
+    prismClass: 'mt-4'
+  }).mt-5
+    +CarouselAutoPlayExample

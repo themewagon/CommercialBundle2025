@@ -1,0 +1,50 @@
+
+mixin CarouselSlider(parentId, indicator)
+  if indicator 
+    .carousel-indicators
+      each item,index in carouselItems 
+        button(class=`${index==0 ? 'active' : ''}` type="button" data-bs-target=parentId data-bs-slide-to=index aria-current="true" aria-label=`Slide ${index + 1}` )
+  .carousel-inner
+    each item,index in carouselItems 
+      .carousel-item(class=`${index==0 ? 'active' : ''}`)
+        = '\n' 
+        section.py-9 
+          = '\n'
+          .bg-holder.overlay.overlay-1(style=`background-image: url('${CWD}${item.imageSrc}')`)
+          = '\n'
+          .row.align-items-center.text-center
+            = '\n'
+            .col
+              = '\n'
+              h3.text-white #{item.title} 
+              = '\n'
+            = '\n'
+          = '\n'
+        = '\n'
+  
+  button.carousel-control-prev(type="button" data-bs-target=parentId data-bs-slide='prev')
+    = '\n'
+    span.carousel-control-prev-icon(aria-hidden='true')
+    = '\n'
+    span.visually-hidden Previous
+    = '\n'
+  
+  button.carousel-control-next(type="button" data-bs-target=parentId data-bs-slide='next')
+    = '\n'
+    span.carousel-control-next-icon(aria-hidden='true')
+    = '\n'
+    span.visually-hidden Next
+    = '\n'
+
+
+mixin CarouselBasicExample 
+  #carouselExample.carousel.slide
+    +CarouselSlider('#carouselExample', false)
+
+mixin CarouselWithIndicatorExample 
+  #carouselExampleIndicators.carousel.slide
+    +CarouselSlider('#carouselExampleIndicators', true)
+
+mixin CarouselAutoPlayExample 
+  #carouselExampleAutoPlaying.carousel.slide(data-bs-ride="carousel")
+    +CarouselSlider('#carouselExampleAutoPlaying', true)

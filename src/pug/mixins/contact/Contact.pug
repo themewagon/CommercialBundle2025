@@ -1,0 +1,61 @@
+mixin Form 
+  form.row(data-form onsubmit="return false;")
+    .col-12
+      input.form-control(type="hidden" name="to" value='user@domain.extension')
+      input.form-control(type="text" placeholder="Your Name" required)
+    .col-12.mt-4
+      input.form-control(type="email" placeholder="Email" required)
+    .col-12.mt-4 
+      textarea.form-control(name="message" rows='6' placeholder="Enter your description here" required)
+    .col-12.mt-4
+      .row 
+        .col-aut 
+          button.btn.btn-primary(type="submit") Send now
+        .col  
+          .feedback.col-12.mt-3
+
+mixin Contact 
+  +Section({image: `${CWD}assets/images/main-header-1.jpg`, className: 'overlay overlay-2', attrs: {"data-parallax":"data-parallax"}},container).has-parallax.py-0
+    .row.align-items-center.justify-content-center.text-center.pt-8.pb-6.vh-50(data-zanim-timeline!={} data-zanim-triggr!='scroll' style="min-height: 300px;") 
+      .col
+        .overflow-hidden 
+            h6.text-uppercase.text-white.fs-10.fs-lg-9.ls-3.font-base(data-zanim-xs!={delay: 1}) west virginia / united states 
+        .overflow-hidden 
+          h1.text-white.fs-4.fs-lg-2(data-zanim-xs!={delay:0.9}) Contact
+
+  +Section(container).py-9
+    .row
+      .col-lg-4.pe-lg-6 
+        .row 
+          .col-md-4.col-lg-12.mb-4 
+            h5.mb-2 Manitoba Office
+            p 
+              | 121 King's Street,
+              br
+              | Manitoba 1230, Canada
+              br
+              | cell 
+              a(href="tel:+47535383458").text-700 +475 3538 3458
+          
+          .col-md-4.col-lg-12.mb-4 
+            h5.mb-2 Brooklyn Office
+            p 
+              | 62 Collins Street West,
+              br
+              | Brooklyn 3030, USA
+              br
+              | cell 
+              a(href="tel:+47523433421").text-700 +475 2343 3421
+
+          .col-md-4.col-lg-12 
+            h4.mb-2 Socials 
+            a.fs-7.d-inline-block.mt-2.me-2(href="#!")
+              spa.fab.fa-linkedin 
+            a.fs-7.d-inline-block.mt-2.mx-2(href="#!")
+              spa.fab.fa-twitter-square 
+            a.fs-7.d-inline-block.mt-2.mx-2(href="#!")
+              spa.fab.fa-facebook-square 
+            a.fs-7.d-inline-block.mt-2.ms-2(href="#!")
+              spa.fab.fa-google-plus-square 
+      .col-lg.mt-4.mt-lg-0
+        +Form

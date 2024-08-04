@@ -1,0 +1,89 @@
+/*-----------------------------------------------
+|   Documentation link and Prism
+-----------------------------------------------*/
+:not(pre) > code[class*='language-'], pre[class*='language-'] {
+  border: $border-width solid var(--#{$prefix}gray-300);
+  border-radius: $border-radius-sm;
+  font-size: 87.5% !important;
+
+}
+
+ pre[class*='language-'] {
+  padding: 1em;
+  margin: .5em 0;
+}
+
+:not(pre) > code {
+  padding: .2rem .4rem;
+  font-size: 87.5%;
+  color: var(--#{$prefix}code-color);
+  border-radius: .25rem;
+}
+
+
+/*-----------------------------------------------
+|   Component examples
+-----------------------------------------------*/
+
+.component-example{
+
+  >{
+    .border {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 8rem;
+      height: 8rem;
+      margin: .75rem;
+      background-color: var(--#{$prefix}gray-100);
+    }
+  }
+}
+
+/*-----------------------------------------------
+|   Utilities
+-----------------------------------------------*/
+.border-component{
+  [class^=border],
+  [class^="rounded-"]{
+    display: inline-block;
+    padding: 3rem;
+    margin-right: 1rem;
+  }
+
+  [class^=border] {
+    background-color: var(--#{$prefix}light);
+    border-color: var(--#{$prefix}gray-1100) !important;
+  }
+
+  [class^="rounded-"] {
+    background-color: var(--#{$prefix}light);
+    border-color: var(--#{$prefix}gray-1100) !important;
+  }
+}
+
+.filter{
+  font-size: map-get($font-sizes, 10) !important;
+  color: $gray-1100 !important;
+  border-color: $gray-300 !important;
+
+  @include hover-focus{
+    border-color: $gray-1100 !important;
+  }
+}
+
+.column-box {
+  padding-top: map-get($spacers, 5);
+  padding-bottom: map-get($spacers, 5);
+  border: 1px dashed var(--#{$prefix}gray-300);
+  background-color: var(--#{$prefix}gray-100);
+  color: var(--#{$prefix}gray-400)
+}
+
+.input-sm {
+  padding: .4rem !important;
+}
+
+.input-xs{
+  padding: .2rem !important;
+}

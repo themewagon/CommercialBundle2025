@@ -1,0 +1,16 @@
+/* -------------------------------------------------------------------------- */
+/*                               Browser Fixing                               */
+/* -------------------------------------------------------------------------- */
+
+// Firefox fixed
+.firefox{
+  .card-notification .scrollbar-overlay {
+    min-height:19rem;
+  }
+}
+
+.chrome{
+  .btn-close{
+    background-clip: unset;
+  }
+}

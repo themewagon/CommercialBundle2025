@@ -1,0 +1,44 @@
+extends Layout
+include ../mixins/common/Logo
+include ../mixins/common/Footer
+include ../mixins/common/Navbar
+include ../mixins/layouts/LayoutContent
+include ../mixins/common/Slider
+include ../mixins/common/ScrollSpyButton
+include ../mixins/Variables
+
+append headScripts
+
+prepend styles
+  link(href=`${CWD}vendors/loaders.css/loaders.min.css` rel='stylesheet' type="text/css")
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet")
+  link(href=`${CWD}vendors/hamburgers/hamburgers.css` rel="stylesheet")
+  link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+
+  
+
+prepend scripts
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`) 
+  script(src=`${CWD}vendors/rellax/rellax.js`)
+  script(src=`${CWD}vendors/fontawesome/all.min.js`)
+  script(src=`${CWD}vendors/lodash/lodash.min.js`)
+  script(src=`${CWD}vendors/imagesloaded/imagesloaded.pkgd.js`)
+  script(src=`${CWD}vendors/gsap/gsap.js`)
+  script(src=`${CWD}vendors/gsap/customEase.js`)
+  script(src=`${CWD}vendors/gsap/drawSVGPlugin.js`)
+  script(src=`${CWD}vendors/gsap/TweenMax.min.js`)
+
+append afterMainContent
+  
+block mainContent
+  #preloader.loading
+    .h-100.d-flex.align-items-center.justify-content-center.bg-1100
+      .loader
+        .line-scale-pulse-out
+          div 
+          div 
+          div 
+          div 
+          div
+  +LayoutContent

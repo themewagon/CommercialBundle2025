@@ -1,0 +1,21 @@
+extends ../layouts/LayoutComponent
+
+include ../mixins/components/Spacing
+
+prepend styles 
+
+prepend scripts
+
+
+append variables
+  - var pageTitle = 'Spacing'
+
+append component
+
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/spacing/`,
+    name: pageTitle,
+  })
+
+  +SpacingDocDescription 
+  +SpacingDoc

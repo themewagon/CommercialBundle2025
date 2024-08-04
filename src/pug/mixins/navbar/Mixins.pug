@@ -1,0 +1,46 @@
+//------navbar-design------//
+
+mixin navbarTopMenus(vars)
+  each item, index in vars 
+    if item.pages.length 
+      li.nav-item.dropdown 
+        if item.label
+          - var label = item.label
+          a.nav-link.dropdown-toggle(href="#!" role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-haspopup='true' aria-expanded='false')
+            +cleanText(label)
+            span.fas.fa-chevron-down.dropdown-toggle-icon
+          if item.pages
+            +TopNavItem(item)
+    else
+      +NavItem(item)
+
+mixin TopNavItem(config)
+  ul.dropdown-menu.navbar-dropdown-caret 
+    each page in config.pages
+      +TopNavDropdownItem(page)
+
+mixin TopNavDropdownItem(page)
+  li 
+    +TopNavDropdownLink({
+      url: page.pages ? `#${page.name}` : `${page.path}`,
+      text: `${page.name}`,
+      hasHash: page.pages ? false : true,
+      isDisabled: page.disabled,
+      depth: 0
+    })
+
+mixin TopNavDropdownLink(config)
+  - var config = Object.assign({}, config);
+  - var { url, text, hasHash, isDisabled, depth } = config; 
+  - var href = hasHash ? text !== 'modal' ? `${CWD}${url}.html` : `${CWD}${url}` : url;
+
+  a.dropdown-item(href=href class=`${isDisabled ? 'nav-link-disable' : href.includes(`${pathName}.html`) ? 'active' : ''}`)
+    +cleanText(text)
+
+mixin NavItem(item)
+  - var href = item.path ? `${CWD}${item.path}.html` : '#!';
+  - var label = item.name
+  li.nav-item
+    a.nav-link(href=href class=`${href.includes(`${pathName}.html`) ? 'active' : ''}`)
+      +cleanText(label)
+

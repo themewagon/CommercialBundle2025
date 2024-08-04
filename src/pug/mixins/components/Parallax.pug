@@ -1,0 +1,12 @@
+mixin ParallaxImageBackground
+  +ComponentCard({
+    prismClass:'mt-4'
+  }).mt-4
+    .py-7.py-md-9.has-parallax
+      +Background({
+        image: `${CWD}assets/images/main-header-1.jpg`,
+        className: 'overlay overlay-1 vh-100',
+        attrs: {'data-rellax-speed':'-10', 'data-parallax': 'data-parallax', "data-center": "true"}
+      })
+      .position-relative.text-center
+        h5.text-white Image Background Parallax

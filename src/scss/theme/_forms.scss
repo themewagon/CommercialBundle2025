@@ -1,0 +1,104 @@
+
+/*-----------------------------------------------
+|   Theme Checkbox
+-----------------------------------------------*/
+.form-check {
+  @each $color,
+  $value in $theme-colors {
+    &-input {
+      &-#{$color} {
+        border-color: $value !important;
+
+        &:focus {
+          box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width rgba($value, $input-btn-focus-color-opacity);
+        }
+
+        &:checked {
+          background-color: $value !important;
+        }
+        &.hideaway-dual-switch {
+          background-color: $value !important;
+        }
+      }
+      &.hideaway-dual-switch {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.form-check {
+  label{
+    margin-bottom: 0;
+  }
+}
+
+// Floating Labels
+.form-floating>label {
+  line-height: 1.625rem;
+}
+
+
+option:disabled {
+  color: var(--#{$prefix}gray-400);
+}
+
+.form-group{
+  margin-bottom: map-get($spacers, 3);
+}
+.form-control, .form-select {
+  padding: .8rem;
+  border-color: var(--#{$prefix}gray-300);
+  border-radius: var(--#{$prefix}border-radius-sm);
+  background-color: var(--#{$prefix}gray-100);
+  box-shadow: none;
+}
+
+.form-control:focus, .form-select:focus{
+  background-color: $white;
+  border-color: var(--#{$prefix}primary);
+  box-shadow: none;
+}
+
+
+.has-success {
+  @include input-feedback-variant(map-get($theme-colors, 'success'));
+}
+
+.has-warning {
+  @include input-feedback-variant(map-get($theme-colors, 'warning'));
+}
+
+.has-error {
+  @include input-feedback-variant(map-get($theme-colors, 'danger'));
+}
+
+.custom-select{
+  label, .label {
+    display: block;
+    font-family: $font-family-sans-serif;
+    color: var(--#{$prefix}gray-1100);
+    font-size: $font-size-base;
+    letter-spacing: 0;
+  }
+  .form-select{
+    --#{$prefix}form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e");
+    padding: .375rem 1.75rem .375rem .75rem;
+    color: #495057;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    height: calc(1.5em + .75rem + 2px);
+    border-color: #ced4da;
+    border-radius: .25rem;
+    background-color: $white;
+  }
+  .form-control{
+    padding: .375rem 1.75rem .375rem .75rem;
+    color: #495057;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    border-color: #ced4da;
+    border-radius: .25rem;
+    background-color: $white;
+  }
+}

@@ -1,0 +1,28 @@
+mixin ThemeColors 
+  .row 
+    each color in [colors, grays]
+      each value,key in color
+        .col-lg-6.mb-4
+          .row.align-items-center 
+            .col-4.col-sm-3.py-4.rounded-3.border(class=`bg-${value} ${(value == 100 )|| (value == 200) ? 'border-700': ''}`)
+              p.mb-0.fs-10 
+            .col
+              code .text-#{value}
+              br
+              code .bg-#{value}
+
+    .col-lg-6.mb-4 
+      .row.align-items-center 
+        .col-4.col-sm-3.py-4.rounded-3.border.bg-black
+        .col
+          code .text-black
+          br
+          code .bg-black
+
+    .col-lg-6 
+      .row.align-items-center 
+        .col-4.col-sm-3.py-4.rounded-3.border.border-700.bg-white
+        .col
+          code .text-white
+          br
+          code .bg-white

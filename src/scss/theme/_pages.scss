@@ -1,0 +1,24 @@
+.define-hr{
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+
+  &::after, &::before{
+    position: absolute;
+    content: '';
+    height: 1px;
+    background-color: $white;
+    width: 1.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after{
+    right: calc(100% + 5px);
+    left: auto;
+  }
+  &::before{
+    right: auto;
+    left: calc(100% + 5px);
+  }
+}

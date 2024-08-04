@@ -1,0 +1,15 @@
+extends ../layouts/LayoutDocs
+include ../mixins/docs/RTL
+
+
+prepend styles 
+
+prepend scripts
+
+
+append variables
+  - var pageTitle = 'RTL'
+  - var pageDes = 'Working with right to left'
+
+append docs 
+  +RTL

@@ -1,0 +1,149 @@
+/*-----------------------------------------------
+|   Button
+-----------------------------------------------*/
+
+
+/*-----------------------------------------------
+|   hideaway buttons
+-----------------------------------------------*/
+$theme-hideaway-btn-colors: (
+  "primary": var(--#{$prefix}primary),
+  "success": var(--#{$prefix}success),
+  "info": var(--#{$prefix}info),
+  "warning": var(--#{$prefix}warning),
+  "danger": var(--#{$prefix}danger),
+);
+
+@each $color,
+$value in $theme-hideaway-btn-colors {
+  .btn-hideaway-#{$color} {
+    @include hideaway-button-variant($color);
+  }
+}
+
+.btn-tertiary {
+  @extend .btn-light;
+}
+
+.btn-white {
+  color: var(--#{$prefix}gray-1100);
+  background-color: $white;
+  border-color: $white;
+
+  @include hover-focus{
+    background-color: shade-color($white, 10%);
+    border-color: shade-color($white, 10%);
+    color: var(--#{$prefix}gray-1100);
+  }
+}
+
+
+/*-----------------------------------------------
+|   Brand Buttons                               |
+-----------------------------------------------*/
+
+.btn-facebook {
+  @include brand-icon-variant($facebook);
+}
+
+.btn-twitter {
+  @include brand-icon-variant($twitter);
+}
+.btn-google-plus{
+  @include brand-icon-variant($google-plus);
+}
+
+.btn-github{
+  @include brand-icon-variant($github);
+}
+/*-----------------------------------------------
+|   Outline Buttons
+-----------------------------------------------*/
+[class*='btn-outline-'] {
+  --#{$prefix}btn-box-shadow: none;
+  --#{$prefix}btn-border-width: 2px; 
+}
+.btn-outline-primary { @include button-outline-variant(map-get($theme-colors, primary)); }
+.btn-outline-info { @include button-outline-variant(map-get($theme-colors, info)); }
+.btn-outline-success { @include button-outline-variant(map-get($theme-colors, success)); }
+.btn-outline-warning { @include button-outline-variant(map-get($theme-colors, warning)); }
+.btn-outline-danger { @include button-outline-variant(map-get($theme-colors, danger)); }
+.btn-outline-white { 
+    @include button-outline-variant($white);
+    &:hover, &:active, &:focus, &:active:focus { color: $gray-1100 }
+}
+
+
+
+
+.btn {
+  letter-spacing: .05em;
+  white-space: nowrap;
+}
+
+.btn-xs {
+  --#{$prefix}btn-padding-x: 0.8rem;
+  --#{$prefix}btn-padding-y: 0.2rem;
+}
+
+.btn-link {
+  --#{$prefix}btn-font-weight: #{$font-weight-semi-bold};
+  --#{$prefix}btn-active-color: var(--#{$prefix}link-hover-color);
+
+}
+
+// disabled btn box shadow
+.btn {
+  &:disabled {
+    @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  }
+}
+
+
+
+
+
+.btn-light, .btn-outline-light { 
+  color: var(--#{$prefix}gray-1200);
+  border-color: #ccc;
+  background-color: $white;
+}
+.btn-outline-light:hover, .btn-light:hover{
+  color: var(--#{$prefix}gray-1200);
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.btn-success{
+  color: $white;
+  @include hover-focus{
+    color: $white;
+  }
+}
+
+.down-indicator{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white;
+  padding: map-get($spacers, 4) map-get($spacers, 2);
+  z-index: 99;
+}
+
+.packages {
+  .btn-packages{
+    position: absolute;
+    bottom: 2.25em;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 0.4 cubic-bezier(0.77, 0, 0.18, 1);
+  }
+
+  @include hover-focus{
+    .btn-packages{
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+extends ../layouts/LayoutDocs
+include ../mixins/docs/FileStructure
+
+
+prepend styles 
+
+prepend scripts
+
+
+append variables
+  - var pageTitle = 'File Structure'
+  - var pageDes = 'Modular grouping to work intuitively'
+
+append docs 
+  +FileStructure

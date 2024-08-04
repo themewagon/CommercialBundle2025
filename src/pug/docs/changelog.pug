@@ -1,0 +1,31 @@
+extends ../layouts/LayoutDocs
+
+
+prepend styles 
+
+prepend scripts
+
+
+append variables
+  - var pageTitle = 'Changelog'
+  - var pageDes = 'Evolution of your hideaway'
+
+append docs 
+
+  .card.mb-3 
+    .card-header.bg-200
+      h5.mb-2
+        code.fw-bold.fs-8 v2.0.0
+        |  - Initial Release
+      p.mb-0 15 July, 2024
+    .card-body
+      p.mb-0 Converted bootstrap 4.x to bootstrap 5.x
+
+  .card
+    .card-header.bg-200
+      h5.mb-2
+        code.fw-bold.fs-8 v1.0.0
+        |  - Initial Release
+      p.mb-0  31 December, 2018
+    .card-body
+      p.mb-0 Nothing to see here.

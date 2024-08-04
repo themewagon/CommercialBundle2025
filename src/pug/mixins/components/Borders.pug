@@ -1,0 +1,129 @@
+
+
+mixin BorderWidthDoc
+  p&attributes(attributes) You can control border width using helper classes 
+    code border-{1|2|3|4|5}
+    |. In addition, you can also use 
+    code border-top-2
+    |, 
+    code border-end-2
+    |, 
+    code border-bottom-2
+    |, 
+    code border-start-2
+    | .
+  
+mixin BorderDoc
+  h4 Border
+  p Use border utilities to quickly style the
+    code border
+    |  of an element. Great for images, buttons, or any other element.
+
+  p The classes are named using the format 
+    code border-{side}
+    |  for 
+    code xs
+    |  and 
+    code border-{side}-{breakpoint}-
+    |  for 
+    code sm
+    | , 
+    code md
+    | , 
+    code lg
+    | ,  
+    code xl
+    | , and 
+    code xxl
+    | .
+  p
+    | Where 
+    em side
+    |  is one of:
+  ul
+    li
+      code top
+      |  - for classes that set style for 
+      code border-top
+    li
+      code bottom
+      |  - for  classes that set style for 
+      code border-bottom
+    li
+      code start
+      |  - for  classes that set style for 
+      code border-start
+    li
+      code end
+      |  - for  classes that set style for 
+      code margin-right
+    li
+      code x
+      |  - for classes that set both
+      code *-left
+      |  and 
+      code *-right
+    li
+      code y
+      |  - for classes that set both
+      code *-top
+      |  and 
+      code *-bottom
+    li
+      | blank - for classes that set the
+      code border
+      |  style on all 4 side of the element.
+
+
+mixin BorderAdditive
+  span.border
+  = '\n'
+  span.border-top
+  = '\n'
+  span.border-end
+  = '\n'
+  span.border-bottom
+  = '\n'
+  span.border-start
+
+mixin BorderSubtractive
+  span.border.border-0
+  = '\n'
+  span.border.border-top-0
+  = '\n'
+  span.border.border-end-0
+  = '\n'
+  span.border.border-bottom-0
+  = '\n'
+  span.border.border-start-0
+  = '\n'
+
+mixin BorderRadiusHeader
+  h5(data-anchor) Border Radius &amp; sizes
+  p.mb-0 Add helper classes to an element to easily round its corners. For the rounded border, the class are named using the format 
+    code rounded-*
+
+
+mixin BorderStyle
+  span.border.border-dashed
+  = '\n'
+  span.border-top.border-dashed
+  = '\n'
+  span.border-end.border-dashed
+  = '\n'
+  span.border-bottom.border-dashed
+  = '\n'
+  span.border-start.border-dashed
+  = '\n'
+
+mixin BorderRadius
+  span.border.rounded-0
+  = '\n'
+  span.border.rounded-1
+  = '\n'
+  span.border.rounded-3
+  = '\n'
+  span.border.rounded-capsule.py-4.px-6
+  = '\n'
+  span.border.rounded-circle
+  = '\n'

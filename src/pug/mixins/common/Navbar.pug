@@ -1,0 +1,29 @@
+include ../navbar/Mixins
+
+
+mixin Navbar 
+  nav.navbar.navbar-top.navbar-hideaway.navbar-expand-lg.position-absolute.start-0.end-0.mt-4&attributes(attributes) 
+    .container.px-3
+      a.navbar-brand.start-50.top-50(href=`${CWD}`) 
+        | Hideaway 
+        span.d-none.d-xl-inline-block Resort
+
+      button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation' data-hamburger-icon)
+        span.hamburger.hamburger--emphatic
+          span.hamburger-box 
+            span.hamburger-inner
+
+      #navbarNavDropdown.collapse.navbar-collapse.navbar-nav-top.w-100(data-top-nav-dropdowns)
+        ul.navbar-nav
+          +navbarTopMenus(sitemap)
+        ul.ms-auto.navbar-nav.navbar-span-right 
+          li.nav-item.text-center 
+            a(href="#!").nav-link.ps-3.ps-lg-0.d-inline-block
+              span.fab.fa-facebook-f.fs-10
+            a(href="#!").nav-link.text-.ps-3.ps-lg-1.d-inline-block
+              span.fab.fa-twitter.fs-10
+            a(href="#!").nav-link.ps-3.ps-lg-1.d-inline-block
+              span.fab.fa-google-plus-g.fs-10 
+          
+          li 
+            a(href="#!").btn.btn-outline-white.btn-sm.fw-bold Book Now 

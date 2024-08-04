@@ -1,0 +1,249 @@
+append variables
+  - var theme = `${name}-${version}`;
+  - var bootstrapVersion = '5.3';
+  - var attrsMain = { id: 'top', class: 'main'};
+  - var attrsLayout = { class: '', 'data-layout': 'container' }
+  - var colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+  - var grays = [ 1100, 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100 ];
+  - var colorsAll = colors.concat(grays);
+  -
+    var themeColor =  {
+      primary: '#007AFF',
+      secondary: '#292b2c',
+      success: '#4CD964',
+      info: '#5AC8FA',
+      warning: '#FF9500',
+      danger: '#FF3B30',
+      light: '#ffffff',
+      dark: '#0c151a',
+    }
+
+  - var footer = true;
+  - var pathName = (locals.filename || locals.history[0]).split('\\').join('/').split('src/pug/').pop().split('.pug').shift();
+  - var pageTree = pathName.split('/');
+  - var pageName = pathName.split('/').pop();
+  - var CWD = pageTree.slice(1).map(() => '../').join('');
+
+  -
+    var sliderImages =[
+      {
+        imageSrc: 'assets/images/feature/1.jpg'
+      },
+      {
+        imageSrc: 'assets/images/feature/2.jpg'
+      },
+      {
+        imageSrc: 'assets/images/feature/3.jpg'
+      },
+      {
+        imageSrc: 'assets/images/feature/4.jpg'
+      },
+      {
+        imageSrc: 'assets/images/feature/5.jpg'
+      },
+      {
+        imageSrc: 'assets/images/feature/6.jpg'
+      },
+    ]
+
+  - 
+    var sitemap = [
+      {
+        label: 'home',
+        pages: [
+          {
+            name:'slider-header',
+            path: 'index',
+            pathName: 'index'
+          },
+          {
+            name:'slider-classic',
+            path: 'homes/header-slider-classic',
+            pathName: 'homes/header-slider-classic'
+          },
+          {
+            name:'static-header',
+            path: 'homes/header-static',
+            pathName: 'homes/header-static'
+          },
+          {
+            name:'static-classic',
+            path: 'homes/header-static-classic',
+            pathName: 'homes/header-static-classic'
+          },
+          {
+            name:'youtube-background',
+            path: 'homes/header-youtube-video',
+            pathName: 'homes/header-youtube-video'
+          },
+          {
+            name:'youtube-classic',
+            path: 'homes/header-youtube-video-classic',
+            pathName: 'homes/header-youtube-video-classic'
+          },
+          {
+            name:'self-hosted-video',
+            path: 'homes/header-selfhosted-video',
+            pathName: 'homes/header-selfhosted-video'
+          },
+          {
+            name:'self-hosted-classic',
+            path: 'homes/header-selfhosted-video-classic',
+            pathName: 'homes/header-selfhosted-video-classic'
+          },
+        ],
+      },
+      {
+        label: 'pages',
+        pages:[
+          {
+            name: 'gallery',
+            path: 'pages/gallery',
+            pathName: 'pages/gallery',
+          },
+          {
+            name: 'amenities',
+            path: 'pages/amenities',
+            pathName: 'pages/amenities'
+          },
+          {
+            name: 'packages',
+            path: 'pages/packages',
+            pathName: 'pages/packages'
+          },
+          {
+            name: 'our-history',
+            path: 'pages/history',
+            pathName: 'pages/history',
+          },
+          {
+            name: 'RTL',
+            path: 'pages/rtl',
+            pathName: 'pages/rtl',
+          }
+        ]
+      },
+      {
+        name: 'contact',
+        path: 'contact/contact',
+        pathName: 'contact/contact',
+        pages: []
+      },
+      {
+        label: 'elements',
+        pages: [
+          {
+            name: 'Buttons',
+            path: 'components/buttons',
+            pathName: 'components/buttons'
+          },
+          {
+            name: 'colors',
+            path: 'components/colors',
+            pathName: 'components/colors'
+          },
+          {
+            name: 'carousel',
+            path: 'components/carousel',
+            pathName: 'components/carousel'
+          },
+          {
+            name: 'google-map',
+            path: 'components/googlemap',
+            pathName: 'components/googlemap'
+          },
+          {
+            name: 'grid',
+            path: 'components/grid',
+            pathName: 'components/grid'
+          },
+          {
+            name: 'icons',
+            path: 'components/icons',
+            pathName: 'components/icons'
+          },
+          {
+            name: 'Layout-helpers',
+            path: 'components/layout-helpers',
+            pathName: 'components/layout-helpers'
+          },
+          {
+            name: 'Lightbox',
+            path: 'components/lightbox',
+            pathName: 'components/lightbox'
+          },
+          {
+            name: 'modal-video',
+            path: 'components/modal-video',
+            pathName: 'components/modal-video'
+          },
+          
+          {
+            name: 'Parallax',
+            path: 'components/parallax',
+            pathName: 'components/parallax'
+          },
+          {
+            name: 'smtpjs',
+            path: 'components/smtpjs',
+            pathName: 'components/smtpjs'
+          },
+          {
+            name: 'Spacing',
+            path: 'components/spacing',
+            pathName: 'components/spacing'
+          },
+          {
+            name: 'Swiper',
+            path: 'components/swiper',
+            pathName: 'components/swiper'
+          },
+          {
+            name: 'Typography',
+            path: 'components/typography',
+            pathName: 'components/typography'
+          }
+        ]
+      },
+      {
+        label: 'docs',
+        pages: [
+          {
+            name:'Getting Started',
+            path: 'docs/getting-started',
+            pathName: 'docs/getting-started'
+          },
+          {
+            name:'File Structure',
+            path: 'docs/file-structure',
+            pathName: 'docs/file-structure'
+          },
+          {
+            name:'customization',
+            path: 'docs/customization',
+            pathName: 'docs/customization'
+          },
+          {
+            name:'gulp',
+            path: 'docs/gulp',
+            pathName: 'docs/gulp'
+          },
+          {
+            name:'RTL',
+            path: 'docs/rtl',
+            pathName: 'docs/rtl',
+          },
+          {
+            name:'plugins',
+            path: 'docs/plugins',
+            pathName: 'docs/plugins',
+          },
+          {
+            name:'changelog',
+            path: 'docs/changelog',
+            pathName: 'docs/changelog'
+          }
+        ]
+      }
+    ]
+  - var paths = flatSitemap(sitemap);

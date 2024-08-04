@@ -1,0 +1,97 @@
+mixin HoverBox(image, title)
+  .hoverbox 
+    img(src=image alt="")
+    .hoverbox-primary-content.as-hoverbox-content.d-flex.align-items-center.justify-content-center.h-100 
+      h3.text-white=  title 
+    .hoverbox-content.p-4 
+      .hoverbox-bg.d-flex.align-items-center.justify-content-center.h-100.w-100
+
+mixin LightBoxItem(item) 
+  .col-md-6.col-lg-4.p-1
+    a(href='#!' data-caption='my caption' data-bigpicture!={
+      gallery: '#image_gallery',
+    } data-bp= item.imageSrc )
+      img(src=item.imageSrc alt='' )
+
+mixin Homes 
+  +Section(container).text-center.text-lg-start.py-9.bg-white#target-down-indicator
+    .row 
+      .col-lg-4
+        a(href=`${CWD}pages/gallery.html`)
+          +HoverBox(`${CWD}assets/images/thumb-gallery.jpg`, 'Gallery')
+      .col-lg-4.mt-4.mt-lg-0
+        a(href=`${CWD}pages/amenities.html`)
+          +HoverBox(`${CWD}assets/images/thumb-amneities.jpg`, 'Amenities') 
+      
+      .col-lg-4.mt-4.mt-lg-0 
+        a(href=`${CWD}pages/packages.html`)
+          +HoverBox(`${CWD}assets/images/thumb-packages.jpg`, 'Packages') 
+
+    .row.mt-6 
+      .col-lg-4.pe-lg-2 
+        h3.text-primary.ls-3 
+          | An 
+          em inviting 
+          | escape 
+      .col-lg-8 
+        p Crafted with Bootstrap 5, Hideaway is perfectly responsive to every devices available. Thousands of CSS helper classes let you customize this template in any way you want, without writing any code. This is a dummy text that you can change customize as you like with your description.
+        a.btn.btn-outline-primary.mt-2.mt-lg-4.py-lg-3.px-lg-4.fw-light(href="#!")  Our History  
+  
+  +Section({image: `${CWD}assets/images/cta.jpg`, className: 'overlay overlay-2', attrs:{"data-parallax": "data-parallax", "data-rellax-parcentage": 0.5, "data-center": "true"}}, container).has-parallax.text-center.py-11
+    .row
+      .col 
+        h1.text-white.fs-5.fs-lg-2.mb-5 
+          | Eagerly 
+          em waiting 
+          | to welcome you.
+        a(href="#!").btn.btn-outline-white.btn-lg.d-none.d-lg-inline-block  Book Your Stay 
+        a(href="#!").btn.btn-outline-white.d-lg-none  Book Your Stay 
+
+  
+  +Section(container).text-center.py-9
+    -
+      var lightBoxItems = [
+        {
+          imageSrc: `${CWD}assets/images/feature/3.jpg`
+        },
+        {
+          imageSrc: `${CWD}assets/images/feature/8.jpg`
+        },
+        {
+          imageSrc: `${CWD}assets/images/feature/5.jpg`
+        },
+        {
+          imageSrc: `${CWD}assets/images/feature/1.jpg`
+        },
+        {
+          imageSrc: `${CWD}assets/images/feature/6.jpg`
+        },
+        {
+          imageSrc: `${CWD}assets/images/feature/12.jpg`
+        }
+      ]
+    .row 
+      .col-xl-6 
+        h6.fs-9.mb-4.text-primary 123 Fake Street, Stone Ridge, NY 12345
+        .p-2 
+          .row 
+            .col 
+              .googlemap(data-gmap data-latlng='41.8333925,-88.0123393' data-scrollwheel='false' data-icon=`${CWD}assets/images/map-marker.png` data-zoom='15' data-theme='Default' style='height: 353px;')
+                .marker-content.py-3 
+                  h5.text-primary The 
+                    em Hideaway 
+                    | Resort 
+                  p.fs-10 
+                    | A nice description about your place 
+                    br
+                    | Customize it as you want.
+      .col-xl-6.mt-6.mt-xl-0 
+        a(href="#!").link-primary.d-inline-block.mx-1.mx-lg-2.font-sans-serif.mb-lg-4 Instagram 
+        span /
+        a(href="#!").link-primary.d-inline-block.mx-1.mx-lg-2.font-sans-serif.mb-lg-4 Facebook 
+        span /
+        a(href="#!").link-primary.d-inline-block.mx-1.mx-lg-2.font-sans-serif.mb-lg-4 Twitter 
+
+        #image_gallery.row.g-0.mt-4.mt-lg-0
+          each item in lightBoxItems
+            +LightBoxItem(item)

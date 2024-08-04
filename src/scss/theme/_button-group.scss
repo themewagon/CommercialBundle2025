@@ -1,0 +1,17 @@
+.button-component{
+  .btn-group {
+    [class*='btn-outline-'] {
+      --#{$prefix}btn-border-width: var(--#{$prefix}border-width); 
+    }
+    @include media-breakpoint-up(md){
+      .btn:first-child{
+        border-top-left-radius: 3.125rem;
+        border-bottom-left-radius: 3.125rem;
+      }
+      .btn:last-child{
+        border-top-right-radius: 3.125rem;
+        border-bottom-right-radius: 3.125rem;
+      }
+    }
+  }
+}

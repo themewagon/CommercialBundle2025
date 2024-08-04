@@ -1,0 +1,32 @@
+mixin StaticFull
+  +Section({image: `${CWD}assets/images/main-header-3.jpg`, className: "overlay overlay-1", attrs: {"data-parallax": "data-parallax", "data-rellax-speed": "-3"}}, container).py-0.has-parallax.text-center(data-zanim-timeline!={} data-zanim-trigger!='scroll')
+    +ScrollSpyButton({
+      attrs: {"data-zanim-xs": {delay: 0.8}, "data-zanim-trigger": "scroll"}
+    })
+    .row.py-8.align-items-center.banner(data-zanim-timeline!={} data-inertia!={weight: 1.5}) 
+      .col 
+        .overflow-hidden 
+          h6.text-uppercase.text-white.fs-10.fs-lg-9.ls-3.font-base(data-zanim-xs!={delay: 1}) west virginia / united states 
+        .overflow-hidden 
+          h1.text-white.fs-4.fs-lg-2.text-capitalize(data-zanim-xs!={delay:0.9})
+            | The 
+            em Hideaway 
+            | Inn 
+
+    
+
+mixin StaticClassic
+  +Section({image: `${CWD}assets/images/main-header-3.jpg`, className: "overlay overlay-1",attrs: {"data-parallax": "data-parallax", "data-rellax-speed": "-3"}}, container).py-0.has-parallax.text-center(data-zanim-timeline!={} data-zanim-trigger!='scroll')
+    +ScrollSpyButton({
+      attrs: {"data-zanim-xs": {delay: 0.8}, "data-zanim-trigger": "scroll"}
+    })
+    .row.py-8.align-items-center.banner-classic(data-zanim-timeline!={} data-inertia!={weight: 1.5}) 
+      .col 
+        .overflow-hidden 
+          h6.text-uppercase.text-white.fs-10.fs-lg-9.ls-3.font-base(data-zanim-xs!={delay: 1}) west virginia / united states 
+        .overflow-hidden 
+          h1.text-white.fs-4.fs-lg-2.text-capitalize(data-zanim-xs!={delay:0.9})
+            | The 
+            em Hideaway 
+            | Inn 
+ 

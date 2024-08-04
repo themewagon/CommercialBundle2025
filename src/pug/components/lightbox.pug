@@ -1,0 +1,39 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Lightbox
+
+prepend styles 
+
+prepend scripts
+  script(src=`${CWD}vendors/bigpicture/BigPicture.js`) 
+
+
+append variables
+  - var pageTitle = 'Lightbox'
+
+append component 
+  p 
+    | For detail documentation, 
+    a(href="https://github.com/henrygd/bigpicture" target="_blank") Big Picture documentation 
+      span.ms-1 &xrarr;
+  +ComponentCard({
+    title: 'Bigpicture Image',
+    description: `BigPictures are integrated into Hideaway. It allows you to display a thumbnail and when clicked, the original image will pop up.<br>The lightbox image works by wrapping anything ie. <code>&lt;img&gt;</code> tag inside an <code>&lt;a&gt;</code> element with the data attribute <code>data-bigpicture</code>. For example <code>data-bigpicture={imgSrc:'source.jpg'}</code>`,
+    prismClass: 'mt-4'
+  }).mt-5
+    +LightboxImageDemo
+
+  h5.mt-5 Javascript
+  +ComponentCardLib
+    script(src=`vendors/bigpicture/BigPicture.js`) 
+
+  hr.my-6
+
+  +ComponentCard({
+    title: 'Bigpicture gallery',
+    description: 'You can easily create a gallery of lightbox images by <code>data-bigpicture</code> and <code>data-bp</code> attribute. For a specific gallery set an Id to the parent element and pass the id through <code>data-bigpicture</code> attribute. Use <code>data-bp</code> attribute to pass the image source.'
+  })
+    +LightboxGalleryDemo
+
+  h5.mt-5 Javascript
+  +ComponentCardLib
+    script(src=`vendors/bigpicture/BigPicture.js`) 

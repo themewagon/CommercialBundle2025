@@ -1,0 +1,12 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/HeroSection
+include ../mixins/pages/Amenities
+
+
+prepend styles 
+
+prepend scripts
+
+append content 
+  +HeroSection({title: 'Amenities', image: `${CWD}assets/images/main-header-1.jpg`})
+  +Amenities

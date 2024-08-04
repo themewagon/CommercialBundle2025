@@ -1,29 +1,33 @@
-/**
- * The base Task runner for ZiON
- *
- * The gulpfile.js connects all other sub task runners.
- * All the task runners are located at './zcore/gulp_tasks'
- * 
- *
- * ZiON currently supports the following major commands:
- *
- * * gulp
- * * gulp:bin (alies `gulp`)
- * * gulp:product
- * * gulp:compress
- *
- * @link https://zioplates.com/
- *
- * @package ZiON
- */
+const gulp = require('gulp');
+const requireDir = require('require-dir');
 
+requireDir('./gulp');
 
-var gulp        = require('gulp'),
-	requireDir  = require('require-dir');
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|  Compile
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+gulp.task('compile', gulp.parallel('style', 'script', 'vendor'));
+gulp.task('compile:all', gulp.parallel('compile', 'pug'));
 
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|  Deploy
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+gulp.task('build', gulp.series('clean:build', 'build:static', 'compile:all'));
+gulp.task('build:test', gulp.series('build', 'watch'));
+gulp.task('live', gulp.series('clean:live', 'build', 'build:push'));
 
-requireDir('./zcore/gulp_tasks');
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|  Run development environment
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+gulp.task('default', gulp.series('clean', 'compile', 'watch'));
 
-gulp.task('default', ['bin'],  function() {
-	console.log("\n\n*** Firing up!! ***\n\n");
-});
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|  Product
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+gulp.task('product:make', gulp.series('compile:all', 'product'));
+
+/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+|  Live
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-*/
+
+gulp.task('live:make', gulp.series('pre:live', 'post:live'));

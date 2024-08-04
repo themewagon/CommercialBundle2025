@@ -1,0 +1,58 @@
+mixin MapBasicExample 
+  .googlemap(data-gmap data-latlng='41.8333925,-88.0123393' data-scrollwheel='false', data-icon=`${CWD}assets/images/map-marker.png`, data-zoom='15' data-theme='Default' style="min-height:300px")
+      .marker-content.py-3
+        h5 Tooltip title
+        p
+          | A nice description about your place
+          br
+          |  Customize it as you want.
+
+mixin BasicMapExampleJavascript 
+  h5.mt-5 JavaScript
+  +ComponentCardLib
+    script(src!="https:maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async)
+  a(href='https://developers.google.com/maps/documentation/javascript/get-api-key' target='_blank').font-sans-serif Get your API key
+    span.d-inline-block.ms-1 &xrarr;
+
+mixin MapsColorScheme 
+  h5.mt-5 Map color schemes
+  p Change the value of 
+    code data-theme=''
+    |  to any of the followings
+
+  ul
+    li
+      code Default
+    li
+      code Gray
+    li
+      code Midnight
+    li
+      code Hopper
+    li
+      code Beard
+    li
+      code AssassianCreed
+    li
+      code SubtleGray
+    li
+      code Tripitty 
+
+mixin MapColorSchemeExample 
+  .googlemap(data-gmap data-latlng='41.8333925,-88.0123393' data-scrollwheel='false', data-icon=`${CWD}assets/images/map-marker.png`, data-zoom='15' data-theme='AssassianCreed' style="min-height:300px")
+      .marker-content.py-3
+        h5 Tooltip title
+        p
+          | A nice description about your place
+          br
+          |  Customize it as you want.
+
+
+mixin StreetViewExample
+  h5.mt-5 Example of street view
+  .googlemap.min-vh-50(data-gmap data-latlng='48.8588723,2.2932638' data-pov!={heading: 120, pitch: 0} data-scrollwheel='false' data-icon=`${CWD}assets/images/map-marker.png`, data-zoom='1' data-theme='streetview')
+      .marker-content.py-3
+  h5.mt-5 HTML
+  pre
+    code.lang-html.
+      #{"<div data-latlng='48.8588723,2.2932638' data-pov='{heading:120,pitch:0}' data-scrollwheel='false' data-icon='../assets/images/map-marker.png' data-zoom='1' data-theme='streetview' class='googlemap h-full'></div>"}

@@ -1,134 +1,80 @@
 {
-  "name": "ZiON",
-  "version": "0.5.0",
-  "description": "Web template crafting machine",
+  "name": "hideaway",
+  "version": "2.0.0",
+  "description": "Dashboard & WebApp Template",
   "main": "gulpfile.js",
-  "dependencies": {
-    "bootstrap": "^4.0.0-beta.2",
-    "flexslider": "^2.6.4",
-    "font-awesome": "^4.7.0",
-    "gsap": "^1.20.3",
-    "hamburgers": "github:jonsuh/hamburgers",
-    "imagesloaded": "^4.1.3",
-    "isotope-layout": "^3.0.4",
-    "jquery": "^3.1.0",
-    "jquery-menu-aim": "^1.1.0",
-    "jquery.mb.ytplayer": "github:pupunzi/jquery.mb.YTPlayer",
-    "lightbox2": "^2.9.0",
-    "loaders.css": "^0.1.2",
-    "owl.carousel": "github:OwlCarousel2/OwlCarousel2",
-    "popper.js": "^1.12.6",
-    "rellax": "github:dixonandmoe/rellax",
-    "remodal": "^1.1.1",
-    "semantic-ui-accordion": "^2.2.12",
-    "semantic-ui-dropdown": "^2.2.12",
-    "semantic-ui-transition": "^2.2.12",
-    "typed.js": "^2.0.6"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.18.13",
-    "del": "^3.0.0",
-    "gulp": "3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-connect-php": "^1.0.1",
-    "gulp-gm": "0.0.8",
-    "gulp-imagemin": "^3.4.0",
-    "gulp-npm-mainfiles": "^1.0.3",
-    "gulp-plumber": "^1.1.0",
-    "gulp-preprocess": "^2.0.0",
-    "gulp-prettify": "^0.5.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-rtlcss": "^1.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
-    "gulp-util": "^3.0.8",
-    "gulp-watch": "^4.3.8",
-    "gulp-webshot": "^0.2.3",
-    "install": "^0.10.1",
-    "node-bourbon": "^4.2.8",
-    "pug": "^2.0.0-rc.4",
-    "require-dir": "^0.3.0",
-    "run-sequence": "^2.2.0",
-    "vinyl-paths": "^2.1.0"
-  },
-  "mainfiles": {
-    "jquery": [
-      "/dist/jquery.min.js"
-    ],
-    "bootstrap": [
-      "/dist/css/bootstrap.min.css",
-      "/dist/js/bootstrap.min.js"
-    ],
-    "popper.js": [
-      "/dist/popper.min.js"
-    ],
-    "font-awesome": [
-      "/css/font-awesome.min.css",
-      "/fonts/*.*"
-    ],
-    "owl.carousel": [
-      "/dist/owl.carousel.min.js",
-      "/dist/assets/**/*.*"
-    ],
-    "semantic-ui-accordion": [
-      "/accordion.min.css",
-      "/accordion.min.js"
-    ],
-    "semantic-ui-dropdown": [
-      "/dropdown.min.css",
-      "/dropdown.min.js"
-    ],
-    "semantic-ui-transition": [
-      "/transition.min.css",
-      "/transition.min.js"
-    ],
-    "typed.js": [
-      "/lib/typed.min.js"
-    ],
-    "jquery-menu-aim": [
-      "/jquery.menu-aim.js"
-    ],
-    "lightbox2": [
-      "/dist/**/*.*"
-    ],
-    "isotope-layout": [
-      "/dist/isotope.pkgd.min.js"
-    ],
-    "hamburgers": [
-      "/dist/hamburgers.min.css"
-    ],
-    "remodal": [
-      "/dist/*.*"
-    ],
-    "flexslider": [
-      "/flexslider.css",
-      "/jquery.flexslider-min.js"
-    ],
-    "gsap": [
-      "/src/minified/TweenMax.min.js",
-      "/src/minified/plugins/ScrollToPlugin.min.js",
-      "/src/minified/TimelineMax.min.js"
-    ],
-    "jquery.mb.ytplayer": [
-      "/dist/**/*.*"
-    ],
-    "loaders.css": [
-      "/loaders.min.css",
-      "/loaders.css.js"
-    ],
-    "imagesloaded": [
-      "/imagesloaded.pkgd.min.js"
-    ],
-    "rellax": [
-      "/rellax.min.js"
-    ]
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "cross-env MODE=PROD gulp build",
+    "build:test": "cross-env MODE=PROD gulp build:test",
+    "live": "gulp compile:all && cross-env MODE=PROD gulp live",
+    "publish": "gh-pages -d live",
+    "publish:force": "cross-var git push origin `git subtree split --prefix live $npm_package_version`:gh-pages --force",
+    "publish:f": "git push origin `git subtree split --prefix live main`:gh-pages --force",
+    "localhost": "ssh -R 80:localhost:3000 ssh.localhost.run"
   },
-  "author": "Ashraful Prium <prium47@gmail.com>",
-  "license": "ISC"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-transform-strict-mode": "^7.23.3",
+    "@babel/preset-env": "^7.23.9",
+    "@mr-hope/gulp-sass": "^3.1.1",
+    "ansi": "^0.3.1",
+    "broken-link-checker": "^0.7.8",
+    "browser-sync": "^3.0.2",
+    "cross-env": "^7.0.3",
+    "cross-var": "^1.1.0",
+    "del": "^6.1.1",
+    "dotenv": "^16.4.3",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "gh-pages": "^3.2.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clone": "^2.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-data": "^1.3.1",
+    "gulp-eslint-new": "^1.9.1",
+    "gulp-if": "^3.0.0",
+    "gulp-jsbeautifier": "^3.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-rtlcss": "^1.4.2",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-w3cjs": "^1.3.2",
+    "gulp-zip": "^5.1.0",
+    "merge-stream": "^2.0.0",
+    "pretty": "^2.0.0",
+    "pug": "^3.0.2",
+    "require-dir": "^1.2.0",
+    "sass": "^1.70.0",
+    "through2": "^4.0.2",
+    "uuid": "^9.0.1",
+    "yargs": "^17.7.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.11.8",
+    "bigpicture": "^2.6.2",
+    "bootstrap": "^5.3.2",
+    "gulp-html": "^4.0.0",
+    "hamburgers": "^1.2.1",
+    "imagesloaded": "^5.0.0",
+    "is_js": "^0.9.0",
+    "loaders.css": "^0.1.2",
+    "lodash": "^4.17.21",
+    "prismjs": "^1.29.0",
+    "rellax": "^1.12.1",
+    "simple-git": "^3.24.0",
+    "swiper": "^11.0.6"
+  },
+  "browserslist": [
+    "last 5 version"
+  ]
 }
