@@ -923,7 +923,7 @@ progress {
 .container-lg,
 .container-md,
 .container-sm {
-  --hideaway-gutter-x: 3rem;
+  --hideaway-gutter-x: 1.875rem;
   --hideaway-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--hideaway-gutter-x) * 0.5);
@@ -961,7 +961,7 @@ progress {
 }
 
 .row {
-  --hideaway-gutter-x: 3rem;
+  --hideaway-gutter-x: 1.875rem;
   --hideaway-gutter-y: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5296,7 +5296,7 @@ textarea.form-control-lg {
   --hideaway-card-color: ;
   --hideaway-card-bg: #fff;
   --hideaway-card-img-overlay-padding: 1rem;
-  --hideaway-card-group-margin: 1.5rem;
+  --hideaway-card-group-margin: 0.9375rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6368,7 +6368,7 @@ textarea.form-control-lg {
   --hideaway-toast-zindex: 1090;
   --hideaway-toast-padding-x: 0.75rem;
   --hideaway-toast-padding-y: 0.5rem;
-  --hideaway-toast-spacing: 3rem;
+  --hideaway-toast-spacing: 1.875rem;
   --hideaway-toast-max-width: 350px;
   --hideaway-toast-font-size: 0.875rem;
   --hideaway-toast-color: var(--hideaway-gray-600);
