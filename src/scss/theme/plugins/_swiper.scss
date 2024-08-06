@@ -49,48 +49,7 @@
       }
     }
   }
-  &.swiper-slider{
-    .swiper-nav{
-      [class*=swiper-]{
-        color: var(--#{$prefix}gray-700);
-        background-color: rgba($gray-200, 0.8) !important;
-        margin: 0;
-        @include hover-focus {
-          background-color: $gray-200 !important;
-          opacity: 1;
-        }
-      }
-    }
-    .swiper-button-prev{ 
-      left : -2rem;
-      @include media-breakpoint-up(md){
-        left: -4rem;
-      }
-      [dir='rtl'] & {
-        left: unset;
-        right: -3rem;
-      }
-    }
-    .swiper-button-next{ 
-      right: -2rem;
-      @include media-breakpoint-up(md){
-        right: -4rem;
-      }
-      [dir='rtl'] & {
-        right: unset;
-        left: -3rem;
-      }
-    }
-    .swiper-pagination-bullet{
-      height: 10px !important;
-      width: 10px !important;
-    }
-
-    .swiper-pagination-bullet-active{
-      background: var(--#{$prefix}primary) !important ;
-    }
-  }
-
+  
   &.home-slider{
     .swiper-nav{
       [class*=swiper-]{
