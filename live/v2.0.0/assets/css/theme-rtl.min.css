@@ -891,7 +891,7 @@ progress {
 }
 
 .img-thumbnail {
-  padding: 0.25rem;
+  padding: 0.5rem;
   background-color: var(--hideaway-thumbnail-bg-global);
   border: 1px solid #ddd;
   border-radius: var(--hideaway-border-radius);
@@ -18681,7 +18681,7 @@ code {
 }
 
 .main {
-  margin: 13px;
+  margin: 16px;
 }
 @media (min-width: 576px) {
   .main {
@@ -19793,14 +19793,6 @@ html[dir=rtl] .googlemap .gm-style-iw.gm-style-iw-c button[title=Close] {
 .swiper-theme-container.home-slider .swiper-button-prev:after,
 .swiper-theme-container.home-slider .swiper-button-next:after {
   font-size: 1.3rem;
-}
-.swiper-theme-container .thumb .swiper-wrapper:first-child {
-  border-top-right-radius: var(--hideaway-border-radius-lg);
-  border-bottom-right-radius: var(--hideaway-border-radius-lg);
-}
-.swiper-theme-container .thumb .swiper-wrapper:last-child {
-  border-top-left-radius: var(--hideaway-border-radius-lg) !important;
-  border-bottom-left-radius: var(--hideaway-border-radius-lg) !important;
 }
 .swiper-theme-container .thumb .swiper-slide {
   opacity: 0.7 !important;

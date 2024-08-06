@@ -893,7 +893,7 @@ progress {
 }
 
 .img-thumbnail {
-  padding: 0.25rem;
+  padding: 0.5rem;
   background-color: var(--hideaway-thumbnail-bg-global);
   border: 1px solid #ddd;
   border-radius: var(--hideaway-border-radius);
@@ -18707,7 +18707,7 @@ code {
 }
 
 .main {
-  margin: 13px;
+  margin: 16px;
 }
 @media (min-width: 576px) {
   .main {
@@ -19820,39 +19820,11 @@ html[dir=rtl] .googlemap .gm-style-iw.gm-style-iw-c button[title=Close] {
 .swiper-theme-container.home-slider .swiper-button-next:after {
   font-size: 1.3rem;
 }
-.swiper-theme-container .thumb .swiper-wrapper:first-child {
-  border-top-left-radius: var(--hideaway-border-radius-lg);
-  border-bottom-left-radius: var(--hideaway-border-radius-lg);
-}
-.swiper-theme-container .thumb .swiper-wrapper:last-child {
-  border-top-right-radius: var(--hideaway-border-radius-lg) !important;
-  border-bottom-right-radius: var(--hideaway-border-radius-lg) !important;
-}
 .swiper-theme-container .thumb .swiper-slide {
   opacity: 0.7 !important;
 }
 .swiper-theme-container .thumb .swiper-slide-thumb-active {
   opacity: 1 !important;
-}
-
-.plyr__control--overlaid, .plyr__control--overlaid:hover, .plyr__control--overlaid:focus {
-  background-color: #240701;
-}
-
-.plyr--video .plyr__controls .plyr__control.plyr__tab-focus, .plyr--video .plyr__controls .plyr__control:hover, .plyr--video .plyr__controls .plyr__control[aria-expanded=true], .plyr__menu__container label.plyr__control input[type=radio]:checked + span {
-  background-color: #240701;
-}
-
-.plyr--full-ui input[type=range] {
-  color: #240701;
-}
-
-.plyr {
-  border-radius: 10px;
-}
-
-.plyr--video .plyr__controls {
-  border-radius: 10px !important;
 }
 
 /*-----------------------------------------------

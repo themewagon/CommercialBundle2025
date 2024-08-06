@@ -14,7 +14,7 @@ mixin LightBoxItem(item)
       img(src=item.imageSrc alt='' )
 
 mixin Homes 
-  +Section(container).text-center.text-lg-start.py-9.bg-white#target-down-indicator
+  +Section(container).text-center.text-lg-start.py-7.py-md-9.bg-white#target-down-indicator
     .row 
       .col-lg-4
         a(href=`${CWD}pages/gallery.html`)
@@ -48,7 +48,7 @@ mixin Homes
         a(href="#!").btn.btn-outline-white.d-lg-none  Book Your Stay 
 
   
-  +Section(container).text-center.py-9
+  +Section(container).text-center.py-7.py-md-9
     -
       var lightBoxItems = [
         {

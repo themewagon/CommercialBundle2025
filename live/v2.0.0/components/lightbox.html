@@ -48,7 +48,7 @@
       <div data-layout="container">
         <div class="content">
           <nav class="navbar navbar-top navbar-hideaway navbar-expand-lg position-absolute start-0 end-0 mt-4">
-            <div class="container px-3"><a class="navbar-brand start-50 top-50" href="../"> Hideaway <span class="d-none d-xl-inline-block">Resort</span></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" data-hamburger-icon="data-hamburger-icon"><span class="hamburger hamburger--emphatic"><span class="hamburger-box"> <span class="hamburger-inner"></span></span></span></button>
+            <div class="container px-3"><a class="navbar-brand" href="../"> Hideaway <span class="d-none d-xl-inline-block">Resort</span></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" data-hamburger-icon="data-hamburger-icon"><span class="hamburger hamburger--emphatic"><span class="hamburger-box"> <span class="hamburger-inner"></span></span></span></button>
               <div class="collapse navbar-collapse navbar-nav-top w-100" id="navbarNavDropdown" data-top-nav-dropdowns="data-top-nav-dropdowns">
                 <ul class="navbar-nav">
                   <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">Home<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
@@ -139,32 +139,27 @@
                   <div class="mt-5">
                     <h4>Bigpicture Image</h4>
                     <p>BigPictures are integrated into Hideaway. It allows you to display a thumbnail and when clicked, the original image will pop up.<br>The lightbox image works by wrapping anything ie. <code>&lt;img&gt;</code> tag inside an <code>&lt;a&gt;</code> element with the data attribute <code>data-bigpicture</code>. For example <code>data-bigpicture={imgSrc:'source.jpg'}</code></p>
-                    <div class="row text-center mt-5">
-                      <div class="col-sm-4">
+                    <div class="row mt-5">
+                      <div class="col-sm-6">
                         <a href="#!" data-caption="caption" data-bigpicture='{"imgSrc":"../assets/images/feature/12.jpg"}'>
-                          <img class="img-thumbnail" src="../assets/images/feature/12.jpg" alt="" />
-                        </a>
+                          <img class="img-thumbnail mb-4" src="../assets/images/feature/12.jpg" alt="" />
+
+                          <a class="btn btn-primary" href="#!" data-bigpicture='{"imgSrc":"../assets/images/feature/12.jpg"}' data-caption="caption">
+                            LightBox
+                          </a></a>
                       </div>
-                      <div class="col-sm-4">
-                        <a class="btn btn-primary" href="#!" data-bigpicture='{"imgSrc":"../assets/images/feature/12.jpg"}' data-caption="caption">
-                          LightBox
-                        </a>
-                      </div>
-                    </div><pre class="scrollbar rounded-1 mt-4"><code class="language-html">&lt;div class=&quot;row text-center mt-5&quot;&gt;
-  &lt;div class=&quot;col-sm-4&quot;&gt;
+                    </div><pre class="scrollbar rounded-1 mt-4"><code class="language-html">&lt;div class=&quot;row mt-5&quot;&gt;
+  &lt;div class=&quot;col-sm-6&quot;&gt;
     &lt;a href=&quot;#!&quot; data-caption=&quot;caption&quot; data-bigpicture='{&quot;imgSrc&quot;:&quot;../assets/images/feature/12.jpg&quot;}'&gt;
-      &lt;img class=&quot;img-thumbnail&quot; src=&quot;../assets/images/feature/12.jpg&quot; alt=&quot;&quot; /&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-sm-4&quot;&gt;
-    &lt;a class=&quot;btn btn-primary&quot; href=&quot;#!&quot; data-bigpicture='{&quot;imgSrc&quot;:&quot;../assets/images/feature/12.jpg&quot;}' data-caption=&quot;caption&quot;&gt;
-      LightBox
-    &lt;/a&gt;
+      &lt;img class=&quot;img-thumbnail mb-4&quot; src=&quot;../assets/images/feature/12.jpg&quot; alt=&quot;&quot; /&gt;
+      &lt;a class=&quot;btn btn-primary&quot; href=&quot;#!&quot; data-bigpicture='{&quot;imgSrc&quot;:&quot;../assets/images/feature/12.jpg&quot;}' data-caption=&quot;caption&quot;&gt;
+        LightBox
+      &lt;/a&gt;&lt;/a&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
                   </div>
                   <h5 class="mt-5">Javascript</h5><pre class="scrollbar mt-2"><code class="language-html">&lt;script src=&quot;vendors/bigpicture/BigPicture.js&quot;&gt; &lt;/script&gt;</code></pre>
-                  <hr class="my-6" />
+                  <hr class="my-4 my-md-6" />
                   <div>
                     <h4>Bigpicture gallery</h4>
                     <p>You can easily create a gallery of lightbox images by <code>data-bigpicture</code> and <code>data-bp</code> attribute. For a specific gallery set an Id to the parent element and pass the id through <code>data-bigpicture</code> attribute. Use <code>data-bp</code> attribute to pass the image source.</p>
@@ -248,7 +243,7 @@
                 </div>
                 <div class="col-md-10 col-lg-7 col-xl-5 mt-4">
                   <form class="row align-items-center g-0" method="POST" onsubmit="return false;">
-                    <div class="col-md-8 px-sm-2 mb-3 mb-sm-0"> <input class="form-control" type="hidden" name="to" value="username@domain.extension" /><input class="form-control border-white" type="email" placeholder="Enter Email Here" /></div>
+                    <div class="col-md-8 px-sm-2 mb-3 mb-md-0"> <input class="form-control" type="hidden" name="to" value="username@domain.extension" /><input class="form-control border-white" type="email" placeholder="Enter Email Here" /></div>
                     <div class="col-md-4 px-sm-2"><input class="btn btn-white w-100 fs-9" type="submit" value="Submit" /></div>
                   </form>
                 </div>

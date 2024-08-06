@@ -1,21 +1,21 @@
 mixin LightboxImageDemo     
-  .row.text-center.mt-5
-    .col-sm-4
+  .row.mt-5
+    .col-sm-6
       = '\n'
       a(href='#!' data-caption='caption' data-bigpicture!={
           imgSrc:`${CWD}assets/images/feature/12.jpg`
         })
         = '\n'
-        img.img-thumbnail(src=`${CWD}assets/images/feature/12.jpg` alt='' )
+        img.img-thumbnail.mb-4(src=`${CWD}assets/images/feature/12.jpg` alt='' )
         = '\n'
-    .col-sm-4
-      = '\n'
-      a.btn.btn-primary(href='#!' data-bigpicture!={
-        imgSrc:`${CWD}assets/images/feature/12.jpg`
-      } data-caption='caption')
-        = '\n' 
-        | LightBox
+      
         = '\n'
+        a.btn.btn-primary(href='#!' data-bigpicture!={
+          imgSrc:`${CWD}assets/images/feature/12.jpg`
+        } data-caption='caption')
+          = '\n' 
+          | LightBox
+          = '\n'
 
 mixin LightboxGalleryDemo
 
