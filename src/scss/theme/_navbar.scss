@@ -30,7 +30,7 @@
         font-size: 10px;
         @include media-breakpoint-up(lg){
           position:absolute;
-          right: 4px;
+          right: 8px;
           top: 50%;
           transform: translateY(-50%);
         }

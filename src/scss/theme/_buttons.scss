@@ -35,6 +35,11 @@ $value in $theme-hideaway-btn-colors {
     border-color: shade-color($white, 10%);
     color: var(--#{$prefix}gray-1100);
   }
+  &:active, &:focus{
+    background-color: shade-color($white, 10%) !important;
+    border-color: shade-color($white, 10%) !important;
+    color: var(--#{$prefix}gray-1100) !important; 
+  }
 }
 
 

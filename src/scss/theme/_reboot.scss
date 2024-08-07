@@ -111,17 +111,7 @@ samp {
   }
 }
 
-[data-bs-theme="dark"] {
-  .d-dark-none {
-    display: none;
-  }
-}
 
-html:not([data-bs-theme="dark"]) {
-  .d-light-none {
-    display: none;
-  }
-}
 img{
   max-width: 100%;
 }
@@ -131,19 +121,11 @@ p {
   line-height: 1.6;
 }
 
-
-th{
-  font-size: map-get($font-sizes, 10 ); 
-}
-
 legend {
   font-size: map-get($font-sizes, 10);
   font-weight: $font-weight-semi-bold;
 }
 
-.form-check-level{
-  margin-bottom: 0;
-}
 /*-----------------------------------------------
 |   Headers
 -----------------------------------------------*/

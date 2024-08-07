@@ -1,52 +1,12 @@
 
 /*-----------------------------------------------
-|   Theme Checkbox
+|   Forms
 -----------------------------------------------*/
-.form-check {
-  @each $color,
-  $value in $theme-colors {
-    &-input {
-      &-#{$color} {
-        border-color: $value !important;
-
-        &:focus {
-          box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width rgba($value, $input-btn-focus-color-opacity);
-        }
-
-        &:checked {
-          background-color: $value !important;
-        }
-        &.hideaway-dual-switch {
-          background-color: $value !important;
-        }
-      }
-      &.hideaway-dual-switch {
-        background-color: $primary;
-      }
-    }
-  }
-}
-
-.form-check {
-  label{
-    margin-bottom: 0;
-  }
-}
-
-// Floating Labels
-.form-floating>label {
-  line-height: 1.625rem;
-}
-
-
-option:disabled {
-  color: var(--#{$prefix}gray-400);
-}
 
 .form-group{
   margin-bottom: map-get($spacers, 3);
 }
-.form-control, .form-select {
+.form-control {
   padding: .8rem;
   border-color: var(--#{$prefix}gray-300);
   border-radius: var(--#{$prefix}border-radius-sm);
@@ -54,21 +14,8 @@ option:disabled {
   box-shadow: none;
 }
 
-.form-control:focus, .form-select:focus{
+.form-control:focus{
   background-color: $white;
   border-color: var(--#{$prefix}primary);
   box-shadow: none;
-}
-
-
-.has-success {
-  @include input-feedback-variant(map-get($theme-colors, 'success'));
-}
-
-.has-warning {
-  @include input-feedback-variant(map-get($theme-colors, 'warning'));
-}
-
-.has-error {
-  @include input-feedback-variant(map-get($theme-colors, 'danger'));
 }

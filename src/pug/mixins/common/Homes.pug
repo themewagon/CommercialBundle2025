@@ -10,6 +10,7 @@ mixin LightBoxItem(item)
   .col-md-6.col-lg-4.p-1
     a(href='#!' data-caption='my caption' data-bigpicture!={
       gallery: '#image_gallery',
+      loop: true
     } data-bp= item.imageSrc )
       img(src=item.imageSrc alt='' )
 
