@@ -19512,8 +19512,7 @@ ul {
   border-color: #ccc;
   background-color: #fff;
 }
-
-.btn-outline-light:hover, .btn-light:hover, .btn-tertiary:hover {
+.btn-light:hover, .btn-tertiary:hover, .btn-light:active, .btn-tertiary:active, .btn-light:focus, .btn-tertiary:focus, .btn-outline-light:hover, .btn-outline-light:active, .btn-outline-light:focus {
   color: var(--hideaway-gray-1200);
   background-color: #e6e6e6;
   border-color: #adadad;

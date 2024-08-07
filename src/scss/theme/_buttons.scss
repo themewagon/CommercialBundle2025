@@ -112,11 +112,12 @@ $value in $theme-hideaway-btn-colors {
   color: var(--#{$prefix}gray-1200);
   border-color: #ccc;
   background-color: $white;
-}
-.btn-outline-light:hover, .btn-light:hover{
-  color: var(--#{$prefix}gray-1200);
-  background-color: #e6e6e6;
-  border-color: #adadad;
+
+  &:hover,&:active, &:focus{
+    color: var(--#{$prefix}gray-1200);
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  }
 }
 
 .btn-success{
