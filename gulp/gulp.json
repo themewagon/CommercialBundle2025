@@ -46,5 +46,5 @@
       "vendors.json"
     ]
   },
-  "watch": ["assets/images", "assets/videos", "vendors"]
+  "watch": ["assets/img", "assets/videos", "vendors"]
 }
