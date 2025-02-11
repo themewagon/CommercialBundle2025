@@ -21,26 +21,25 @@ mixin PreFooter
   +Section(gradient, 'container-fluid').position-relative.py-0
     +Background(footerbackground)
     .container.pt-10.z-index-1.pb-9
-      .row.justify-content-center.mt-9
-        .col-xl-8
-          .row.g-2.justify-content-center.justify-content-lg-between.align-items-center.mb-4 
-            .col-lg-6.text-center.text-lg-start
-              h1.fw-bold.font-base.fs-8.fs-sm-10.fs-md-12.text-100.mb-0 
-                span.position-relative.decorate-text R
-                span eady to
-                br
-                | Get Started?
-            .col-auto
-              p.fs--1.text-100.fw-semibold Keep Uninterrupted Network Connectivity
-              a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).btn.btn-success
-                i.fas.fa-download.me-3
-                | Download BUNDLE
-          p.mb-0.fs-2.text-100.outside-line.mx-auto.text-center
-            | Brought to you with
-            span.fas.fa-heart.mx-1.text-success
-            | from
-            a(href="https://themewagon.com/" target="_blank" ).ms-1.link-100 ThemeWagon
-    .position-absolute.top-0.start-0.end-0.z-n1(style="transform: rotate(180deg);")
+      .mt-9.footer-container.mx-auto
+        .d-flex.flex-column.flex-lg-row.justify-content-center.justify-content-lg-between.align-items-center.mb-4 
+          .text-center.text-lg-start
+            h1.fw-bold.font-base.fs-8.fs-sm-10.fs-md-12.text-100.mb-0 
+              span.position-relative.decorate-text R
+              span eady to
+              br
+              | Get Started?
+          .mt-4.mt-lg-0
+            p.fs--1.text-100.fw-semibold Keep Uninterrupted Network Connectivity
+            a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).btn.btn-success
+              i.fas.fa-download.me-3
+              | Download BUNDLE
+        p.mb-0.fs-2.text-100.outside-line.mx-auto.text-center
+          | Brought to you with
+          span.fas.fa-heart.mx-1.text-success
+          | from
+          a(href="https://themewagon.com/" target="_blank" ).ms-1.link-100 ThemeWagon
+    .position-absolute.start-0.end-0.z-n1(style="transform: rotate(180deg); top: -2px;")
       img.img-fluid.w-100(src=`${CWD}assets/img/bottom_bar.png`, alt="")
     
 
