@@ -51,27 +51,27 @@
   --#{$prefix}btn-disabled-border-color: transparent;
 
   //
-  // hideaway Button
+  // creative-bundle Button
   //
-  --#{$prefix}btn-hideaway-background: var(--#{$prefix}quaternary-bg);
+  --#{$prefix}btn-creative-bundle-background: var(--#{$prefix}quaternary-bg);
   --#{$prefix}btn-disabled-color: #4d5969;
-  --#{$prefix}btn-hideaway-box-shadow: #{$btn-hideaway-box-shadow};
-  --#{$prefix}btn-hideaway-hover-box-shadow: #{$btn-hideaway-hover-box-shadow};
+  --#{$prefix}btn-creative-bundle-box-shadow: #{$btn-creative-bundle-box-shadow};
+  --#{$prefix}btn-creative-bundle-hover-box-shadow: #{$btn-creative-bundle-hover-box-shadow};
 
   --#{$prefix}btn-active-border-color: transparent;
 
-  [class^="btn-hideaway-"].show {
-    --#{$prefix}btn-active-shadow: var(--#{$prefix}btn-hideaway-box-shadow);
+  [class^="btn-creative-bundle-"].show {
+    --#{$prefix}btn-active-shadow: var(--#{$prefix}btn-creative-bundle-box-shadow);
   }
 
   @each $color, $value in $theme-colors {
     // 
-    // hideaway Button
+    // creative-bundle Button
     // 
-    --#{$prefix}btn-hideaway-#{$color}-color: var(--#{$prefix}#{$color});
-    --#{$prefix}btn-hideaway-#{$color}-hover-color: #{shift-color($value, 17%)};
-    --#{$prefix}btn-hideaway-#{$color}-active-background: #{shift-color($value, -80%)};
-    --#{$prefix}btn-hideaway-#{$color}-active-color: #{shift-color($value, 17%)};
+    --#{$prefix}btn-creative-bundle-#{$color}-color: var(--#{$prefix}#{$color});
+    --#{$prefix}btn-creative-bundle-#{$color}-hover-color: #{shift-color($value, 17%)};
+    --#{$prefix}btn-creative-bundle-#{$color}-active-background: #{shift-color($value, -80%)};
+    --#{$prefix}btn-creative-bundle-#{$color}-active-color: #{shift-color($value, 17%)};
   }
 
   // Need To Work
@@ -160,9 +160,9 @@
   --#{$prefix}simplebar-bg: #{rgba($gray-400, 1)};
 
   // 
-  // hideaway pill
+  // creative-bundle pill
   // 
-  --#{$prefix}nav-pills-hideaway-active-bg-color: var(--#{$prefix}quaternary-bg);
+  --#{$prefix}nav-pills-creative-bundle-active-bg-color: var(--#{$prefix}quaternary-bg);
 
   //
   // Custom disabled button

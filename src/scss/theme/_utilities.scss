@@ -16,6 +16,7 @@ $utilities: map_merge(
       values: (
         monospace: var(--#{$prefix}font-monospace),
         sans-serif: var(--#{$prefix}font-sans-serif),
+        nunito: $font-family-nunito,
         base: var(--#{$prefix}font-base),
       )
     ),
@@ -74,12 +75,12 @@ $utilities: map_merge(
       values: (
         0: 0,
         f1: 0.7,
-        f2: 0.85,
+        f2: 0.9,
         1: 1,
-        2: 1.15,
+        2: 1.1875,
         3: $line-height-lg,
         4: $line-height-base,
-        5: 1.6,
+        5: 1.6667,
         6: 1.75,
         7: 1.9,
         8: 2.05

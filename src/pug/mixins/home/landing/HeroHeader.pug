@@ -1,0 +1,45 @@
+append variables 
+  -
+    var gradient={
+      "className":" bottom-0",
+
+      attrs:{
+        style:'background-image:linear-gradient(90deg, #FFFFFF -11.17%, #FFFFFF 110.39%);' 
+      }
+    }
+    var background={
+        "image":`${CWD}assets/img/header-bg.webp`,
+        attrs:{
+          style:'background-position: center;' 
+        }
+
+    }
+
+mixin HeroHeader
+  +Section(gradient,"container-fluid ").position-relative.py-0.overflow-hidden
+    +Background(background)
+      .container.overflow-hidden.text-center.z-index-1.banner-section
+        .outside-line.mx-auto.mb-5.mb-lg-7
+          img.img-fluid(src=`${CWD}assets/img/ThemeWagon-logo.svg`  alt="")
+        .row.g-4
+          .col-lg-4
+            img.img-fluid.w-lg-100.h-lg-100(src=`${CWD}assets/img/50-text.svg`, alt="")
+          .col-lg-8.text-lg-start
+            p.fs-5.fs-md-10.fs-xl-11.text-100.lh-1 Commercial Bundle 2025
+            h1.text-100.fw-bold.font-sans-serif.title.lh-f2 ADMIN & eCOM 
+              span.extra-large-text TEMPLATES
+        h2.fs-5.fs-md-10.fs-lg-10.fw-normal.text-white.font-base.mb-4.mb-md-6.mb-lg-8 Powered by Material UI, Bootstrap & more!
+
+        
+
+        a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).text-white.btn.btn-success.fw-normal.mb-8
+          i.fas.fa-download.me-3
+          | Download BUNDLE
+    .position-absolute.bottom-0.start-0.end-0.z-n1
+      img.img-fluid.w-100(src=`${CWD}assets/img/bottom_bar.png`, alt="")
+
+
+
+
+
+

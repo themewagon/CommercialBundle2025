@@ -1,14 +1,18 @@
 extends layouts/LayoutTheme
-include mixins/common/Homes
-include mixins/homes/HomeSliders
+include mixins/common/PreFooter
+include mixins/common/Footer
+include mixins/common/ItemCard
+include mixins/home/landing/HeroHeader
+include mixins/home/landing/Item
 
 
-prepend styles 
+
 
 prepend scripts
-  script(src!=`https://maps.googleapis.com/maps/api/js?key=${APIGmap}&callback=initMap` async)
-  script(src=`${CWD}vendors/bigpicture/BigPicture.js`) 
 
-append content 
-    +SliderFull
-    +Homes
+append content
+
+  +HeroHeader
+  +Section("container-fluid px-5").py-10
+    +Item
+  +PreFooter

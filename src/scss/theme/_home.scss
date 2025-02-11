@@ -1,0 +1,86 @@
+// Header Section //
+
+$font-size: 23.5rem; // Adjust based on your design
+$circle-color: #fff; // Background color of the circle
+$break-color: #0080ff; // Color for the break line
+
+.outside-line{
+  position: relative;
+  width: fit-content;
+  padding: 0px 1.25rem;
+  
+  @include media-breakpoint-up(sm){
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3rem;
+      height: 4px;
+      background-color: $white;
+    }
+  
+    &::before{
+      right: 100%;
+    }
+  
+    &::after{
+      left: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(md){
+    &::after, &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6.25rem;
+      height: 4px;
+      background-color: $white;
+    }
+  }
+}
+
+.title{
+  font-size: 3rem;
+  @include media-breakpoint-up(md){
+    font-size: 4.5rem;
+  }
+
+  @include media-breakpoint-up(lg){
+    font-size: 6rem;
+  }
+  @include media-breakpoint-up(xl){
+    font-size: 7.5rem;
+  }
+}
+
+.extra-large-text{
+  font-size: 3.5rem;
+  @include media-breakpoint-up(md){
+    font-size: 5.5rem;
+  }
+
+  @include media-breakpoint-up(lg){
+    font-size: 6.5rem;
+  }
+  @include media-breakpoint-up(xl){
+    font-size: 9.75rem;
+  }
+}
+
+.decorate-text{
+  &::before{
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 2px;
+    width: 38px;
+    height: 23px;
+    z-index: 1;
+    background-image: url('../img/text-design.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

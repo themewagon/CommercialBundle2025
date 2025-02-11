@@ -4,9 +4,9 @@
 
 
 /*-----------------------------------------------
-|   hideaway buttons
+|   creative-bundle buttons
 -----------------------------------------------*/
-$theme-hideaway-btn-colors: (
+$theme-creative-bundle-btn-colors: (
   "primary": var(--#{$prefix}primary),
   "success": var(--#{$prefix}success),
   "info": var(--#{$prefix}info),
@@ -15,9 +15,9 @@ $theme-hideaway-btn-colors: (
 );
 
 @each $color,
-$value in $theme-hideaway-btn-colors {
-  .btn-hideaway-#{$color} {
-    @include hideaway-button-variant($color);
+$value in $theme-creative-bundle-btn-colors {
+  .btn-creative-bundle-#{$color} {
+    @include creative-bundle-button-variant($color);
   }
 }
 
@@ -82,7 +82,6 @@ $value in $theme-hideaway-btn-colors {
 
 
 .btn {
-  letter-spacing: .05em;
   white-space: nowrap;
 }
 
@@ -101,55 +100,5 @@ $value in $theme-hideaway-btn-colors {
 .btn {
   &:disabled {
     @include box-shadow(var(--#{$prefix}btn-box-shadow));
-  }
-}
-
-
-
-
-
-.btn-light, .btn-outline-light { 
-  color: var(--#{$prefix}gray-1200);
-  border-color: #ccc;
-  background-color: $white;
-
-  &:hover,&:active, &:focus{
-    color: var(--#{$prefix}gray-1200);
-    background-color: #e6e6e6;
-    border-color: #adadad;
-  }
-}
-
-.btn-success{
-  color: $white;
-  @include hover-focus{
-    color: $white;
-  }
-}
-
-.down-indicator{
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: $white;
-  padding: map-get($spacers, 4) map-get($spacers, 2);
-  z-index: 99;
-}
-
-.packages {
-  .btn-packages{
-    position: absolute;
-    bottom: 2.25em;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: all 0.4 cubic-bezier(0.77, 0, 0.18, 1);
-  }
-
-  @include hover-focus{
-    .btn-packages{
-      opacity: 1;
-    }
   }
 }

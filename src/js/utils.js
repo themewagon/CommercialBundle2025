@@ -53,7 +53,7 @@ const rgbaColor = (color = '#fff', alpha = 0.5) => `rgba(${hexToRgb(color)}, ${a
 /* --------------------------------- Colors --------------------------------- */
 
 const getColor = (name, dom = document.documentElement) =>
-  getComputedStyle(dom).getPropertyValue(`--hideaway-${name}`).trim();
+  getComputedStyle(dom).getPropertyValue(`--creative-bundle-${name}`).trim();
 
 const getColors = dom => ({
   primary: getColor('primary', dom),

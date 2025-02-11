@@ -1,18 +1,19 @@
 /*-----------------------------------------------
 |   Reboot
 -----------------------------------------------*/
-::placeholder {
+::placeholder{
   opacity: 1;
-  color: var(--#{$prefix}gray-400);
+  color: $gray-400 !important;
 }
-
-::selection {
-  background-color: var(--#{$prefix}primary);
-  color: $white;
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: smooth;
+  scroll-padding-top: $top-nav-height + 2;
 }
-
-[id]{
-  scroll-margin-top: calc($top-nav-height + 1.5rem);
+header{
+  position: relative;
+  z-index: 1020;
+  background: $body-bg;
 }
 
 body {
@@ -21,50 +22,24 @@ body {
   position: relative;
 }
 
-pre,
-code {
+pre, code {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
 }
-
-.main {
-  margin: 16px;
-
-  @include media-breakpoint-up(sm){
-    margin: 1.625rem;
-  }
-
-  @include media-breakpoint-up(md){
-    margin: 3.25rem;
-  }
-}
-
 
 section {
   position: relative;
   padding-top: map_get($spacers, 6);
   padding-bottom: map_get($spacers, 6);
-
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(lg){
     padding-top: map_get($spacers, 8);
     padding-bottom: map_get($spacers, 8);
   }
 }
 
-small {
-  font-size: map-get($font-sizes, 10);
-}
-.small, small{
-  font-weight: 400;
-}
-
-hr{
-  display: inline-block;
-  margin-top: .25rem;
-}
-
 //setting up font family for bootstrap components
 input,
+button,
 select,
 optgroup,
 textarea,
@@ -75,77 +50,24 @@ label,
 .navbar,
 .pagination,
 .valid-feedback,
-.invalid-feedback {
-  font-family: var(--#{$prefix}font-base);
-}
-
-mark, .mark {
-  color: var(--#{$prefix}gray-1100);
-}
-pre {
+.invalid-feedback { font-family: $font-family-sans-serif; }
+pre{ 
   margin: 0;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0,0,0);
+}
+strong{ font-weight: $font-weight-semi-bold; }
+label{ 
+  font-weight: $font-weight-medium !important; 
+  margin-bottom: map-get($spacers, 2);
 }
 
-strong {
-  font-weight: $font-weight-semi-bold;
-}
+// Lists
 
-label {
-  font-size: map_get($font-sizes, 10);
-  font-weight: $form-label-font-weight;
-  margin-bottom: $form-label-margin-bottom;
-  letter-spacing: 0.02em;
-}
-
-pre,
-code,
-kbd,
-samp {
-  font-size: $font-size-sm;
-}
-
-[dir="rtl"]{
-  pre, code, kbd, samp{
-    direction: rtl
-  }
-}
-
-
-img{
-  max-width: 100%;
-}
-
-p {
-  margin-bottom: 1.6rem;
-  line-height: 1.6;
-}
-
-legend {
-  font-size: map-get($font-sizes, 10);
-  font-weight: $font-weight-semi-bold;
-}
-
-/*-----------------------------------------------
-|   Headers
------------------------------------------------*/
-
-
-.h4, h4{
-  margin-bottom: 1.333rem;
-}
-
-h1, .h1 {
-  line-height: 1;
-}
-
-
-.banner{
-  min-height: calc(100vh - 104px) ;
-}
-.banner-classic {
-  min-height: calc(75vh - 104px);
-}
+ol,
 ul {
-  padding-left: 2.5rem;
+  padding-left: 1.1rem;
+}
+
+iframe{
+  border: none;
 }

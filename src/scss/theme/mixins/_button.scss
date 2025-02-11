@@ -1,47 +1,47 @@
 /* -------------------------------------------------------------------------- */
-/*                                hideaway Button                               */
+/*                                creative-bundle Button                               */
 /* -------------------------------------------------------------------------- */
-@mixin hideaway-button-variant($color) {
+@mixin creative-bundle-button-variant($color) {
   &, &.show {
-    color: var(--#{$prefix}btn-hideaway-#{$color}-color);
-    background-color: var(--#{$prefix}btn-hideaway-background);
-    border-color: var(--#{$prefix}btn-hideaway-background);
-    box-shadow: var(--#{$prefix}btn-hideaway-box-shadow);
+    color: var(--#{$prefix}btn-creative-bundle-#{$color}-color);
+    background-color: var(--#{$prefix}btn-creative-bundle-background);
+    border-color: var(--#{$prefix}btn-creative-bundle-background);
+    box-shadow: var(--#{$prefix}btn-creative-bundle-box-shadow);
 
   }
 
   @include hover-focus {
-    color: var(--#{$prefix}btn-hideaway-#{$color}-hover-color);
-    background-color: var(--#{$prefix}btn-hideaway-background);
-    border-color: var(--#{$prefix}btn-hideaway-background);
+    color: var(--#{$prefix}btn-creative-bundle-#{$color}-hover-color);
+    background-color: var(--#{$prefix}btn-creative-bundle-background);
+    border-color: var(--#{$prefix}btn-creative-bundle-background);
 
     &:not(.disabled):not(:disabled) {
-      color: var(--#{$prefix}btn-hideaway-#{$color}-hover-color);
-      box-shadow: var(--#{$prefix}btn-hideaway-hover-box-shadow);
+      color: var(--#{$prefix}btn-creative-bundle-#{$color}-hover-color);
+      box-shadow: var(--#{$prefix}btn-creative-bundle-hover-box-shadow);
     }
   }
   &:active {
     box-shadow: none !important;
-    color: var(--#{$prefix}btn-hideaway-#{$color}-active-color);
+    color: var(--#{$prefix}btn-creative-bundle-#{$color}-active-color);
   }
 
   .btn-check:checked+&,
   :not(.btn-check)+&:active,
   &:first-child:active,
   &.active {
-    color: var(--#{$prefix}btn-hideaway-#{$color}-color);
-    background-color: var(--#{$prefix}btn-hideaway-#{$color}-active-background);
+    color: var(--#{$prefix}btn-creative-bundle-#{$color}-color);
+    background-color: var(--#{$prefix}btn-creative-bundle-#{$color}-active-background);
     // Remove CSS gradients if they're enabled
     // background-image: if($enable-gradients, none, null);
-    border-color: var(--#{$prefix}btn-hideaway-background);
+    border-color: var(--#{$prefix}btn-creative-bundle-background);
   }
   &:disabled,
   &.disabled {
     color: var(--#{$prefix}btn-disabled-color);
-    background-color: var(--#{$prefix}btn-hideaway-background);
+    background-color: var(--#{$prefix}btn-creative-bundle-background);
     // Remove CSS gradients if they're enabled
     background-image: if($enable-gradients, none, null);
-    box-shadow: var(--#{$prefix}btn-hideaway-box-shadow) !important;
+    box-shadow: var(--#{$prefix}btn-creative-bundle-box-shadow) !important;
   }
 }
 @mixin button-outline-variant($color) {

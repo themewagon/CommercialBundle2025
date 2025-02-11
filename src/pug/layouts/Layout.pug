@@ -4,11 +4,11 @@
 block variables
   - var CWD = '';
   - var attrsHtml = { lang: `${ dir === 'rtl' ? 'ar' : 'en-US'}`, dir: dir || 'ltr' };
-  - var title = 'Hideaway';
+  - var title = 'space| Responsive, Ecommerce & Business Template';
   - var attrsBody = {};
   - var attrsMain = {};
   - var attrsLayout = {};
-  - var APIGmap = 'AIzaSyDUXLNfNHetc6JAuEyFkT87txEeRxehuv4';
+  - var APIGmap = 'AIzaSyARdVcREeBK44lIWnv5-iPijKqvlSAVwbw';
 
 
 //- ===============================================
@@ -21,7 +21,7 @@ include ../mixins/core/ThemeStyle
 
 
 doctype html
-html&attributes(attrsHtml)
+html()&attributes(attrsHtml)
   head
 
     block meta
@@ -42,13 +42,14 @@ html&attributes(attrsHtml)
     //    Favicons
     // ===============================================
     block favicon
-      link(rel="apple-touch-icon" sizes="180x180", href=`${CWD}assets/images/favicons/apple-touch-icon.png`)
-      link(rel="icon" type="image/png" sizes="32x32", href=`${CWD}assets/images/favicons/favicon-32x32.png`)
-      link(rel="icon" type="image/png" sizes="16x16", href=`${CWD}assets/images/favicons/favicon-16x16.png`)
-      link(rel="shortcut icon" type="image/x-icon", href=`${CWD}assets/images/favicons/favicon.ico`)
-      link(rel="manifest", href=`${CWD}assets/images/favicons/manifest.json`)
-      meta(name='msapplication-TileImage', content=`${CWD}assets/images/favicons/mstile-150x150.png`)
+      link(rel="apple-touch-icon" sizes="180x180", href=`${CWD}assets/img/favicons/apple-touch-icon.png`)
+      link(rel="icon" type="image/png" sizes="32x32", href=`${CWD}assets/img/favicons/favicon-32x32.png`)
+      link(rel="icon" type="image/png" sizes="16x16", href=`${CWD}assets/img/favicons/favicon-16x16.png`)
+      link(rel="shortcut icon" type="image/x-icon", href=`${CWD}assets/img/favicons/favicon.png`)
+      link(rel="manifest", href=`${CWD}assets/img/favicons/manifest.json`)
+      meta(name='msapplication-TileImage', content=`${CWD}assets/img/favicons/mstile-150x150.png`)
       meta(name="theme-color" content="#ffffff")
+
 
     block headScripts
 
@@ -76,7 +77,6 @@ html&attributes(attrsHtml)
     //    End of Main Content
     // ===============================================
     = '\n\n'
-    
 
     block afterMainContent
 
@@ -84,12 +84,12 @@ html&attributes(attrsHtml)
     // ===============================================
     //    JavaScripts
     // ===============================================
-    
-    script(src=`${CWD}vendors/popper/popper.min.js`)
+    script(src=`${CWD}vendors/@popperjs/popper.min.js`)
     script(src=`${CWD}vendors/bootstrap/bootstrap.min.js`)
     script(src=`${CWD}vendors/is/is.min.js`)
-    
+
     block scripts
+
       script(src=`${CWD}assets/js/theme.js`)
 
     = '\n'

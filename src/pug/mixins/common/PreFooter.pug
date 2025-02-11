@@ -1,0 +1,57 @@
+append variables 
+  -
+    var gradient={
+      "className":" bottom-0",
+
+      attrs:{
+        style:'background-image:linear-gradient(90deg, #FFFFFF -11.17%, #FFFFFF 110.39%);' 
+      }
+    }
+    var footerbackground={
+      "className":" bottom-0",
+        "image":`${CWD}assets/img/footer-bg.webp`,
+        attrs:{
+          style:'background-position: top;' 
+        }
+
+    }
+
+
+mixin PreFooter
+  +Section(gradient, 'container-fluid').position-relative.py-0
+    +Background(footerbackground)
+    .container.pt-10.z-index-1.pb-9
+      .row.justify-content-center.mt-9
+        .col-xl-8
+          .row.g-2.justify-content-center.justify-content-lg-between.align-items-center.mb-4 
+            .col-lg-6.text-center.text-lg-start
+              h1.fw-bold.font-base.fs-8.fs-sm-10.fs-md-12.text-100.mb-0 
+                span.position-relative.decorate-text R
+                span eady to
+                br
+                | Get Started?
+            .col-auto
+              p.fs--1.text-100.fw-semibold Keep Uninterrupted Network Connectivity
+              a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).btn.btn-success
+                i.fas.fa-download.me-3
+                | Download BUNDLE
+          p.mb-0.fs-2.text-100.outside-line.mx-auto.text-center
+            | Brought to you with
+            span.fas.fa-heart.mx-1.text-success
+            | from
+            a(href="https://themewagon.com/" target="_blank" ).ms-1.link-100 ThemeWagon
+    .position-absolute.top-0.start-0.end-0.z-n1(style="transform: rotate(180deg);")
+      img.img-fluid.w-100(src=`${CWD}assets/img/bottom_bar.png`, alt="")
+    
+
+
+
+
+
+
+
+
+
+
+
+

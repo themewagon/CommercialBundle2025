@@ -16,7 +16,7 @@ mixin Background(background, attrs)
 						source(src=background.video.ogv + '.ogv' type="video/ogv")
 
 			if(background.youtube)
-				.bg-youtube(data-youtube-embed!=background.youtube)
+				.bg-youtube(data-property!=background.youtube)
 
 		block
 		///.bg-holder

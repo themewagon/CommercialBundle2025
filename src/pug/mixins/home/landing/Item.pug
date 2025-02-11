@@ -1,0 +1,11 @@
+append variables
+mixin Item 
+  .row.grid
+    each val in data
+      .col-lg-4.col-6.mb-3(class=`item ${
+      val.item
+        }`)
+          a(href=`${val.preview}`  data-category=`${val.item}` target="_blank").text-decoration-none
+            +ItemCard(val)
+
+

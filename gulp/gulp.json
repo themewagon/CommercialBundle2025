@@ -24,12 +24,7 @@
     "src": {
       "all": "src/pug/**/*.pug",
       "pages": [
-        "*.pug",
-        "homes/**/*.pug",
-        "pages/**/*.pug",
-        "components/**/*.pug",
-        "docs/**/*.pug",
-        "contact/**/*.pug"
+        "*.pug"
       ]
     },
     "dest": ""

@@ -1,249 +1,316 @@
 append variables
+  - var title = 'Showcase | 50 Pre-built Creative Websites';
   - var theme = `${name}-${version}`;
-  - var bootstrapVersion = '5.3';
-  - var attrsMain = { id: 'top', class: 'main'};
-  - var attrsLayout = { class: '', 'data-layout': 'container' }
+  - var bootstrapVersion = '5.0';
+  - var attrsMain = { id: 'top', class: 'main' };
+  - var attrsLayout = { class: 'container', 'data-layout': ENV === 'PROD' ? 'container' : false }
   - var colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
-  - var grays = [ 1100, 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100 ];
+  - var grays = ['black', 1100, 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100, 'white'];
   - var colorsAll = colors.concat(grays);
-  -
-    var themeColor =  {
-      primary: '#007AFF',
-      secondary: '#292b2c',
-      success: '#4CD964',
-      info: '#5AC8FA',
-      warning: '#FF9500',
-      danger: '#FF3B30',
-      light: '#ffffff',
-      dark: '#0c151a',
-    }
-
   - var footer = true;
-  - var pathName = (locals.filename || locals.history[0]).split('\\').join('/').split('src/pug/').pop().split('.pug').shift();
-  - var pageTree = pathName.split('/');
-  - var pageName = pathName.split('/').pop();
-  - var CWD = pageTree.slice(1).map(() => '../').join('');
-
-  -
-    var sliderImages =[
-      {
-        imageSrc: 'assets/images/feature/1.jpg'
-      },
-      {
-        imageSrc: 'assets/images/feature/2.jpg'
-      },
-      {
-        imageSrc: 'assets/images/feature/3.jpg'
-      },
-      {
-        imageSrc: 'assets/images/feature/4.jpg'
-      },
-      {
-        imageSrc: 'assets/images/feature/5.jpg'
-      },
-      {
-        imageSrc: 'assets/images/feature/6.jpg'
-      },
-    ]
-
+  - var currentPage = 'index'
   - 
-    var sitemap = [
+    var data = [
       {
-        label: 'home',
-        pages: [
-          {
-            name:'slider-header',
-            path: 'index',
-            pathName: 'index'
-          },
-          {
-            name:'slider-classic',
-            path: 'homes/header-slider-classic',
-            pathName: 'homes/header-slider-classic'
-          },
-          {
-            name:'static-header',
-            path: 'homes/header-static',
-            pathName: 'homes/header-static'
-          },
-          {
-            name:'static-classic',
-            path: 'homes/header-static-classic',
-            pathName: 'homes/header-static-classic'
-          },
-          {
-            name:'youtube-background',
-            path: 'homes/header-youtube-video',
-            pathName: 'homes/header-youtube-video'
-          },
-          {
-            name:'youtube-classic',
-            path: 'homes/header-youtube-video-classic',
-            pathName: 'homes/header-youtube-video-classic'
-          },
-          {
-            name:'self-hosted-video',
-            path: 'homes/header-selfhosted-video',
-            pathName: 'homes/header-selfhosted-video'
-          },
-          {
-            name:'self-hosted-classic',
-            path: 'homes/header-selfhosted-video-classic',
-            pathName: 'homes/header-selfhosted-video-classic'
-          },
-        ],
+      title: 'Foto',
+      link: 'https://themewagon.com/themes/free-responsive-photography-template/',
+      preview: 'https://themewagon.github.io/foto/',
+      img: 'img01.png',
+    },
+      {
+      title: 'Elen',
+      link: 'https://themewagon.com/themes/free-bootstrap-4-html5-blogger-website-template-elen/',
+      preview: 'https://themewagon.github.io/elen/',
+      img: 'img02.png',
+    },
+      {
+      title: 'Moon',
+      link: 'https://themewagon.com/themes/free-bootstrap-4-html5-portfolio-website-template-moon/',
+      preview: 'https://themewagon.github.io/moon/',
+      img: 'img03.png',
+    },
+      {
+      title: 'Spurgeon',
+      link: 'https://themewagon.com/themes/spurgeon/',
+      preview: 'https://themewagon.github.io/spurgeon/',
+      img: 'img04.png',
+    },
+      {
+      title: 'Ace',
+      link: 'https://themewagon.com/themes/free-bootstrap-4-html5-photography-website-template-ace/',
+      preview: 'https://themewagon.github.io/ace/',
+      img: 'img05.png',
+    },
+      {
+      title: 'Arkitektur',
+      link: 'https://themewagon.com/themes/free-responsive-html5-bootstrap-5-architecture-website-template-arkitektur/',
+      preview: 'https://themewagon.github.io/arkitektur/',
+      img: 'img06.png',
+    },
+      {
+      title: 'Swanky',
+      link: 'https://themewagon.com/themes/swanky/',
+      preview: 'https://themewagon.github.io/swanky/',
+      img: 'img07.png',
+    },
+      {
+      title: 'Minimal',
+      link: 'https://themewagon.com/themes/minimal/',
+      preview: 'https://rafiaein.github.io/minimal/',
+      img: 'img08.png',
+    },
+      {
+      title: 'VintageFur',
+      link: 'https://themewagon.com/themes/responsive-free-html5-bootstrap-5-educational-template-eduwell/',
+      preview: 'https://themewagon.github.io/vintagefur/',
+      img: 'img09.png',
+    },
+      {
+      title: 'Furnics',
+      link: 'https://themewagon.com/themes/furnics/',
+      preview: 'https://themewagon.github.io/furnics/',
+      img: 'img10.png',
+    },
+      {
+      title: 'LifeStyleMag',
+      link: 'https://themewagon.com/themes/lifestylemag/',
+      preview: 'https://themewagon.github.io/LifeStyleMag/',
+      img: 'img11.png',
+    },
+      {
+      title: 'Augustine',
+      link: 'https://themewagon.com/themes/augustine/',
+      preview: 'https://themewagon.github.io/augustine/',
+      img: 'img12.png',
+    },
+      {
+      title: 'Mark',
+      link: 'https://themewagon.com/themes/free-bootstrap-4-html-5-personal-portfolio-website-template-mark/',
+      preview: 'https://themewagon.github.io/mark/',
+      img: 'img13.png',
+    },
+      
+      {
+        title: 'MyPortfolio',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-portfolio-website-template-myportfolio/',
+        preview: 'https://themewagon.github.io/myportfolio/',
+        img: 'img14.png',
+    },
+      {
+      title: 'SnapX',
+      link: 'https://themewagon.com/themes/snapx/',
+      preview: 'https://themewagon.github.io/snapx/',
+      img: 'img15.png',
+    },
+      {
+        title: 'Furni',
+        link: 'https://themewagon.com/themes/furni-online-store/',
+        preview: 'https://themewagon.github.io/furni/',
+        img: 'img16.png',
+    },
+
+      {
+        title: 'Mosaic ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-architectural-business-website-template-mosaic/',
+        preview: 'https://themewagon.github.io/mosaic/',
+        img: 'img18.png',
       },
       {
-        label: 'pages',
-        pages:[
-          {
-            name: 'gallery',
-            path: 'pages/gallery',
-            pathName: 'pages/gallery',
-          },
-          {
-            name: 'amenities',
-            path: 'pages/amenities',
-            pathName: 'pages/amenities'
-          },
-          {
-            name: 'packages',
-            path: 'pages/packages',
-            pathName: 'pages/packages'
-          },
-          {
-            name: 'our-history',
-            path: 'pages/history',
-            pathName: 'pages/history',
-          },
-          {
-            name: 'RTL',
-            path: 'pages/rtl',
-            pathName: 'pages/rtl',
-          }
-        ]
+        title: 'Cassi',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-photography-website-template-cassi/',
+        preview: 'https://themewagon.github.io/cassi/#',
+        img: 'img19.png',
       },
       {
-        name: 'contact',
-        path: 'contact/contact',
-        pathName: 'contact/contact',
-        pages: []
+        title: 'Photosen ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-photography-website-template-photosen/',
+        preview: 'https://themewagon.github.io/photosen/',
+        img: 'img20.png',
       },
       {
-        label: 'elements',
-        pages: [
-          {
-            name: 'Buttons',
-            path: 'components/buttons',
-            pathName: 'components/buttons'
-          },
-          {
-            name: 'colors',
-            path: 'components/colors',
-            pathName: 'components/colors'
-          },
-          {
-            name: 'carousel',
-            path: 'components/carousel',
-            pathName: 'components/carousel'
-          },
-          {
-            name: 'google-map',
-            path: 'components/googlemap',
-            pathName: 'components/googlemap'
-          },
-          {
-            name: 'grid',
-            path: 'components/grid',
-            pathName: 'components/grid'
-          },
-          {
-            name: 'icons',
-            path: 'components/icons',
-            pathName: 'components/icons'
-          },
-          {
-            name: 'Layout-helpers',
-            path: 'components/layout-helpers',
-            pathName: 'components/layout-helpers'
-          },
-          {
-            name: 'Lightbox',
-            path: 'components/lightbox',
-            pathName: 'components/lightbox'
-          },
-          {
-            name: 'modal-video',
-            path: 'components/modal-video',
-            pathName: 'components/modal-video'
-          },
-          
-          {
-            name: 'Parallax',
-            path: 'components/parallax',
-            pathName: 'components/parallax'
-          },
-          {
-            name: 'smtpjs',
-            path: 'components/smtpjs',
-            pathName: 'components/smtpjs'
-          },
-          {
-            name: 'Spacing',
-            path: 'components/spacing',
-            pathName: 'components/spacing'
-          },
-          {
-            name: 'Swiper',
-            path: 'components/swiper',
-            pathName: 'components/swiper'
-          },
-          {
-            name: 'Typography',
-            path: 'components/typography',
-            pathName: 'components/typography'
-          }
-        ]
+        title: 'Monica',
+        link: 'https://themewagon.com/themes/monica/',
+        preview: 'https://themewagon.github.io/monica/#0',
+        img: 'img21.png',
       },
       {
-        label: 'docs',
-        pages: [
-          {
-            name:'Getting Started',
-            path: 'docs/getting-started',
-            pathName: 'docs/getting-started'
-          },
-          {
-            name:'File Structure',
-            path: 'docs/file-structure',
-            pathName: 'docs/file-structure'
-          },
-          {
-            name:'customization',
-            path: 'docs/customization',
-            pathName: 'docs/customization'
-          },
-          {
-            name:'gulp',
-            path: 'docs/gulp',
-            pathName: 'docs/gulp'
-          },
-          {
-            name:'RTL',
-            path: 'docs/rtl',
-            pathName: 'docs/rtl',
-          },
-          {
-            name:'plugins',
-            path: 'docs/plugins',
-            pathName: 'docs/plugins',
-          },
-          {
-            name:'changelog',
-            path: 'docs/changelog',
-            pathName: 'docs/changelog'
-          }
-        ]
-      }
-    ]
-  - var paths = flatSitemap(sitemap);
+        title: 'Mueller',
+        link: 'https://themewagon.com/themes/mueller/',
+        preview: 'https://themewagon.github.io/mueller/',
+        img: 'img22.png',
+      },
+      {
+        title: 'Woody',
+        link: 'https://themewagon.com/themes/responsive-free-bootstrap-5-html5-business-template-woody/',
+        preview: 'https://themewagon.github.io/woody/',
+        img: 'img23.png',
+      },
+      {
+        title: 'Klar ',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-website-template-klar/',
+        preview: 'https://themewagon.github.io/klar/',
+        img: 'img24.png',
+      },
+      {
+        title: 'Stride',
+        link: 'https://themewagon.com/themes/stride-free-responsive-bootstrap-5-landing-page-template/',
+        preview: 'https://themewagon.github.io/stride/',
+        img: 'img25.png',
+      },
+      {
+        title: 'PhotoZone',
+        link: 'https://themewagon.com/themes/photozone-free-bootstrap-5-photo-studio-website-template/',
+        preview: 'https://themewagon.github.io/photozone/',
+        img: 'img26.png',
+      },
+      {
+        title: 'Fotogency',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-photography-agency-website-template-fotogency/',
+        preview: 'https://themewagon.github.io/fotogency/',
+        img: 'img27.png',
+      },
+      {
+        title: 'Painto',
+        link: 'https://themewagon.com/themes/painto/',
+        preview: 'https://themewagon.github.io/Painto/painto/html/index.html',
+        img: 'img28.png',
+      },
+      {
+        title: 'FestavaLive',
+        link: 'https://themewagon.com/themes/bizconsult-free-responsive-bootstrap-5-html5-template/',
+        preview: 'https://themewagon.github.io/bizconsult/',
+        img: 'img29.png',
+      },
+      {
+        title: 'Elegance',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-professional-website-template-elegance/',
+        preview: 'https://themewagon.github.io/elegence/#slide01',
+        img: 'img30.png',
+      },
+      {
+        title: 'Ultras',
+        link: 'https://themewagon.com/themes/ultras/',
+        preview: 'https://themewagon.github.io/ultras/',
+        img: 'img31.png',
+      },
+      {
+        title: 'Snap',
+        link: 'https://themewagon.com/themes/snap-photography/',
+        preview: 'https://themewagon.github.io/snap/',
+        img: 'img32.png',
+      },
+      {
+        title: 'Nimo',
+        link: 'https://themewagon.com/themes/nimo/',
+        preview: 'https://themewagon.github.io/Nimo/',
+        img: 'img35.png',
+      },
+      {
+        title: 'Birdor',
+        link: 'https://themewagon.com/themes/birdor/',
+        preview: 'https://themewagon.github.io/Birdor/',
+        img: 'img36.png',
+      },
+      {
+        title: 'PodTalk',
+        link: 'https://themewagon.com/themes/podtalk-free-bootstrap-5-html5-website-template/',
+        preview: 'https://themewagon.github.io/PodTalk/',
+        img: 'img37.png',
+      },
+      {
+        title: 'Blogy',
+        link: 'https://themewagon.com/themes/blogy/',
+        preview: 'https://themewagon.github.io/blogy/',
+        img: 'img38.png',
+      },
+      {
+        title: 'ProMan',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-css3-portfolio-website-template-proman/',
+        preview: 'https://themewagon.github.io/proman/',
+        img: 'img39.png',
+      },
+      {
+        title: 'DronePhotography',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-drone-photography-website-template-dronephotography/',
+        preview: 'https://themewagon.github.io/dronephotography/',
+        img: 'img40.png',
+      },
+      {
+        title: 'Girly',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html-portfolio-website-template-girly/',
+        preview: 'https://technext.github.io/girly/index.html',
+        img: 'img41.png',
+      },
+      {
+        title: 'SnapShot',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-photography-website-template-snapshot/',
+        preview: 'https://themewagon.github.io/snapshot/',
+        img: 'img42.png',
+      },
+      {
+        title: 'Mostudio',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-photography-portfolio-website-template-mostudio/',
+        preview: 'https://themewagon.github.io/mostudio/',
+        img: 'img43.png',
+      },
+      {
+        title: 'Studio',
+        link: 'https://themewagon.com/themes/free-bootstrap-photography-template-studio/',
+        preview: 'https://themewagon.github.io/studio/index.html',
+        img: 'img44.png',
+      },
+      {
+        title: 'NextPage',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html-5-blog-website-template-nextpage/',
+        preview: 'https://themewagon.github.io/next-page/',
+        img: 'img46.png',
+      },
+      {
+        title: 'FoodieBlog',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-blog-template-foodeiblog/',
+        preview: 'https://themewagon.github.io/foodeiblog/',
+        img: 'img47.png',
+      },
+      {
+        title: 'ArcLabs',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-architecture-website-template-arclabs/',
+        preview: 'https://themewagon.github.io/arclabs/',
+        img: 'img48.png',
+      },
+      {
+        title: 'Impulse',
+        link: 'https://themewagon.com/themes/free-tailwind-css-traveingl-blog-website-template-impulse/',
+        preview: 'https://novolio-impulse.netlify.app/',
+        img: 'img49.png',
+      },
+      {
+        title: 'NomadForce',
+        link: 'https://themewagon.com/themes/nomad-force-free-bootstrap-5-html5-landing-page-template/',
+        preview: 'https://themewagon.github.io/nomad-force/',
+        img: 'img50.png',
+      },
+      {
+        title: 'Andrea',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-blog-website-template-andrea/',
+        preview: 'https://themewagon.github.io/andrea/',
+        img: 'img33.png',
+      },
+      {
+        title: 'Ionize ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-blog-template-ionize/',
+        preview: 'https://themewagon.github.io/ionize/',
+        img: 'img34.png',
+      },
+      {
+        title: 'Sided',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-travel-blog-website-template-sided/',
+        preview: 'https://themewagon.github.io/sided/',
+        img: 'img45.png',
+      },
+      //- {
+      //-   title: 'Sensive',
+      //-   link: 'https://themewagon.com/themes/free-bootstrap-4-html5-travel-blog-website-template-sensive/',
+      //-   preview: 'https://themewagon.github.io/sensive/',
+      //-   img: 'img51 .png',
+      //- },
+    ];

@@ -6,7 +6,6 @@ import { addClass } from './utils';
 const detectorInit = () => {
   const { is } = window;
   const html = document.querySelector('html');
-
   is.opera() && addClass(html, 'opera');
   is.mobile() && addClass(html, 'mobile');
   is.firefox() && addClass(html, 'firefox');
@@ -20,6 +19,7 @@ const detectorInit = () => {
   is.mac() && addClass(html, 'osx');
   is.windows() && addClass(html, 'windows');
   navigator.userAgent.match('CriOS') && addClass(html, 'chrome');
+
 };
 
 export default detectorInit;

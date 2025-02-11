@@ -1,31 +1,5 @@
-mixin Footer(attrs)
-  footer.pt-6.pt-md-8.pb-3.text-center.position-relative&attributes(attributes)= attrs 
-    .bg-holder.overlay.overlay-2(style=`background-image: url('${CWD}assets/images/footer-bg.jpg'); background-position: top;`)
-    .container
-      .row.justify-content-center  
-        .col-12 
-          h4.mb-2.text-white 
-            | Join the 
-            em Hideaway 
-            | Newsletters 
-          p.mb-0.text-300 Subscribe to our mailing list to receive updates and promotional offers. 
-        .col-md-10.col-lg-7.col-xl-5.mt-4
-          form(method="POST" onsubmit="return false;").row.align-items-center.g-0
-            .col-md-8.px-sm-2.mb-3.mb-md-0 
-              input.form-control(type="hidden" name="to" value="username@domain.extension")
-              input.form-control.border-white(type="email" placeholder="Enter Email Here")
-            .col-md-4.px-sm-2
-              input(type="submit", value="Submit").btn.btn-white.w-100.fs-9
-      
-      .row.mt-8.fs-10 
-        .col-lg-auto.ms-lg-auto.order-lg-1.mb-2.mb-lg-0 
-          a(href="#!").d-inline-block.mx-2.text-400 Home 
-          a(href="#!").d-inline-block.mx-2.text-400 Book Now 
-          a(href="#!").d-inline-block.mx-2.text-400 Contact 
-          a(href="#!").d-inline-block.mx-2.text-400 Events 
-          a(href="#!").d-inline-block.mx-2.text-400 Policies 
-          a(href="#!").d-inline-block.mx-2.text-400 Terms &amp; Conditions 
-        
-        .col-lg.text-lg-start 
-          .text-400 &copy; Hideway 2018 | Template crafted by 
-            a(href="https://themewagon.com" target="_blank").text-400 Themewagon 
+//- mixin Footer
+//-   +Section("container-fluid").py-0
+//-     img(src=`${CWD}assets/img/footer/footerframe.png`  alt="Feature")
+
+
