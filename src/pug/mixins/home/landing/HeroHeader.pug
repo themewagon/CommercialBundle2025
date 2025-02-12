@@ -29,15 +29,18 @@ mixin HeroHeader
             h1.text-100.fw-bold.font-sans-serif.title.lh-f2.text-nowrap.mb-0 ADMIN & eCOM
               br
               span.extra-large-text  TEMPLATES
-        h2.fw-normal.text-white.text-center.font-base.mb-4.mb-md-6.mb-lg-8.powered-by Powered by Material UI, Bootstrap & more!
+        h2.fw-normal.text-white.text-center.font-base.mb-4.mb-md-5.mb-lg-7.powered-by Powered by Material UI, Bootstrap & more!
 
         
 
-        a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).text-white.btn.btn-success.fw-normal.mb-8
+        a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).text-white.btn.btn-success.fw-normal.mb-5
           i.fas.fa-download.me-3
-          | Download BUNDLE
+          | Download BUNDLE 
+
+    .position-absolute.line-svg
+      img.img-fluid(src=`${CWD}assets/img/line.svg` alt='')
     .position-absolute.bottom-0.start-0.end-0.z-n1
-      img.img-fluid.w-100(src=`${CWD}assets/img/bottom_bar.png`, alt="")
+      img.img-fluid(src=`${CWD}assets/img/bottom_bar.png`, alt="")
 
 
 

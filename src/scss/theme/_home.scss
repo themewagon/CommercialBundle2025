@@ -44,6 +44,7 @@ $break-color: #0080ff; // Color for the break line
 
 .sub-heading {
   font-size: map-get($font-sizes, 5 );
+  margin-bottom: 20px;
 
   @include media-breakpoint-up(md){
     font-size: map-get($font-sizes, 6 );
@@ -83,7 +84,9 @@ $break-color: #0080ff; // Color for the break line
 }
 
 .powered-by {
-  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+  margin-top: 1.173rem;
   font-size: map-get($font-sizes, 5 );
   letter-spacing: 0.008em;
   @include media-breakpoint-up(md){
@@ -115,4 +118,10 @@ $break-color: #0080ff; // Color for the break line
 
 .footer-container {
   max-width: 889px;
+}
+
+.line-svg{
+  top: 50%;
+  left: -10%;
+  transform: rotate(5deg);
 }
