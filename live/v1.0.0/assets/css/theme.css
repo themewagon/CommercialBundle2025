@@ -24257,6 +24257,7 @@ iframe {
 }
 @media (min-width: 1200px) {
   .text-container .sub-heading {
+    letter-spacing: 0px;
     font-size: 57px;
   }
 }
@@ -24276,7 +24277,7 @@ iframe {
 @media (min-width: 1200px) {
   .text-container .title {
     font-size: 120px;
-    letter-spacing: -4px;
+    letter-spacing: -1px;
   }
 }
 .text-container .extra-large-text {
@@ -24315,7 +24316,7 @@ iframe {
 }
 @media (min-width: 1200px) {
   .powered-by {
-    letter-spacing: -1.8px;
+    letter-spacing: -0.5px;
     font-size: 56px;
   }
 }
