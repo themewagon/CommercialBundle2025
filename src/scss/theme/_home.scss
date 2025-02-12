@@ -42,64 +42,58 @@ $break-color: #0080ff; // Color for the break line
   }
 }
 
-.text-container{
-  max-width: 727px;
-  .sub-heading {
-    letter-spacing: -1.6px;
-    font-size: map-get($font-sizes, 5 );
-  
-    @include media-breakpoint-up(md){
-      font-size: map-get($font-sizes, 6 );
-    }
-    @include media-breakpoint-up(lg){
-      font-size: 50px;
-    }
-    @include media-breakpoint-up(xl){
-      letter-spacing: 0px;
-      font-size: 57px;
-    }
-  }
-  .title{
-    font-size: 3rem;
-    @include media-breakpoint-up(md){
-      font-size: 4.5rem;
-    }
-    @include media-breakpoint-up(lg){
-      font-size: 100px;
-    }
-    @include media-breakpoint-up(xl){
-      font-size: 120px;
-      letter-spacing: -1px;
-    }
-  }
-  
-  .extra-large-text{
-    font-size: 3.5rem;
-    @include media-breakpoint-up(md){
-      font-size: 5.5rem;
-    }
-    @include media-breakpoint-up(lg){
-      font-size: 129px;
-    }
-    @include media-breakpoint-up(xl){
-      font-size: 156px;
-    }
-  }
-}
-
-
-.powered-by {
+.sub-heading {
   font-size: map-get($font-sizes, 5 );
-  letter-spacing: -2.2px;
+
   @include media-breakpoint-up(md){
     font-size: map-get($font-sizes, 6 );
   }
   @include media-breakpoint-up(lg){
-    text-align: start;
-    font-size: 48px;
+    font-size: 50px;
   }
   @include media-breakpoint-up(xl){
-    letter-spacing: -0.5px;
+    letter-spacing: 0px;
+    font-size: 57px;
+  }
+}
+.title{
+  font-size: 3rem;
+  @include media-breakpoint-up(md){
+    font-size: 4.5rem;
+  }
+  @include media-breakpoint-up(lg){
+    font-size: 100px;
+  }
+  @include media-breakpoint-up(xl){
+    font-size: 120px;
+  }
+}
+
+.extra-large-text{
+  font-size: 3.5rem;
+  @include media-breakpoint-up(md){
+    font-size: 5.5rem;
+  }
+  @include media-breakpoint-up(lg){
+    font-size: 129px;
+  }
+  @include media-breakpoint-up(xl){
+    font-size: 156px;
+  }
+}
+
+.powered-by {
+  margin-top: 20px;
+  font-size: map-get($font-sizes, 5 );
+  letter-spacing: 0.008em;
+  @include media-breakpoint-up(md){
+    font-size: 34px;
+  }
+  @include media-breakpoint-up(lg){
+    text-align: start;
+    font-size: 46px;
+  }
+  @include media-breakpoint-up(xl){
     font-size: 56px;
   }
 }
@@ -120,5 +114,5 @@ $break-color: #0080ff; // Color for the break line
 }
 
 .footer-container {
-  max-width: 902px;
+  max-width: 889px;
 }

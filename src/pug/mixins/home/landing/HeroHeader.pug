@@ -18,17 +18,18 @@ append variables
 mixin HeroHeader
   +Section(gradient,"container-fluid ").position-relative.py-0.overflow-hidden
     +Background(background)
-      .container.overflow-hidden.text-center.z-index-1.banner-section
+      .container.overflow-hidden.text-center.z-index-1.banner-section.px-0
         .outside-line.mx-auto.mb-5.mb-lg-7
           img.img-fluid(src=`${CWD}assets/img/ThemeWagon-logo.svg`  alt="")
-        .row.gx-1.gy-4.gy-lg-0
-          .col-lg-4
-            img.img-fluid.w-lg-100.h-lg-100(src=`${CWD}assets/img/50-text.svg`, alt="")
-          .col-lg-8.text-container.ms-auto.text-xl-start
+        .row.align-items-center.justify-content-center.justify-content-xl-between.gx-2.gy-4
+          .col-12.col-xl-auto.px-0
+            img.img-fluid(src=`${CWD}assets/img/50-text.svg`, alt="")
+          .col-auto.px-0.text-container.text-xl-start
             p.text-100.lh-1.sub-heading Commercial Bundle 2025
-            h1.text-100.fw-bold.font-sans-serif.title.lh-f2 ADMIN & eCOM 
-              span.extra-large-text TEMPLATES
-        h2.fw-normal.text-white.font-base.mb-4.mb-md-6.mb-lg-8.powered-by Powered by Material UI, Bootstrap & more!
+            h1.text-100.fw-bold.font-sans-serif.title.lh-f2.text-nowrap.mb-0 ADMIN & eCOM
+              br
+              span.extra-large-text  TEMPLATES
+        h2.fw-normal.text-white.text-center.font-base.mb-4.mb-md-6.mb-lg-8.powered-by Powered by Material UI, Bootstrap & more!
 
         
 
