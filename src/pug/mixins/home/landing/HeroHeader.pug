@@ -8,39 +8,40 @@ append variables
       }
     }
     var background={
-        "image":`${CWD}assets/img/header-bg.webp`,
-        attrs:{
-          style:'background-position: center;' 
-        }
-
+        "image":`${CWD}assets/img/header-bg.png`,
+        "className": 'bg-header'
     }
 
 mixin HeroHeader
   +Section(gradient,"container-fluid ").position-relative.py-0.overflow-hidden
     +Background(background)
-      .container.overflow-hidden.text-center.z-index-1.banner-section.px-0
+      .container.overflow-hidden.text-center.z-index-1.banner-section.px-0.position-static
         .outside-line.mx-auto.mb-5.mb-lg-7
           img.img-fluid(src=`${CWD}assets/img/ThemeWagon-logo.svg`  alt="")
-        .row.align-items-center.justify-content-center.justify-content-xl-between.gx-2.gy-4
-          .col-12.col-xl-auto.px-0
+        .row.align-items-center.justify-content-center.justify-content-xxl-between.gap-5.g-0
+          .col-12.col-xl-auto.px-0.order-1.order-xl-0.d-none.d-xl-block
             img.img-fluid(src=`${CWD}assets/img/50-text.svg`, alt="")
           .col-auto.px-0.text-container.text-xl-start
-            p.text-100.lh-1.sub-heading Commercial Bundle 2025
-            h1.text-100.fw-bold.font-sans-serif.title.lh-f2.text-nowrap.mb-0 ADMIN & eCOM
+            p.text-100.lh-f2.sub-heading Commercial Bundle 2025
+            h1.text-100.fw-bold.font-sans-serif.title.lh-f2.text-nowrap.mb-0.lh-f2
+              span.text-50.d-xl-none 50
+              br.d-xl-none
+              | ADMIN & eCOM
               br
               span.extra-large-text  TEMPLATES
-        h2.fw-normal.text-white.text-center.font-base.mb-4.mb-md-5.mb-lg-7.powered-by Powered by Material UI, Bootstrap & more!
+        h2.fw-normal.text-white.text-center.font-base.mb-4.mb-md-5.mb-lg-6.mb-xxl-7.powered-by.lh-lg-f2 Powered by Material UI, 
+          span.text-nowrap Bootstrap & more!
 
         
 
-        a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).text-white.btn.btn-success.fw-normal.mb-5
+        a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).text-white.btn.btn-success.fw-normal.mb-5.action-button.position-relative
           i.fas.fa-download.me-3
           | Download BUNDLE 
 
-    .position-absolute.line-svg
-      img.img-fluid(src=`${CWD}assets/img/line.svg` alt='')
-    .position-absolute.bottom-0.start-0.end-0.z-n1
-      img.img-fluid(src=`${CWD}assets/img/bottom_bar.png`, alt="")
+        .position-absolute.layer-3
+          img.img-fluid.object-fit-cover(src=`${CWD}assets/img/bottom_shape.svg` alt='')
+    .position-absolute.bottom-0.start-0.end-0.white-curve
+      img.img-fluid.object-fit-cover(src=`${CWD}assets/img/bottom_bar.png`, alt="")
 
 
 

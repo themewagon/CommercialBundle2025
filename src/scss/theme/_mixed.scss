@@ -208,11 +208,16 @@
 }
 
 .banner-section{
-  max-width: 74.375rem;
   padding-top: 8rem;
   padding-bottom: 10rem;
   @include media-breakpoint-up(lg){
-    padding-top: 13rem;
+    padding-top: 10rem;
     padding-bottom: 19.688rem;
+  }
+  @include media-breakpoint-up(xl){
+    padding-top: 13rem;
+  }
+  @include media-breakpoint-up(xxl){
+    max-width: 74.375rem;
   }
 }

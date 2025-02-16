@@ -11,7 +11,7 @@ append variables
       "className":" bottom-0",
         "image":`${CWD}assets/img/footer-bg.webp`,
         attrs:{
-          style:'background-position: top;' 
+          style:'background-position: center;' 
         }
 
     }
@@ -20,27 +20,27 @@ append variables
 mixin PreFooter
   +Section(gradient, 'container-fluid').position-relative.py-0
     +Background(footerbackground)
-    .container.pt-10.z-index-1.pb-9
-      .row.flex-center.mt-10.g-0
-        .col-10.px-0.footer-container
-          .d-flex.flex-column.flex-lg-row.justify-content-center.justify-content-lg-between.align-items-center.mb-5 
+    .container.pt-8.pt-sm-9.z-index-1.pb-9.pt-xxl-10
+      .row.flex-center.mt-5.mt-lg-9.g-0
+        .col-lg-10.col-xxl-9.px-0.footer-container
+          .d-flex.flex-column.flex-lg-row.justify-content-center.justify-content-lg-between.align-items-center.mb-3.mb-md-5 
             .text-center.text-lg-start
-              h1.fw-bold.font-base.fs-8.fs-sm-10.fs-md-12.text-100.mb-0 
+              h1.fw-bold.font-base.fs-7.fs-md-9.fs-lg-10.fs-xl-11.fs-xxl-12.text-100.mb-0 
                 span.position-relative.decorate-text R
                 span eady to
                 br
                 span.text-nowrap Get Started?
-            .mt-4.mt-lg-0
+            .mt-3.mt-lg-0
               p.fs--1.text-100.fw-semibold Keep Uninterrupted Network Connectivity
               a(href="https://themewagon.com/themes/creative-bundle-2024/" target="_blank" ).btn.btn-success
                 i.fas.fa-download.me-3
                 | Download BUNDLE
-          p.mb-0.fs-2.text-100.outside-line.mx-auto.text-center
-            | Brought to you with
+          p.mb-0.fs-2.text-100.outside-line.footer-outside-line.mx-auto.text-center
+            span Brought to you with
             span.fas.fa-heart.mx-1.text-success
             | from
             a(href="https://themewagon.com/" target="_blank" ).ms-1.link-100 ThemeWagon
-    .position-absolute.start-0.end-0.z-n1(style="transform: rotate(180deg); top: -2px;")
+    .position-absolute.start-0.end-0.z-n1(style="transform: rotate(180deg); top: -3px;")
       img.img-fluid.w-100(src=`${CWD}assets/img/bottom_bar.png`, alt="")
     
 
