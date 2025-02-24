@@ -1,0 +1,322 @@
+append variables
+  - var title = 'Showcase | 50 Pre-built Creative Websites';
+  - var theme = `${name}-${version}`;
+  - var bootstrapVersion = '5.0';
+  - var attrsMain = { id: 'top', class: 'main' };
+  - var attrsLayout = { class: 'container', 'data-layout': ENV === 'PROD' ? 'container' : false }
+  - var colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+  - var grays = ['black', 1100, 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100, 'white'];
+  - var colorsAll = colors.concat(grays);
+  - var footer = true;
+  - var currentPage = 'index'
+  - 
+    var data = [
+      {
+      title: 'Booksaw',
+      link: 'https://themewagon.com/themes/booksaw/',
+      preview: 'https://themewagon.github.io/booksaw/',
+      img: 'img01.png',
+    },
+      {
+      title: 'Base',
+      link: 'https://themewagon.com/themes/base/',
+      preview: 'https://themewagon.github.io/base/',
+      img: 'img02.png',
+    },
+      {
+      title: 'waGGy',
+      link: 'https://themewagon.com/themes/waggy/',
+      preview: 'https://themewagon.github.io/waggy/',
+      img: 'img03.png',
+    },
+      {
+      title: 'Horizon',
+      link: 'https://themewagon.com/themes/horizon-mui/',
+      preview: 'https://themewagon.github.io/horizon/',
+      img: 'img04.png',
+    },
+      {
+      title: 'Hexashop',
+      link: 'https://themewagon.com/themes/hexashop-free-responsive-bootstrap-4-ecommerce-website-template/',
+      preview: 'https://themewagon.github.io/hexashop/',
+      img: 'img05.png',
+    },
+      {
+      title: 'NickelFox',
+      link: 'https://themewagon.com/themes/nickelfox/',
+      preview: 'https://themewagon.github.io/nickelfox/',
+      img: 'img06.png',
+    },
+      {
+      title: 'FoodMart',
+      link: 'https://themewagon.com/themes/foodmart/',
+      preview: 'https://themewagon.github.io/FoodMart/',
+      img: 'img07.png',
+    },
+      {
+      title: 'Venus',
+      link: 'https://themewagon.com/themes/venus/',
+      preview: 'https://themewagon.github.io/venus/',
+      img: 'img08.png',
+    },
+      {
+      title: 'ShionHouse',
+      link: 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-ecommerce-website-template-shionhouse/',
+      preview: 'https://themewagon.github.io/shionhouse/',
+      img: 'img09.png',
+    },
+      {
+      title: 'DNX',
+      link: 'https://themewagon.com/themes/dnx/',
+      preview: 'https://themewagon.github.io/dnx/',
+      img: 'img10.png',
+    },
+      {
+      title: 'eflyer',
+      link: 'https://themewagon.com/themes/free-bootstrap-4-html5-ecommerce-website-template-eflyer/',
+      preview: 'https://themewagon.github.io/eflyer/',
+      img: 'img11.png',
+    },
+      {
+      title: 'BankDash',
+      link: 'https://themewagon.com/themes/bankdash/',
+      preview: 'https://themewagon.github.io/bankdash/',
+      img: 'img12.png',
+    },
+      {
+      title: 'MiniStore',
+      link: 'https://themewagon.com/themes/ministore/',
+      preview: 'https://themewagon.github.io/MiniStore/',
+      img: 'img13.png',
+    },
+      
+      {
+        title: 'Dabang',
+        link: 'https://themewagon.com/themes/dabang/',
+        preview: 'https://themewagon.github.io/dabang/',
+        img: 'img14.png',
+    },
+      {
+      title: 'MaleFashion',
+      link: 'https://themewagon.com/themes/free-bootstrap-4-html5-ecommerce-website-template-malefashion/',
+      preview: 'https://themewagon.github.io/malefashion/',
+      img: 'img15.png',
+    },
+      {
+        title: 'DashDarkX',
+        link: 'https://themewagon.com/themes/dashdarkx/',
+        preview: 'https://themewagon.github.io/dashdarkX/',
+        img: 'img16.png',
+    },
+
+      {
+        title: 'Fruitkha ',
+        link: 'https://themewagon.com/themes/fruitkha-free-bootstrap-4-responsive-food-business-template/',
+        preview: 'https://themewagon.github.io/fruitkha/',
+        img: 'img17.png',
+      },
+      {
+        title: 'Modernize MUI',
+        link: 'https://themewagon.com/themes/modernize-mui/',
+        preview: 'https://themewagon.github.io/modernize-mui-admin/',
+        img: 'img18.png',
+      },
+      {
+        title: 'Footwear ',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-ecommerce-website-template-footwear/',
+        preview: 'https://themewagon.github.io/footwear/',
+        img: 'img19.png',
+      },
+      {
+        title: 'Motiv.',
+        link: 'https://themewagon.com/themes/motiv/',
+        preview: 'https://themewagon.github.io/motiv/',
+        img: 'img20.png',
+      },
+      {
+        title: 'Pillow Mart',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-online-store-template-pillow-mart/',
+        preview: 'https://themewagon.github.io/pillowmart/',
+        img: 'img21.png',
+      },
+      {
+        title: 'Elegent',
+        link: 'https://themewagon.com/themes/elegent/',
+        preview: 'https://themewagon.github.io/elegent/',
+        img: 'img22.png',
+      },
+      {
+        title: 'Ultras ',
+        link: 'https://themewagon.github.io/ultras/',
+        preview: 'https://themewagon.github.io/ultras/',
+        img: 'img23.png',
+      },
+      {
+        title: 'SoftUI',
+        link: 'https://themewagon.com/themes/softui-react/',
+        preview: 'https://themewagon.github.io/soft-ui-dashboard-react/dashboard',
+        img: 'img24.png',
+      },
+      {
+        title: 'Kaira',
+        link: 'https://themewagon.com/themes/kaira/',
+        preview: 'https://themewagon.github.io/kaira/',
+        img: 'img25.png',
+      },
+      {
+        title: 'Slim',
+        link: 'https://themewagon.com/themes/slim/',
+        preview: 'https://themewagon.github.io/slim-free-react-mui-template/',
+        img: 'img26.png',
+      },
+      {
+        title: 'Majestic',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-html5-ecommerce-website-template-majestic/',
+        preview: 'https://themewagon.github.io/majestic-2/v1.0.0/',
+        img: 'img27.png',
+      },
+      {
+        title: 'Material Dashboard',
+        link: 'https://themewagon.com/themes/material-dashboard-react/',
+        preview: 'https://themewagon.github.io/react-dashboard-material/',
+        img: 'img28.png',
+      },
+      {
+        title: 'Tropiko',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-online-store-website-template-tropiko/',
+        preview: 'https://themewagon.github.io/tropika/',
+        img: 'img29.png',
+      },
+      {
+        title: 'Carpatin',
+        link: 'https://themewagon.com/themes/carpatin-dashboard/',
+        preview: 'https://themewagon.github.io/carpatin-dashboard-free/',
+        img: 'img30.png',
+      },
+      {
+        title: 'Famms',
+        link: 'https://themewagon.com/themes/famms-free-responsive-bootstrap-4-e-commerce-website-template/',
+        preview: 'https://themewagon.github.io/famms/',
+        img: 'img31.png',
+      },
+      {
+        title: 'Argon',
+        link: 'https://themewagon.com/themes/argon-dashboard/',
+        preview: 'https://themewagon.github.io/argon-dashboard-material-ui/dashboard',
+        img: 'img32.png',
+      },
+      {
+        title: 'Fruitables',
+        link: 'https://themewagon.com/themes/fruitables-free/',
+        preview: 'https://themewagon.github.io/fruitables/',
+        img: 'img33.png',
+      },
+      {
+        title: 'Spike NuxtJS',
+        link: 'https://themewagon.com/themes/spike-nuxt/',
+        preview: 'https://themewagon.github.io/spike-nuxtjs-free/',
+        img: 'img34.png',
+      },
+      {
+        title: 'Minishop',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-responsive-ecommerce-website-template-minishop/',
+        preview: 'https://themewagon.github.io/minishop/',
+        img: 'img35.png',
+      },
+      {
+        title: 'Spike VueJS',
+        link: 'https://themewagon.com/themes/spike/',
+        preview: 'https://spike-vue-free.netlify.app/',
+        img: 'img36.png',
+      },
+      {
+        title: 'Aranoz',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-ecommerce-website-template-aranoz/',
+        preview: 'https://themewagon.github.io/aranoz/',
+        img: 'img37.png',
+      },
+      {
+        title: 'KaiAdmin',
+        link: 'hhttps://themewagon.com/themes/kaiadmin/',
+        preview: 'https://themewagon.github.io/kaiadmin-lite/',
+        img: 'img38.png',
+      },
+      {
+        title: 'Karma',
+        link: 'https://themewagon.com/themes/free-reponsive-bootstrap-4-html5-ecommerce-website-template-karma/',
+        preview: 'https://themewagon.github.io/karma/',
+        img: 'img39.png',
+      },
+      {
+        title: 'Modernize',
+        link: 'https://themewagon.com/themes/modernize/',
+        preview: 'https://themewagon.github.io/Modernize/src/html/',
+        img: 'img40.png',
+      },
+      {
+        title: 'Shopmax',
+        link: 'https://themewagon.com/themes/free-bootstrap-4-html5-ecommerce-website-template-shopmax/',
+        preview: 'https://themewagon.github.io/shopmax/',
+        img: 'img41.png',
+      },
+      {
+        title: 'Dashmin',
+        link: 'https://themewagon.com/themes/dashmin-responsive-free-bootstrap-5-html5-admin-dashboard-template/',
+        preview: 'https://themewagon.github.io/dashmin/',
+        img: 'img42.png',
+      },
+      {
+        title: 'Organic',
+        link: 'https://themewagon.com/themes/organic/',
+        preview: 'https://themewagon.github.io/organic/',
+        img: 'img43.png',
+      },
+      {
+        title: 'Sneat',
+        link: 'https://themewagon.com/themes/sneat-vuejs/',
+        preview: 'https://sneat-vuetify-admin-template.vercel.app/',
+        img: 'img44.png',
+      },
+      {
+        title: 'Stylish',
+        link: 'https://themewagon.com/themes/stylish/',
+        preview: 'https://themewagon.github.io/stylish/',
+        img: 'img45.png',
+      },
+      {
+        title: 'DarkPan',
+        link: 'https://themewagon.com/themes/free-bootstrap-5-admin-dashboard-template-darkpan/',
+        preview: 'https://themewagon.github.io/darkpan/',
+        img: 'img46.png',
+      },
+      {
+        title: 'Ashion',
+        link: 'https://themewagon.com/themes/free-responsive-bootstrap-4-html5-ecommerce-website-template-ashion/',
+        preview: 'https://themewagon.github.io/ashion/',
+        img: 'img47.png',
+      },
+      {
+        title: 'Dash UI ',
+        link: 'https://themewagon.com/themes/dashui/',
+        preview: 'https://dash-ui-admin-template.vercel.app/',
+        img: 'img48.png',
+      },
+      {
+        title: 'Eshopper',
+        link: 'https://themewagon.com/themes/eshopper-free-responsive-bootstrap-4-e-commerce-website-template/',
+        preview: 'https://themewagon.github.io/eshopper/',
+        img: 'img49.png',
+      },      
+      {
+        title: 'Materio',
+        link: 'https://themewagon.com/themes/free-responsive-mui-react-nextjs-admin-dashboard-template-materio/',
+        preview: 'https://demos.themeselection.com/materio-mui-react-nextjs-admin-template-free/',
+        img: 'img50.png',
+      },
+      //- {
+      //-   title: 'Sensive',
+      //-   link: 'https://themewagon.com/themes/free-bootstrap-4-html5-travel-blog-website-template-sensive/',
+      //-   preview: 'https://themewagon.github.io/sensive/',
+      //-   img: 'img51 .png',
+      //- },
+    ];
